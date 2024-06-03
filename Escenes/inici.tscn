@@ -1,0 +1,151 @@
+[gd_scene load_steps=15 format=3 uid="uid://bb70pnreiwa3t"]
+
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_ddbjg"]
+[ext_resource type="Script" path="res://Scripts/Terra.gd" id="2_bfy51"]
+[ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="3_fwd04"]
+[ext_resource type="Texture2D" uid="uid://coa2h52ejspmb" path="res://icon.svg" id="4_bcsi6"]
+[ext_resource type="Script" path="res://Escenes/AnimationPlayer.gd" id="5_tv8k6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ieo7e"]
+size = Vector2(2997.5, 52.7968)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77apc"]
+size = Vector2(4499, 85.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8rne"]
+size = Vector2(324.964, 502.031)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cevw"]
+atlas = ExtResource("1_ddbjg")
+region = Rect2(0, 483, 28, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e62c3"]
+atlas = ExtResource("1_ddbjg")
+region = Rect2(28, 483, 28, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqpo0"]
+atlas = ExtResource("1_ddbjg")
+region = Rect2(56, 483, 28, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_str21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cevw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e62c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqpo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e62c3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[sub_resource type="Animation" id="Animation_jyxiy"]
+resource_name = "desp"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(284, 127.4), Vector2(284, 138.785), Vector2(284, 127.4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yd5yh"]
+_data = {
+"desp": SubResource("Animation_jyxiy")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160.005, 240)
+scale = Vector2(2.23776, 1.88235)
+texture = ExtResource("1_ddbjg")
+region_enabled = true
+region_rect = Rect2(0.100723, -0.0463715, 143.753, 255.855)
+
+[node name="terra" type="Area2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(160.005, 240)
+scale = Vector2(2.23776, 1.88235)
+collision_layer = 4
+collision_mask = 22
+script = ExtResource("2_bfy51")
+velocitat = 2.3
+
+[node name="Terra" type="Sprite2D" parent="terra"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(932, 106)
+scale = Vector2(0.670312, 0.830343)
+texture = ExtResource("3_fwd04")
+region_enabled = true
+region_rect = Rect2(-68.035, -0.237, 3000, 55.886)
+
+[node name="Area2D" type="Area2D" parent="terra/Terra"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra/Terra/Area2D"]
+position = Vector2(-2, 0.783966)
+shape = SubResource("RectangleShape2D_ieo7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terra"]
+position = Vector2(932.18, 106.25)
+scale = Vector2(0.446875, 0.531249)
+shape = SubResource("RectangleShape2D_77apc")
+
+[node name="rotacio" type="Area2D" parent="."]
+position = Vector2(160.005, 240)
+scale = Vector2(2.23776, 1.88235)
+collision_layer = 16
+collision_mask = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="rotacio"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-572.449, 119.531)
+scale = Vector2(0.671176, 3.90565)
+texture = ExtResource("4_bcsi6")
+region_enabled = true
+region_rect = Rect2(-0.947281, -0.157837, 129.829, 128.29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rotacio"]
+position = Vector2(-691.318, 117.406)
+shape = SubResource("RectangleShape2D_g8rne")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(284, 127.4)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_str21")
+autoplay = "default"
+frame_progress = 0.964018
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(-57.6, 1.59999)
+texture = ExtResource("1_ddbjg")
+region_enabled = true
+region_rect = Rect2(351, 87, 91, 28)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yd5yh")
+}
+autoplay = "desp"
+script = ExtResource("5_tv8k6")

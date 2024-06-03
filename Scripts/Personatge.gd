@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -200.0
-
+var animacio = 0
 
 var gravity = (ProjectSettings.get_setting("physics/2d/default_gravity"))/1.4
 
@@ -30,10 +30,13 @@ func _physics_process(delta):
 			$AnimatedSprite2D.stop()
 	else:
 		if not is_on_floor():
-			velocity.y += gravity * delta
+			velocity.y += gravity * delta * 2
 		$AnimatedSprite2D.stop()
-		rotation_degrees = 75
-
+		if animacio == 0:
+			$AnimationPlayer.play('rotacio')
+			animacio += 1
+		
 	
-
+	
 	move_and_slide()
+
