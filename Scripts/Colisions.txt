@@ -1,0 +1,8 @@
+
+personatge 2 -> 3(terra)/4(obstacles)/8(static body)
+terra 3 -> 5(rotacio)/2(personatge)
+terra(static body)8 -> 2(personatge) 
+obstacles 4 -> 6(puntuacio)/7(obstacles eliminar)
+rotacio 5 -> 3(terra)
+puntuacio 6 -> 4(obstacles)
+obstacles eliminar 7 -> 4(obstacles)

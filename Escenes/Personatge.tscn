@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://7je0l4k3i20b"]
+
+[ext_resource type="Script" path="res://Scripts/Personatge.gd" id="1_isg8g"]
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_x1u6r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y33h2"]
+radius = 6.08276
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cevw"]
+atlas = ExtResource("1_x1u6r")
+region = Rect2(0, 483, 28, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e62c3"]
+atlas = ExtResource("1_x1u6r")
+region = Rect2(28, 483, 28, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqpo0"]
+atlas = ExtResource("1_x1u6r")
+region = Rect2(56, 483, 28, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mxa6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cevw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e62c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqpo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e62c3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 142
+script = ExtResource("1_isg8g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y33h2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3, -3)
+sprite_frames = SubResource("SpriteFrames_mxa6y")
+frame_progress = 0.580825

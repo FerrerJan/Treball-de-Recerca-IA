@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx4nlu06uhgrv"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacles.gd" id="1_y01gp"]
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="2_0ux3i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am2sg"]
+size = Vector2(57, 4155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4wyk"]
+size = Vector2(59, 488.75)
+
+[node name="obstacles" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 8
+collision_mask = 106
+script = ExtResource("1_y01gp")
+velocitat = 2.5
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_0ux3i")
+offset = Vector2(0, 105)
+region_enabled = true
+region_rect = Rect2(83, 323, 28, 161)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 3.14159
+texture = ExtResource("2_0ux3i")
+offset = Vector2(0, 115)
+region_enabled = true
+region_rect = Rect2(83, 323, 28, 161)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.200001, -866.2)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_am2sg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-0.199999, 123.75)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_o4wyk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
