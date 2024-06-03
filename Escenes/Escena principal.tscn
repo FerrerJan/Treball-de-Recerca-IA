@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b6crr5p0l7b6r"]
+[gd_scene load_steps=18 format=3 uid="uid://b6crr5p0l7b6r"]
 
 [ext_resource type="Script" path="res://Scripts/Escena principal.gd" id="1_h3yut"]
 [ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_ryu7r"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://coa2h52ejspmb" path="res://icon.svg" id="5_ul0xr"]
 [ext_resource type="PackedScene" uid="uid://7je0l4k3i20b" path="res://Escenes/Personatge.tscn" id="6_pbbl2"]
 [ext_resource type="FontFile" uid="uid://cs11ai2xuag05" path="res://Recursos/flappy-font.ttf" id="8_3tsa3"]
+[ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="9_4w6is"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_07mwj"]
 size = Vector2(2997.5, 52.7968)
@@ -39,7 +40,7 @@ size = Vector2(20, 391)
 size = Vector2(20, 486)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kh3bp"]
-size = Vector2(325, 86)
+size = Vector2(325, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lin5l"]
 size = Vector2(88, 20)
@@ -147,7 +148,7 @@ collision_layer = 128
 collision_mask = 130
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="terra2"]
-position = Vector2(158.5, 440)
+position = Vector2(158.5, 443)
 shape = SubResource("RectangleShape2D_kh3bp")
 
 [node name="clicar" type="Sprite2D" parent="."]
@@ -186,7 +187,66 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="resultat" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(161.375, 217.594)
+scale = Vector2(1.94181, 2.1834)
+texture = ExtResource("9_4w6is")
+region_enabled = true
+region_rect = Rect2(145, 57, 116, 61)
+
+[node name="resultat" type="Sprite2D" parent="resultat"]
+texture_filter = 1
+position = Vector2(-0.708101, -42.408)
+texture = ExtResource("9_4w6is")
+region_enabled = true
+region_rect = Rect2(145, 197, 96, 23)
+
+[node name="resultat2" type="Sprite2D" parent="resultat"]
+texture_filter = 1
+position = Vector2(0, 39.116)
+texture = ExtResource("9_4w6is")
+region_enabled = true
+region_rect = Rect2(246, 133, 41, 16)
+
+[node name="Button" type="Button" parent="resultat/resultat2"]
+offset_left = -20.0
+offset_top = -7.0
+offset_right = 20.0
+offset_bottom = 7.0
+flat = true
+
+[node name="Contador2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 198.0
+offset_top = 177.0
+offset_right = 268.0
+offset_bottom = 228.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_3tsa3")
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="maxim" type="Label" parent="."]
+texture_filter = 1
+offset_left = 197.0
+offset_top = 225.0
+offset_right = 267.0
+offset_bottom = 276.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_3tsa3")
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="timeout" from="Obstacles/Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="terra" to="terra" method="_on_body_entered"]
 [connection signal="area_entered" from="rotacio" to="terra" method="_on_rotacio_area_entered"]
 [connection signal="area_entered" from="puntuacio" to="." method="_on_puntuacio_area_entered"]
+[connection signal="area_exited" from="puntuacio" to="." method="_on_puntuacio_area_exited"]
 [connection signal="area_entered" from="Obsacles_eliminar" to="." method="_on_obsacles_eliminar_area_entered"]
+[connection signal="pressed" from="resultat/resultat2/Button" to="." method="_on_button_pressed"]

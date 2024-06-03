@@ -5,4 +5,6 @@ var Obstacles := Node2D
 var punts : int = 0
 var iniciat = false
 var distancia : int = 0
-var mort := false 
+var mort := false
+var maxim : int = 0
+

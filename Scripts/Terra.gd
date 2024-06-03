@@ -4,7 +4,7 @@ extends Area2D
 @export var p : float
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	Global.mort = false
 
 
 
@@ -20,3 +20,7 @@ func _process(delta):
 func _on_rotacio_area_entered(area):
 	position = Vector2(p,240)
 	
+
+
+func _on_body_entered(body):
+	Global.mort = true

@@ -12,7 +12,7 @@ func _physics_process(delta):
 	if Global.mort == false:
 		if not is_on_floor():
 			velocity.y += gravity * delta
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("espai"):
 			velocity.y = JUMP_VELOCITY
 		if Global.life == true:
 			if velocity.y < 0:
@@ -32,7 +32,7 @@ func _physics_process(delta):
 		if not is_on_floor():
 			velocity.y += gravity * delta * 2
 		$AnimatedSprite2D.stop()
-		if animacio == 0:
+		if animacio == 0 and velocity.y > 0:
 			$AnimationPlayer.play('rotacio')
 			animacio += 1
 		
