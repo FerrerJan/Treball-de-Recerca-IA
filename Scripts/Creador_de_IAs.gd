@@ -6,5 +6,3 @@ extends Node2D
 func _ready():
 	for i in range(num_IA):
 		add_child(ia.instantiate())
-
-
