@@ -64,9 +64,6 @@ func _process(delta):
 		print('-------------------------------------------------')
 		print('')
 	'''
-	if Global.mort == false and Global.iniciat == true:
-		Vpos_personatge = $CharacterBody2D.get_global_position()
-		print(Global.posicio_obstacle_continua - Vpos_personatge)
 		
 		
 	if Input.is_action_just_pressed("I"):

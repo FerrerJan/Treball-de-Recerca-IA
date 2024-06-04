@@ -26,11 +26,11 @@ func _ready():
 		neurons.append(NEATNeuron.new())
 	for _i in range(num_outputs):  # 1 neurona de salida
 		neurons.append(NEATNeuron.new())
-	for _i in range(3 * 2 + 2 * 1):  # Conexiones entre neuronas
+	for _i in range(num_inputs * num_hidden + num_hidden * num_outputs):  # Conexiones entre neuronas
 		connections.append(NEATConnection.new())
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	for _i in range(3 * 2 + 2 * 1):
+	for _i in range(num_inputs * num_hidden + num_hidden * num_outputs):
 		connections[_i].from_neuron = rng.randi() % 3
 		connections[_i].to_neuron = rng.randi() % (3 + 2 + 1)
 		connections[_i].weight = rng.randf() * 2 - 1
@@ -99,6 +99,5 @@ func sigmoid(x):
 
 func _on_area_2d_area_entered(area):
 	mort = true # Replace with function body.
-	$CollisionShape2D.disabled = false
 
 
