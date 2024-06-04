@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cy7hv3njt5jqm"]
+[gd_scene load_steps=20 format=3 uid="uid://cy7hv3njt5jqm"]
 
 [ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_ahhu8"]
 [ext_resource type="Script" path="res://Scripts/escena_ia.gd" id="1_uv4r2"]
@@ -35,7 +35,7 @@ func _process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5iqum"]
-size = Vector2(20, 391)
+size = Vector2(13, 391)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0upp"]
 size = Vector2(20, 486)
@@ -45,6 +45,9 @@ size = Vector2(325, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_211kk"]
 size = Vector2(88, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7e7gu"]
+size = Vector2(326, 85.5)
 
 [node name="Escena IA" type="Node2D"]
 script = ExtResource("1_uv4r2")
@@ -123,7 +126,6 @@ shape = SubResource("RectangleShape2D_wbt7w")
 position = Vector2(54, 183)
 scale = Vector2(2, 2)
 script = ExtResource("6_kgc84")
-num_IA = 5
 
 [node name="configuracio" type="Node" parent="."]
 script = SubResource("GDScript_3opii")
@@ -133,7 +135,7 @@ collision_layer = 32
 collision_mask = 40
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="puntuacio"]
-position = Vector2(63, 197.5)
+position = Vector2(36.5, 197.5)
 shape = SubResource("RectangleShape2D_5iqum")
 
 [node name="Obsacles_eliminar" type="Area2D" parent="."]
@@ -247,6 +249,12 @@ vertical_alignment = 1
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_dlkbu")]
 position = Vector2(50, 185)
 scale = Vector2(2.5, 2.5)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(158, 443.75)
+shape = SubResource("RectangleShape2D_7e7gu")
 
 [connection signal="timeout" from="Obstacles/Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="terra" to="terra" method="_on_area_entered"]

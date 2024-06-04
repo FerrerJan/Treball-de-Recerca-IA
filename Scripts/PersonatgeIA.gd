@@ -40,7 +40,7 @@ func _physics_process(delta):
 		var inputs := [get_global_position().y, Global.posicio_obstacle_continua[0], Global.posicio_obstacle_continua[1]] 
 		if not is_on_floor():
 			velocity.y += gravity * delta
-		if feedforward(inputs)[0] > 0.75:
+		if feedforward(inputs)[0] > 0.5:
 			velocity.y = JUMP_VELOCITY
 		if life == true:
 			if velocity.y < 0:
@@ -102,6 +102,3 @@ func _on_area_2d_area_entered(area):
 	$CollisionShape2D.disabled = false
 
 
-func _on_area_2d_body_entered(body):
-	mort = true # Replace with function body.
-	$CollisionShape2D.disabled = false

@@ -34,7 +34,7 @@ func _process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wopf7"]
-size = Vector2(20, 391)
+size = Vector2(31, 391)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1laq"]
 size = Vector2(20, 486)
@@ -130,7 +130,7 @@ collision_layer = 32
 collision_mask = 40
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="puntuacio"]
-position = Vector2(63, 197.5)
+position = Vector2(57.5, 197.5)
 shape = SubResource("RectangleShape2D_wopf7")
 
 [node name="Obsacles_eliminar" type="Area2D" parent="."]

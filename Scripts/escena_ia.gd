@@ -51,7 +51,6 @@ func _process(delta):
 		$maxim.visible = true
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
-	print(str(Global.iniciat) +' /'+'/ '+ str(Global.Z))
 	
 	'''if Global.mort == true and Global.I == 0:
 		posicio = $CharacterBody2D.get_global_position().y
@@ -64,19 +63,15 @@ func _process(delta):
 		print('Altura del forat: '+ str(Global.posicio_obstacle))
 		print('-------------------------------------------------')
 		print('')
-		
+	'''
 	if Global.mort == false and Global.iniciat == true:
 		Vpos_personatge = $CharacterBody2D.get_global_position()
-		print(Global.posicio_obstacle_continua - Vpos_personatge)'''
+		print(Global.posicio_obstacle_continua - Vpos_personatge)
 		
 		
 	if Input.is_action_just_pressed("I"):
-		if Global.IA == true:
-			Global.IA = false
-			Global.noIA = true
-		else:
-			Global.IA = true
-			Global.noIA = false
+		Global.IA = !Global.IA
+		Global.noIA = !Global.noIA
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
 	if Input.is_action_just_pressed("R"):
@@ -91,7 +86,6 @@ func _on_timer_timeout():
 		random_number = randi_range(min, max)
 	else:
 		$Obstacles/Timer.stop()
-	print('a')
 	
 func crea_obstacle(posicio: Vector2):
 	var nou_obstacle = escena_obstacle.instantiate()

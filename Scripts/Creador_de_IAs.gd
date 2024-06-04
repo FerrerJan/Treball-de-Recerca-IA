@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var num_IA := 30
+@export var num_IA := 1
 @onready var ia = preload("res://Escenes/ia.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
