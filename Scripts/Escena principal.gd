@@ -3,17 +3,24 @@ extends Node2D
 @export var escena_obstacle: PackedScene
 @export var min : float
 @export var max : float
-var random_number = 0
-
+var random_number: float
+var posicio: float
 var posicio_obstacles = Vector2(0,0)
+var Vpos_personatge : Vector2
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.mort = false
 	Global.iniciat = false
 	Global.punts = 0
+	Global.distancia = 0
+	Global.posicio_obstacle = 0
 	$resultat.visible = false
 	$Contador2.visible = false
 	$maxim.visible = false
+	Global.I = 0
+	posicio = 0
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -37,6 +44,19 @@ func _process(delta):
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
 		get_tree().change_scene_to_file("res://Escenes/Escena principal.tscn")
 		
+	if Global.mort == true and Global.I == 0:
+		posicio = $CharacterBody2D.get_global_position().y
+		Global.I += 1
+		print('Distancia recorreguda: ' + str(Global.distancia))
+		print('Punts: ' + str(Global.punts))
+		print('Altura personatge: ' + str(posicio))
+		print('Altura del forat: '+ str(Global.posicio_obstacle))
+		print('-------------------------------------------------')
+	if Global.mort == false and Global.iniciat == true:
+		Vpos_personatge = $CharacterBody2D.get_global_position()
+		print(Global.posicio_obstacle_continua - Vpos_personatge)
+		
+		
 func _on_timer_timeout():
 	if Global.iniciat == true:
 		$Obstacles/Timer.start()
@@ -52,13 +72,13 @@ func crea_obstacle(posicio: Vector2):
 	$Obstacles.add_child(nou_obstacle)
 
 
-#func _on_puntuacio_area_entered(area):
-	
+func _on_puntuacio_area_entered(area):
+	Global.distancia += 5
 
 
 func _on_obsacles_eliminar_area_entered(area):
 	area.queue_free()
-	print('eliminat')
+	#print('eliminat')
 
 
 func _on_button_pressed():
@@ -67,4 +87,6 @@ func _on_button_pressed():
 
 func _on_puntuacio_area_exited(area):
 	Global.punts += 1
-	print(Global.punts)
+	Global.distancia += 50
+	Global.posicio_obstacle_continua = Vector2(1000,1000)
+	#print(Global.punts)

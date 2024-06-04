@@ -38,21 +38,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Animation" id="Animation_2tnrp"]
-resource_name = "rotacio"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.32645]
-}
-
 [sub_resource type="Animation" id="Animation_l6mcy"]
 length = 0.001
 tracks/0/type = "value"
@@ -70,6 +55,21 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_lkrcm"]
 resource_name = "normal"
+
+[sub_resource type="Animation" id="Animation_2tnrp"]
+resource_name = "rotacio"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.32645]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_01y2m"]
 _data = {
