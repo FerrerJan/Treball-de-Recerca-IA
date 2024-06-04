@@ -1,8 +1,8 @@
 extends Node2D
 
 @export var escena_obstacle: PackedScene
-@export var min : float
-@export var max : float
+@export var min : float = -150
+@export var max : float = 130
 var random_number: float
 var posicio: float
 var posicio_obstacles = Vector2(0,0)

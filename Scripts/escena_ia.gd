@@ -1,8 +1,8 @@
 extends Node2D
 
 @export var escena_obstacle: PackedScene
-@export var min : float
-@export var max : float
+@export var min : float = -150
+@export var max : float = 130
 var random_number: float
 var posicio: float
 var posicio_obstacles = Vector2(0,0)
@@ -20,6 +20,7 @@ func _ready():
 	$maxim.visible = false
 	Global.I = 0
 	posicio = 0
+	Global.Z = 1
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,6 +31,13 @@ func _process(delta):
 		$volar_principi/CollisionShape2D.disabled = true
 		$clicar.visible = false
 		$clicar2.visible = false
+		
+		if Global.IA == true:
+			$CharacterBody2D.queue_free()
+			Global.Z = 0
+		else:
+			pass
+		
 	$Contador.text = str(Global.punts)
 	$Contador2.text = str(Global.punts)
 	$maxim.text = str(Global.maxim)
@@ -42,9 +50,10 @@ func _process(delta):
 		$Contador2.visible = true
 		$maxim.visible = true
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
-		get_tree().change_scene_to_file("res://Escenes/Escena principal.tscn")
-		
-	if Global.mort == true and Global.I == 0:
+		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+	print(str(Global.iniciat) +' /'+'/ '+ str(Global.Z))
+	
+	'''if Global.mort == true and Global.I == 0:
 		posicio = $CharacterBody2D.get_global_position().y
 		Global.I += 1
 		print('')
@@ -56,6 +65,24 @@ func _process(delta):
 		print('-------------------------------------------------')
 		print('')
 		
+	if Global.mort == false and Global.iniciat == true:
+		Vpos_personatge = $CharacterBody2D.get_global_position()
+		print(Global.posicio_obstacle_continua - Vpos_personatge)'''
+		
+		
+	if Input.is_action_just_pressed("I"):
+		if Global.IA == true:
+			Global.IA = false
+			Global.noIA = true
+		else:
+			Global.IA = true
+			Global.noIA = false
+		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+	
+	if Input.is_action_just_pressed("R"):
+		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+		
+		
 		
 func _on_timer_timeout():
 	if Global.iniciat == true:
@@ -64,7 +91,7 @@ func _on_timer_timeout():
 		random_number = randi_range(min, max)
 	else:
 		$Obstacles/Timer.stop()
-	
+	print('a')
 	
 func crea_obstacle(posicio: Vector2):
 	var nou_obstacle = escena_obstacle.instantiate()
@@ -82,7 +109,7 @@ func _on_obsacles_eliminar_area_entered(area):
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://Escenes/inici.tscn")
+	get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 
 
 func _on_puntuacio_area_exited(area):

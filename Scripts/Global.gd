@@ -11,3 +11,6 @@ var I : int
 var posicio_obstacle: float
 var posicio_obstacle_continua: Vector2 = Vector2(10000,10000)
 var posicio_personatge_obstacles : Vector2
+var Z : int = 0
+var IA := true
+var noIA := false

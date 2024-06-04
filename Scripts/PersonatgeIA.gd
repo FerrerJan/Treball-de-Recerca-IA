@@ -38,7 +38,7 @@ func _physics_process(delta):
 		var inputs := [get_global_position().y, Global.posicio_obstacle_continua[0], Global.posicio_obstacle_continua[1]] 
 		if not is_on_floor():
 			velocity.y += gravity * delta
-		if feedforward(inputs)[0] > 0.5:
+		if feedforward(inputs)[0] > 0.75:
 			velocity.y = JUMP_VELOCITY
 		if Global.life == true:
 			if velocity.y < 0:
