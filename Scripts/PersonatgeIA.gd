@@ -19,7 +19,7 @@ var life := true
 
 
 func _ready():
-	$CollisionShape2D.disabled = false
+	$CollisionShape2D.disabled = true
 	for _i in range(num_inputs):  # 3 neuronas de entrada
 		neurons.append(NEATNeuron.new())
 	for _i in range(num_hidden):  # 2 neuronas ocultas
@@ -59,6 +59,8 @@ func _physics_process(delta):
 	else:
 		if not is_on_floor():
 			velocity.y += gravity * delta * 2
+		else:
+			velocity = Vector2(-200, 0)
 		$AnimatedSprite2D.stop()
 		if animacio == 0 and velocity.y > 0:
 			$AnimationPlayer.play('rotacio')
@@ -95,9 +97,5 @@ func feedforward(inputs):
 func sigmoid(x):
 	return 1 / (1 + exp(-x))
 
-
-
-func _on_area_2d_area_entered(area):
-	mort = true # Replace with function body.
 
 

@@ -7,6 +7,7 @@ var random_number: float
 var posicio: float
 var posicio_obstacles = Vector2(0,0)
 var Vpos_personatge : Vector2
+@onready var collision = $CollisionShape2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -108,3 +109,8 @@ func _on_puntuacio_area_exited(area):
 	Global.distancia += 50
 	Global.posicio_obstacle_continua = Vector2(1000,1000)
 	#print(Global.punts)
+
+
+func _on_area_2d_area_entered(area):
+	area.get_parent().mort = true # Replace with function body.
+	area.get_parent().collision.disabled = false # Replace with function body.

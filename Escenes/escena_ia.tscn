@@ -47,7 +47,7 @@ size = Vector2(325, 80)
 size = Vector2(88, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7e7gu"]
-size = Vector2(326, 84.5)
+size = Vector2(326, 89.5)
 
 [node name="Escena IA" type="Node2D"]
 script = ExtResource("1_uv4r2")
@@ -253,7 +253,7 @@ scale = Vector2(2.5, 2.5)
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(158, 444.25)
+position = Vector2(158, 441.75)
 shape = SubResource("RectangleShape2D_7e7gu")
 
 [connection signal="timeout" from="Obstacles/Timer" to="." method="_on_timer_timeout"]
@@ -264,3 +264,4 @@ shape = SubResource("RectangleShape2D_7e7gu")
 [connection signal="area_exited" from="puntuacio" to="." method="_on_puntuacio_area_exited"]
 [connection signal="area_entered" from="Obsacles_eliminar" to="." method="_on_obsacles_eliminar_area_entered"]
 [connection signal="pressed" from="resultat/resultat2/Button" to="." method="_on_button_pressed"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
