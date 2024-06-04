@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cy7hv3njt5jqm"]
+[gd_scene load_steps=18 format=3 uid="uid://cy7hv3njt5jqm"]
 
 [ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_ahhu8"]
 [ext_resource type="Script" path="res://Escenes/escena_ia.gd" id="1_uv4r2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="4_8ggo0"]
 [ext_resource type="PackedScene" uid="uid://7je0l4k3i20b" path="res://Escenes/Personatge.tscn" id="5_ekts1"]
 [ext_resource type="FontFile" uid="uid://cs11ai2xuag05" path="res://Recursos/flappy-font.ttf" id="6_6wc8m"]
+[ext_resource type="Script" path="res://Scripts/PersonatgeIA.gd" id="7_6lrb3"]
 [ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="7_dthcl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fueu7"]
@@ -119,6 +120,7 @@ shape = SubResource("RectangleShape2D_wbt7w")
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_ekts1")]
 position = Vector2(62, 187)
 scale = Vector2(2.5, 2.5)
+script = ExtResource("7_6lrb3")
 
 [node name="configuracio" type="Node" parent="."]
 script = SubResource("GDScript_3opii")
