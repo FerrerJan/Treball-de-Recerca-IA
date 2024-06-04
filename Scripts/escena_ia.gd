@@ -55,9 +55,6 @@ func _process(delta):
 		print('Altura del forat: '+ str(Global.posicio_obstacle))
 		print('-------------------------------------------------')
 		print('')
-	if Global.mort == false and Global.iniciat == true:
-		Vpos_personatge = $CharacterBody2D.get_global_position()
-		print(Global.posicio_obstacle_continua - Vpos_personatge)
 		
 		
 func _on_timer_timeout():

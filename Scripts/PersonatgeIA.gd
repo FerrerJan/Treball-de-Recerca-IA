@@ -17,6 +17,7 @@ var num_outputs = 1
 
 
 func _ready():
+	$CollisionShape2D.disabled = true
 	for _i in range(num_inputs):  # 3 neuronas de entrada
 		neurons.append(NEATNeuron.new())
 	for _i in range(num_hidden):  # 2 neuronas ocultas

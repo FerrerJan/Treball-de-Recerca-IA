@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://b3j3313davvg0"]
+
+[ext_resource type="Script" path="res://Scripts/PersonatgeIA.gd" id="1_jqy1y"]
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="2_b8m7y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y33h2"]
+radius = 6.08276
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cevw"]
+atlas = ExtResource("2_b8m7y")
+region = Rect2(0, 483, 28, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e62c3"]
+atlas = ExtResource("2_b8m7y")
+region = Rect2(28, 483, 28, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqpo0"]
+atlas = ExtResource("2_b8m7y")
+region = Rect2(56, 483, 28, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mxa6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cevw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e62c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqpo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e62c3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_l6mcy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_lkrcm"]
+resource_name = "normal"
+
+[sub_resource type="Animation" id="Animation_2tnrp"]
+resource_name = "rotacio"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.32645]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_01y2m"]
+_data = {
+"RESET": SubResource("Animation_l6mcy"),
+"normal": SubResource("Animation_lkrcm"),
+"rotacio": SubResource("Animation_2tnrp")
+}
+
+[node name="IA" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 142
+script = ExtResource("1_jqy1y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y33h2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3, -3)
+sprite_frames = SubResource("SpriteFrames_mxa6y")
+frame_progress = 0.580825
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_01y2m")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
