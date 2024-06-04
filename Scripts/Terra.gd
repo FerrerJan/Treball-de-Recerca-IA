@@ -22,5 +22,7 @@ func _on_rotacio_area_entered(area):
 	
 
 
+
 func _on_body_entered(body):
 	Global.mort = true
+

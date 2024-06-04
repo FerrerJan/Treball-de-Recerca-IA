@@ -14,10 +14,12 @@ var fitness = 0.0
 var num_inputs = 3
 var num_hidden = 2
 var num_outputs = 1
+var mort := false
+var life := true
 
 
 func _ready():
-	$CollisionShape2D.disabled = true
+	$CollisionShape2D.disabled = false
 	for _i in range(num_inputs):  # 3 neuronas de entrada
 		neurons.append(NEATNeuron.new())
 	for _i in range(num_hidden):  # 2 neuronas ocultas
@@ -34,13 +36,13 @@ func _ready():
 		connections[_i].weight = rng.randf() * 2 - 1
 
 func _physics_process(delta):
-	if Global.mort == false:
+	if mort == false:
 		var inputs := [get_global_position().y, Global.posicio_obstacle_continua[0], Global.posicio_obstacle_continua[1]] 
 		if not is_on_floor():
 			velocity.y += gravity * delta
 		if feedforward(inputs)[0] > 0.75:
 			velocity.y = JUMP_VELOCITY
-		if Global.life == true:
+		if life == true:
 			if velocity.y < 0:
 				$AnimatedSprite2D.play()
 				set_rotation(deg_to_rad(velocity.y * 0.05))
@@ -93,3 +95,13 @@ func feedforward(inputs):
 func sigmoid(x):
 	return 1 / (1 + exp(-x))
 
+
+
+func _on_area_2d_area_entered(area):
+	mort = true # Replace with function body.
+	$CollisionShape2D.disabled = false
+
+
+func _on_area_2d_body_entered(body):
+	mort = true # Replace with function body.
+	$CollisionShape2D.disabled = false
