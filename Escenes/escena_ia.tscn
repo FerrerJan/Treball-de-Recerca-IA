@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cy7hv3njt5jqm"]
+[gd_scene load_steps=17 format=3 uid="uid://cy7hv3njt5jqm"]
 
 [ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_ahhu8"]
+[ext_resource type="Script" path="res://Escenes/escena_ia.gd" id="1_uv4r2"]
 [ext_resource type="Texture2D" uid="uid://coa2h52ejspmb" path="res://icon.svg" id="2_ebxrb"]
 [ext_resource type="Script" path="res://Scripts/Terra.gd" id="3_s4yvk"]
 [ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="4_8ggo0"]
@@ -8,16 +9,16 @@
 [ext_resource type="FontFile" uid="uid://cs11ai2xuag05" path="res://Recursos/flappy-font.ttf" id="6_6wc8m"]
 [ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="7_dthcl"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jx65"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fueu7"]
 size = Vector2(2997.5, 52.7968)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vrif"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gt21"]
 size = Vector2(4499, 85.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi8qo"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbt7w"]
 size = Vector2(324.964, 502.031)
 
-[sub_resource type="GDScript" id="GDScript_7omf4"]
+[sub_resource type="GDScript" id="GDScript_3opii"]
 script/source = "extends Node
 
 
@@ -31,16 +32,20 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7co1s"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5iqum"]
 size = Vector2(20, 391)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lysmc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0upp"]
 size = Vector2(20, 486)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrrjk"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxdgy"]
 size = Vector2(325, 80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_211kk"]
+size = Vector2(88, 20)
+
 [node name="Escena IA" type="Node2D"]
+script = ExtResource("1_uv4r2")
 
 [node name="fondo" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -85,12 +90,12 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="terra/Terra/Area2D"]
 visible = false
 position = Vector2(-2, 0.783966)
-shape = SubResource("RectangleShape2D_1jx65")
+shape = SubResource("RectangleShape2D_fueu7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="terra"]
 position = Vector2(932.18, 106.25)
 scale = Vector2(0.446875, 0.531249)
-shape = SubResource("RectangleShape2D_4vrif")
+shape = SubResource("RectangleShape2D_0gt21")
 
 [node name="rotacio" type="Area2D" parent="."]
 position = Vector2(160.005, 240)
@@ -109,14 +114,14 @@ region_rect = Rect2(-0.947281, -0.157837, 129.829, 128.29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rotacio"]
 position = Vector2(-691.318, 117.406)
-shape = SubResource("RectangleShape2D_qi8qo")
+shape = SubResource("RectangleShape2D_wbt7w")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_ekts1")]
 position = Vector2(62, 187)
 scale = Vector2(2.5, 2.5)
 
 [node name="configuracio" type="Node" parent="."]
-script = SubResource("GDScript_7omf4")
+script = SubResource("GDScript_3opii")
 
 [node name="puntuacio" type="Area2D" parent="."]
 collision_layer = 32
@@ -124,7 +129,7 @@ collision_mask = 40
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="puntuacio"]
 position = Vector2(63, 197.5)
-shape = SubResource("RectangleShape2D_7co1s")
+shape = SubResource("RectangleShape2D_5iqum")
 
 [node name="Obsacles_eliminar" type="Area2D" parent="."]
 collision_layer = 64
@@ -132,7 +137,7 @@ collision_mask = 72
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obsacles_eliminar"]
 position = Vector2(-92, 243)
-shape = SubResource("RectangleShape2D_lysmc")
+shape = SubResource("RectangleShape2D_q0upp")
 
 [node name="terra2" type="StaticBody2D" parent="."]
 collision_layer = 128
@@ -140,7 +145,31 @@ collision_mask = 130
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="terra2"]
 position = Vector2(158.5, 443)
-shape = SubResource("RectangleShape2D_rrrjk")
+shape = SubResource("RectangleShape2D_hxdgy")
+
+[node name="clicar" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(163, 243)
+scale = Vector2(2.4428, 2.42161)
+texture = ExtResource("1_ahhu8")
+region_enabled = true
+region_rect = Rect2(291, 81, 59, 59)
+
+[node name="clicar2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(163, 114)
+scale = Vector2(2.4428, 2.42161)
+texture = ExtResource("1_ahhu8")
+region_enabled = true
+region_rect = Rect2(292, 58, 99, 27)
+
+[node name="volar_principi" type="StaticBody2D" parent="."]
+collision_layer = 128
+collision_mask = 130
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="volar_principi"]
+position = Vector2(64, 211)
+shape = SubResource("RectangleShape2D_211kk")
 
 [node name="Contador" type="Label" parent="."]
 texture_filter = 1
