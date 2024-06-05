@@ -14,3 +14,5 @@ var posicio_personatge_obstacles : Vector2
 var Z : int = 0
 var IA := true
 var noIA := false
+var num_IA : int = 0
+var morts_ia: int = 0

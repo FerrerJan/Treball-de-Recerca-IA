@@ -5,7 +5,7 @@ var IA_vives
 @onready var ia = preload("res://Escenes/ia.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	Global.num_IA = num_IA
 
 func _process(delta):
 	if Global.iniciat == true and Global.Z == 0:
