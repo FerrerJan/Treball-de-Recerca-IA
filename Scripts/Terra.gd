@@ -12,9 +12,10 @@ func _process(delta):
 	#var desp := Vector2(velocitat,0)*(-1)
 	if Global.mort == false:
 		var desp := Vector2(velocitat,0)*(-1)
-		position += desp
+		position += desp * delta
 		if Global.iniciat == true:
 			Global.distancia += 1
+	print(delta)
 
 
 func _on_rotacio_area_entered(area):

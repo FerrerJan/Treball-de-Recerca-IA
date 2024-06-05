@@ -77,7 +77,7 @@ scale = Vector2(2.23776, 1.88235)
 collision_layer = 4
 collision_mask = 22
 script = ExtResource("3_s4yvk")
-velocitat = 2.3
+velocitat = 138.0
 
 [node name="Terra" type="Sprite2D" parent="terra"]
 texture_filter = 1
