@@ -60,10 +60,18 @@ class NEATIndividual:
 		# Establecer las conexiones entre las neuronas
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
-		for _i in range(3 * 2 + 2 * 1):
-			connections[_i].from_neuron = rng.randi() % 3
-			connections[_i].to_neuron = rng.randi() % (3 + 2 + 1)
-			connections[_i].weight = rng.randf() * 2 - 1
+		var index := 0
+		for _i in range(num_inputs):
+			for _j in range(num_hidden):
+				connections[index].from_neuron = _i
+				connections[index].to_neuron = num_inputs + _j
+				connections[index].weight = rng.randf()
+				index += 1
+		for _j in range(num_hidden):
+			connections[index].from_neuron = _j
+			connections[index].to_neuron = num_inputs + num_hidden
+			connections[index].weight = rng.randf()
+			index += 1
 
 		# Establecer los inputs
 		for _i in range(3):
