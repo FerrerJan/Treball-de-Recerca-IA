@@ -48,7 +48,7 @@ func _physics_process(delta):
 		var inputs := [get_global_position().y / 5000, Global.posicio_obstacle_continua[0] / 5000, Global.posicio_obstacle_continua[1] / 5000] 
 		if not is_on_floor():
 			velocity.y += gravity * delta
-		if feedforward(inputs)[0] > 0.6:
+		if feedforward(inputs())[0] > 0.6:
 			velocity.y = JUMP_VELOCITY
 		if life == true:
 			if velocity.y < 0:
@@ -89,6 +89,9 @@ class NEATConnection:
 
 	func __init__():
 		pass
+
+func inputs():
+	var pos_y_obstacle := Global.posicio_obstacle_continua[1] * (3/140) + (3/14)
 
 func feedforward(inputs):
 	var outputs = []
