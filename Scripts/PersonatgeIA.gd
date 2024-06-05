@@ -94,12 +94,17 @@ func feedforward(inputs):
 	var outputs = []
 	for _i in range(num_inputs):
 		neurons[_i].output = inputs[_i]
-	var contection := 1
 	for _j in range(num_hidden):
+		var value := 0
 		for _i in range(num_inputs):
-			neurons[num_inputs + _j].output = sigmoid(neurons[num_inputs + _j].output * connections[_i].weight)
-	for _i in range(num_outputs):
-		neurons[num_inputs + num_hidden + _i].output = sigmoid(neurons[num_inputs + num_hidden + _i].output * connections[num_hidden + _i].weight)
+			value += neurons[num_inputs + _i].output * connections[_j + num_hidden * _i].weight
+		neurons[num_inputs + _j].output = sigmoid(value)
+	
+	for _j in range(num_outputs):
+		var value := 0
+		for _i in range(num_hidden):
+			value += neurons[num_inputs + num_hidden + _i].output * connections[num_inputs * num_hidden + num_outputs * _i + _j].weight
+		neurons[num_inputs + num_hidden + _j].output = sigmoid(value)
 	for _i in range(num_outputs):
 		outputs.append(neurons[num_inputs + num_hidden + _i].output)
 	print(outputs)
