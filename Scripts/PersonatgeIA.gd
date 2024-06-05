@@ -30,17 +30,25 @@ func _ready():
 		connections.append(NEATConnection.new())
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	for _i in range(num_inputs * num_hidden + num_hidden * num_outputs):
-		connections[_i].from_neuron = rng.randi() % 3
-		connections[_i].to_neuron = rng.randi() % (3 + 2 + 1)
-		connections[_i].weight = rng.randf() * 2 - 1
+	var index := 0
+	for _i in range(num_inputs):
+		for _j in range(num_hidden):
+			connections[index].from_neuron = _i
+			connections[index].to_neuron = num_inputs + _j
+			connections[index].weight = rng.randf()
+			index += 1
+	for _j in range(num_hidden):
+		connections[index].from_neuron = _j
+		connections[index].to_neuron = num_inputs + num_hidden
+		connections[index].weight = rng.randf()
+		index += 1
 
 func _physics_process(delta):
 	if mort == false:
 		var inputs := [get_global_position().y, Global.posicio_obstacle_continua[0], Global.posicio_obstacle_continua[1]] 
 		if not is_on_floor():
 			velocity.y += gravity * delta
-		if feedforward(inputs)[0] > 0.5:
+		if feedforward(inputs)[0] > 0.6:
 			velocity.y = JUMP_VELOCITY
 		if life == true:
 			if velocity.y < 0:
@@ -84,14 +92,17 @@ class NEATConnection:
 
 func feedforward(inputs):
 	var outputs = []
-	for i in range(num_inputs):
-		neurons[i].output = inputs[i]
-	for i in range(num_hidden):
-		neurons[num_inputs + i].output = sigmoid(neurons[num_inputs + i].output * connections[i].weight)
-	for i in range(num_outputs):
-		neurons[num_inputs + num_hidden + i].output = sigmoid(neurons[num_inputs + num_hidden + i].output * connections[num_hidden + i].weight)
-	for i in range(num_outputs):
-		outputs.append(neurons[num_inputs + num_hidden + i].output)
+	for _i in range(num_inputs):
+		neurons[_i].output = inputs[_i]
+	var contection := 1
+	for _j in range(num_hidden):
+		for _i in range(num_inputs):
+			neurons[num_inputs + _j].output = sigmoid(neurons[num_inputs + _j].output * connections[_i].weight)
+	for _i in range(num_outputs):
+		neurons[num_inputs + num_hidden + _i].output = sigmoid(neurons[num_inputs + num_hidden + _i].output * connections[num_hidden + _i].weight)
+	for _i in range(num_outputs):
+		outputs.append(neurons[num_inputs + num_hidden + _i].output)
+	print(outputs)
 	return outputs
 
 func sigmoid(x):
