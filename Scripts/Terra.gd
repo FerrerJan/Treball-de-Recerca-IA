@@ -15,7 +15,6 @@ func _process(delta):
 		position += desp * delta
 		if Global.iniciat == true:
 			Global.distancia += 1
-	print(delta)
 
 
 func _on_rotacio_area_entered(area):
@@ -27,7 +26,7 @@ func _on_rotacio_area_entered(area):
 func _on_body_entered(body):
 	if Global.IA == true:
 		Global.morts_ia += 1
-		print(body.get_global_position().x)
+		#print(body.get_global_position().x)
 		body.queue_free()
 	
 	else:

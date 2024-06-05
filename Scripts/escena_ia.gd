@@ -40,7 +40,6 @@ func _process(delta):
 			Global.Z = 0
 	if Global.morts_ia >= Global.num_IA and Global.IA == true:
 		Global.mort = true
-		print (Global.mort)
 	else:
 		pass
 		
@@ -59,7 +58,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
-	'''if Global.mort == true and Global.I == 0:
+	if Global.mort == true and Global.I == 0 and Global.IA == false:
 		posicio = $CharacterBody2D.get_global_position().y
 		Global.I += 1
 		print('')
@@ -70,7 +69,7 @@ func _process(delta):
 		print('Altura del forat: '+ str(Global.posicio_obstacle))
 		print('-------------------------------------------------')
 		print('')
-	'''
+	
 		
 		
 	if Input.is_action_just_pressed("I"):

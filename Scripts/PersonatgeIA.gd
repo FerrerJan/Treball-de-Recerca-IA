@@ -105,7 +105,7 @@ func feedforward(inputs):
 		for _i in range(num_hidden):
 			value += neurons[num_inputs + _i].output * connections[num_inputs * num_hidden + num_outputs * _i + _j].weight
 			#print(neurons[num_inputs + _i].output,' - ', connections[num_inputs * num_hidden + num_outputs * _i + _j].weight)
-			print(value , ' - ' , sigmoid(value))
+			#print(value , ' - ' , sigmoid(value))
 		neurons[num_inputs + num_hidden + _j].output = sigmoid(value)
 	for _i in range(num_outputs):
 		outputs.append(neurons[num_inputs + num_hidden + _i].output)

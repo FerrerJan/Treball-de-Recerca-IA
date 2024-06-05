@@ -131,6 +131,10 @@ num_IA = 30
 [node name="configuracio" type="Node" parent="."]
 script = SubResource("GDScript_3opii")
 
+[node name="CharacterBody2D" parent="." instance=ExtResource("10_dlkbu")]
+position = Vector2(50, 185)
+scale = Vector2(2.5, 2.5)
+
 [node name="puntuacio" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 40
@@ -247,10 +251,6 @@ theme_override_font_sizes/font_size = 26
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("10_dlkbu")]
-position = Vector2(50, 185)
-scale = Vector2(2.5, 2.5)
 
 [node name="Area2D" type="Area2D" parent="."]
 
