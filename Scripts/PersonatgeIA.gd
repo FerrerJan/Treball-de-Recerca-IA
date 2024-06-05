@@ -45,7 +45,7 @@ func _ready():
 
 func _physics_process(delta):
 	if mort == false:
-		var inputs := [get_global_position().y, Global.posicio_obstacle_continua[0], Global.posicio_obstacle_continua[1]] 
+		var inputs := [get_global_position().y / 5000, Global.posicio_obstacle_continua[0] / 5000, Global.posicio_obstacle_continua[1] / 5000] 
 		if not is_on_floor():
 			velocity.y += gravity * delta
 		if feedforward(inputs)[0] > 0.6:
@@ -97,13 +97,15 @@ func feedforward(inputs):
 	for _j in range(num_hidden):
 		var value := 0
 		for _i in range(num_inputs):
-			value += neurons[num_inputs + _i].output * connections[_j + num_hidden * _i].weight
+			value += neurons[_i].output * connections[_j + num_hidden * _i].weight
 		neurons[num_inputs + _j].output = sigmoid(value)
 	
 	for _j in range(num_outputs):
 		var value := 0
 		for _i in range(num_hidden):
-			value += neurons[num_inputs + num_hidden + _i].output * connections[num_inputs * num_hidden + num_outputs * _i + _j].weight
+			value += neurons[num_inputs + _i].output * connections[num_inputs * num_hidden + num_outputs * _i + _j].weight
+			#print(neurons[num_inputs + _i].output,' - ', connections[num_inputs * num_hidden + num_outputs * _i + _j].weight)
+			print(value , ' - ' , sigmoid(value))
 		neurons[num_inputs + num_hidden + _j].output = sigmoid(value)
 	for _i in range(num_outputs):
 		outputs.append(neurons[num_inputs + num_hidden + _i].output)
