@@ -38,10 +38,11 @@ func _process(delta):
 		if Global.IA == true:
 			$CharacterBody2D.queue_free()
 			Global.Z = 0
-			if Global.morts_ia >= Global.num_IA:
-				Global.mort == true
-		else:
-			pass
+	if Global.morts_ia >= Global.num_IA and Global.IA == true:
+		Global.mort = true
+		print (Global.mort)
+	else:
+		pass
 		
 	$Contador.text = str(Global.punts)
 	$Contador2.text = str(Global.punts)
@@ -73,8 +74,12 @@ func _process(delta):
 		
 		
 	if Input.is_action_just_pressed("I"):
-		Global.IA = Global.IA
-		Global.noIA = Global.noIA
+		if Global.IA == true:
+			Global.IA = false
+			Global.noIA = true
+		else:
+			Global.IA = true
+			Global.noIA = false
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
 	if Input.is_action_just_pressed("R"):
