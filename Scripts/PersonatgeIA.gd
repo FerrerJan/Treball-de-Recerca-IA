@@ -99,3 +99,12 @@ func sigmoid(x):
 
 
 
+
+'''
+func _on_area_2d_area_entered(area):
+	gravity = 0 # Replace with function body.
+	SPEED = -200
+'''
+
+func _on_area_2d_body_entered(body):
+	mort = true

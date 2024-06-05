@@ -110,7 +110,8 @@ func _on_puntuacio_area_exited(area):
 	Global.posicio_obstacle_continua = Vector2(1000,1000)
 	#print(Global.punts)
 
-
+'''
 func _on_area_2d_area_entered(area):
 	area.get_parent().mort = true # Replace with function body.
 	area.get_parent().collision.disabled = false # Replace with function body.
+'''
