@@ -24,5 +24,11 @@ func _on_rotacio_area_entered(area):
 
 
 func _on_body_entered(body):
-	Global.mort = true
+	if Global.IA == true:
+		Global.morts_ia += 1
+		print(body.get_global_position().x)
+		body.queue_free()
+	
+	else:
+		Global.mort = true
 

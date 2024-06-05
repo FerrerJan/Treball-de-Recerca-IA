@@ -19,7 +19,7 @@ var life := true
 
 
 func _ready():
-	$CollisionShape2D.disabled = true
+	$CollisionShape2D.disabled = false
 	for _i in range(num_inputs):  # 3 neuronas de entrada
 		neurons.append(NEATNeuron.new())
 	for _i in range(num_hidden):  # 2 neuronas ocultas

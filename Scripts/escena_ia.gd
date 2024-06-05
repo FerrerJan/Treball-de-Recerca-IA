@@ -9,6 +9,7 @@ var posicio_obstacles = Vector2(0,0)
 var Vpos_personatge : Vector2
 @onready var collision = $CollisionShape2D
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.mort = false
@@ -22,6 +23,7 @@ func _ready():
 	Global.I = 0
 	posicio = 0
 	Global.Z = 1
+	Global.morts_ia = 0
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,6 +38,8 @@ func _process(delta):
 		if Global.IA == true:
 			$CharacterBody2D.queue_free()
 			Global.Z = 0
+			if Global.morts_ia >= Global.num_IA:
+				Global.mort == true
 		else:
 			pass
 		
@@ -44,6 +48,7 @@ func _process(delta):
 	$maxim.text = str(Global.maxim)
 	if Global.punts > Global.maxim:
 		Global.maxim = Global.punts 
+		
 	if Global.mort == true:
 		$Obstacles/Timer.stop()
 		$resultat.visible = true
@@ -68,8 +73,8 @@ func _process(delta):
 		
 		
 	if Input.is_action_just_pressed("I"):
-		Global.IA = !Global.IA
-		Global.noIA = !Global.noIA
+		Global.IA = Global.IA
+		Global.noIA = Global.noIA
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
 	if Input.is_action_just_pressed("R"):
