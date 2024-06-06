@@ -35,12 +35,12 @@ func _ready():
 		for _j in range(num_hidden):
 			connections[index].from_neuron = _i
 			connections[index].to_neuron = num_inputs + _j
-			connections[index].weight = rng.randf()
+			connections[index].weight = rng.randf_range(-1.0, 1.0)
 			index += 1
 	for _j in range(num_hidden):
 		connections[index].from_neuron = _j
 		connections[index].to_neuron = num_inputs + num_hidden
-		connections[index].weight = rng.randf()
+		connections[index].weight = rng.randf_range(-1.0, 1.0)
 		index += 1
 
 func _physics_process(delta):
@@ -90,9 +90,9 @@ class NEATConnection:
 		pass
 
 func inputs():
-	var pos_y_bird := get_global_position().y * (24.0/1585.0) + 3.0
-	var pos_x_obstacle := Global.posicio_obstacle_continua[1] * (3.0/230.0) - (78.0/23.0)
-	var pos_y_obstacle := -Global.posicio_obstacle_continua[1] * (3.0/140.0) - (3.0/14.0)
+	var pos_y_bird :float = get_global_position().y #* (24.0/1585.0) + 3.0
+	var pos_x_obstacle :float = Global.posicio_obstacle_continua[1] #* (3.0/230.0) - (78.0/23.0)
+	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1] #* (3.0/140.0) - (3.0/14.0)
 	
 	return [pos_y_bird, pos_x_obstacle, pos_y_obstacle]
 
@@ -100,7 +100,7 @@ func feedforward(inputs):
 	var outputs = []
 	for _i in range(num_inputs):
 		neurons[_i].output = inputs[_i]
-	var value = 0
+	var value :float = 0.0
 	for _j in range(num_hidden):
 		value = 0
 		for _i in range(num_inputs):
