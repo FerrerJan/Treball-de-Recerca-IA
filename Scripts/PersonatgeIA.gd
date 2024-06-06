@@ -90,9 +90,9 @@ class NEATConnection:
 		pass
 
 func inputs():
-	var pos_y_bird := -get_global_position().y * (24/1585) + 3
-	var pos_x_obstacle := Global.posicio_obstacle_continua[1] * (3/230) - (78/23)
-	var pos_y_obstacle := -Global.posicio_obstacle_continua[1] * (3/140) - (3/14)
+	var pos_y_bird := get_global_position().y * (24.0/1585.0) + 3.0
+	var pos_x_obstacle := Global.posicio_obstacle_continua[1] * (3.0/230.0) - (78.0/23.0)
+	var pos_y_obstacle := -Global.posicio_obstacle_continua[1] * (3.0/140.0) - (3.0/14.0)
 	
 	return [pos_y_bird, pos_x_obstacle, pos_y_obstacle]
 
@@ -105,14 +105,14 @@ func feedforward(inputs):
 		value = 0
 		for _i in range(num_inputs):
 			value += neurons[_i].output * connections[_j + num_hidden * _i].weight
-		neurons[num_inputs + _j].output = sigmoid(value)
+		neurons[num_inputs + _j].output = value
 	
 	for _j in range(num_outputs):
 		value = 0
 		for _i in range(num_hidden):
 			value += neurons[num_inputs + _i].output * connections[num_inputs * num_hidden + num_outputs * _i + _j].weight
 			#print(neurons[num_inputs + _i].output * connections[num_inputs * num_hidden + num_outputs * _i + _j].weight)
-		print(sigmoid(value))
+		#print(sigmoid(value))
 		neurons[num_inputs + num_hidden + _j].output = sigmoid(value)
 	for _i in range(num_outputs):
 		outputs.append(neurons[num_inputs + num_hidden + _i].output)
