@@ -148,6 +148,9 @@ func mutar():
 		if n == 0:
 			connections[rng.randi_range(0, len(connections))].weight = rng.randf_range(-1, 1)
 		elif n == 1:
+			for connection in connections:
+				if connection.to_neuron == len(neurons) - 1:
+					connection.to_neuron += 1
 			connections.insert(len(connections) - 1, NEATConnection.new())
 			connections[len(connections) - 2].from_neuron = rng.randi_range(0, len(neurons) - 2)
 			connections[len(connections) - 2].to_neuron = rng.randi_range(num_inputs, len(neurons) - 1)
