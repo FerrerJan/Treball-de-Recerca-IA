@@ -73,7 +73,7 @@ func _physics_process(delta):
 		if not is_on_floor():            
 			velocity.y += gravity * delta        
 		# Saltar si la salida de la red neuronal es mayor que 0.6        
-		if feedforward(inputs())[0] > 0.6:            
+		if feedforward(inputs())[0] > 0.9:            
 			velocity.y = JUMP_VELOCITY        
 		# Animación y movimiento si está vivo        
 		if life == true:            
@@ -123,7 +123,7 @@ func feedforward(inputs):
 		neurons[_i].output = inputs[_i]
 	for _i in range(num_outputs):
 		valor(_i + num_inputs + num_hidden)
-		outputs.append(neurons[_i + num_inputs + num_hidden].output)
+		outputs.append(sigmoid(neurons[_i + num_inputs + num_hidden].output))
 	'''
 	for _i in range(num_inputs):
 		neurons[_i].output = inputs[_i]
@@ -174,7 +174,7 @@ func mutar():
 			for connection in connections:
 				if connection.to_neuron == len(neurons) - 1:
 					connection.to_neuron += 1
-			# Agregar neurona
+			# Agregar conexión
 			connections.insert(len(connections) - 1, NEATConnection.new())
 			connections[len(connections) - 2].from_neuron = rng.randi_range(0, len(neurons) - 2)
 			connections[len(connections) - 2].to_neuron = rng.randi_range(num_inputs, len(neurons) - 1)

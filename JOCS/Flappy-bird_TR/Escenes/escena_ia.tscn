@@ -123,7 +123,7 @@ shape = SubResource("RectangleShape2D_wbt7w")
 position = Vector2(54, 183)
 scale = Vector2(2, 2)
 script = ExtResource("6_kgc84")
-num_IA = 1000
+num_IA = 20
 
 [node name="configuracio" type="Node" parent="."]
 script = SubResource("GDScript_3opii")
