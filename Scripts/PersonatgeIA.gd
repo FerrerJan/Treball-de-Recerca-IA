@@ -37,11 +37,12 @@ func _ready():
 			connections[index].to_neuron = num_inputs + _j
 			connections[index].weight = rng.randf_range(-1.0, 1.0)
 			index += 1
-	for _j in range(num_hidden):
-		connections[index].from_neuron = _j
-		connections[index].to_neuron = num_inputs + num_hidden
-		connections[index].weight = rng.randf_range(-1.0, 1.0)
-		index += 1
+	for _i in range(num_outputs):
+		for _j in range(num_hidden):
+			connections[index].from_neuron = _j
+			connections[index].to_neuron = num_inputs + num_hidden + _i
+			connections[index].weight = rng.randf_range(-1.0, 1.0)
+			index += 1
 
 func _physics_process(delta):
 	if mort == false:
@@ -137,6 +138,21 @@ func valor(n):
 		elif conection.to_neuron == n and neurons[conection.from_neuron].output == 0:
 			output += valor(conection.from_neuron)
 	neurons[n].output = output
+
+func mutar():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	if rng.randf() < 0.1:
+		var n :int = rng.randi_range(0, 2)
+		if n == 0:
+			connections[rng.randi_range(0, len(connections))].weight = rng.randf_range(-1, 1)
+		elif n == 1:
+			connections.insert(len(connections) - 1, NEATConnection.new())
+			connections[len(connections) - 2].from_neuron = rng.randi_range(0, len(neurons) - 2)
+			connections[len(connections) - 2].to_neuron = rng.randi_range(num_inputs, len(neurons) - 1)
+			connections[len(connections) - 2].weight = rng.randf_range(-1.0, 1.0)
+		elif n == 2:
+			neurons.insert(len(connections) - 1, NEATNeuron.new())
 
 func _on_area_2d_body_entered(body):
 	mort = true
