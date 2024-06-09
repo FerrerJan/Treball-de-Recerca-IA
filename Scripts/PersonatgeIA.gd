@@ -10,7 +10,7 @@ var gravity = (ProjectSettings.get_setting("physics/2d/default_gravity"))/1.4
 
 var neurons = []
 var connections = []
-var fitness = 0.0
+var fitness := 0.0
 var num_inputs = 3
 var num_hidden = 2
 var num_outputs = 1
@@ -46,6 +46,7 @@ func _ready():
 
 func _physics_process(delta):
 	if mort == false:
+		fitness = Global.distancia
 		if not is_on_floor():
 			velocity.y += gravity * delta
 		if feedforward(inputs())[0] > 0.6:
@@ -143,7 +144,7 @@ func mutar():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	if rng.randf() < 0.1:
-		var n :int = rng.randi_range(0, 2)
+		var n :int = rng.randi_range(0, 4)
 		if n == 0:
 			connections[rng.randi_range(0, len(connections))].weight = rng.randf_range(-1, 1)
 		elif n == 1:
@@ -152,7 +153,24 @@ func mutar():
 			connections[len(connections) - 2].to_neuron = rng.randi_range(num_inputs, len(neurons) - 1)
 			connections[len(connections) - 2].weight = rng.randf_range(-1.0, 1.0)
 		elif n == 2:
-			neurons.insert(len(connections) - 1, NEATNeuron.new())
+			neurons.insert(len(neurons) - 1, NEATNeuron.new())
+			connections.insert(len(connections) - 1, NEATConnection.new())
+			while connections[len(connections) - 2].from_neuron == connections[len(connections) - 2].to_neuron:
+				connections[len(connections) - 2].from_neuron = len(neurons) - 2
+				connections[len(connections) - 2].to_neuron = rng.randi_range(num_inputs, len(neurons) - 1)
+			connections[len(connections) - 2].weight = rng.randf_range(-1.0, 1.0)
+			connections.insert(len(connections) - 1, NEATConnection.new())
+			connections[len(connections) - 2].from_neuron = rng.randi_range(0, len(neurons) - 3)
+			connections[len(connections) - 2].to_neuron = len(neurons) - 1
+			connections[len(connections) - 2].weight = rng.randf_range(-1.0, 1.0)
+		elif n == 3:
+			connections.remove_at(rng.randi_range(0, len(connections) - 1))
+		elif n == 4:
+			var m := rng.randi_range(num_inputs, len(neurons) - 2)
+			neurons.remove_at(m)
+			for connection in connections:
+				if connection.to_neuron == m or connection.from_neuron == m:
+					connections.erase(connection)
 
 func _on_area_2d_body_entered(body):
 	mort = true
