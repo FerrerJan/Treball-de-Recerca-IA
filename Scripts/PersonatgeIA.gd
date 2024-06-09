@@ -171,6 +171,10 @@ func mutar():
 			for connection in connections:
 				if connection.to_neuron == m or connection.from_neuron == m:
 					connections.erase(connection)
+				if connection.to_neuron > m:
+					connection.to_neuron -= 1
+				if connection.from_neuron > m:
+					connection.from_neuron -= 1
 
 func _on_area_2d_body_entered(body):
 	mort = true
