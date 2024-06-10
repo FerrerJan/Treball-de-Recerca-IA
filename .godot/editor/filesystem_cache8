@@ -1,0 +1,31 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1717863534
+icon.svg::CompressedTexture2D::5757138655285401781::1717324230::1717324235::1::::<><>::
+::res://Escenes/::1717796262
+Escena principal.tscn::PackedScene::4567467739378053443::1717677589::0::1::::<><>::res://Scripts/Escena principal.gd<>uid://dmbwxm0gim8uc::::res://Recursos/Tilemaps/59894.png<>uid://bx4nlu06uhgrv::::res://Escenes/obstacles.tscn<>uid://cdqtgjttec2b3::::res://Recursos/Tilemaps/598942.png<>res://Scripts/Terra.gd<>uid://coa2h52ejspmb::::res://icon.svg<>uid://7je0l4k3i20b::::res://Escenes/Personatge.tscn<>uid://cs11ai2xuag05::::res://Recursos/flappy-font.ttf<>uid://nvq3j6kv7vjk::::res://Recursos/Tilemaps/SPRITES.webp
+escena_ia.tscn::PackedScene::6523897714622020944::1717796262::0::1::::<><>::uid://dmbwxm0gim8uc::::res://Recursos/Tilemaps/59894.png<>res://Scripts/escena_ia.gd<>uid://coa2h52ejspmb::::res://icon.svg<>uid://bx4nlu06uhgrv::::res://Escenes/obstacles.tscn<>res://Scripts/Terra.gd<>uid://cdqtgjttec2b3::::res://Recursos/Tilemaps/598942.png<>uid://cs11ai2xuag05::::res://Recursos/flappy-font.ttf<>res://Scripts/Creador_de_IAs.gd<>uid://nvq3j6kv7vjk::::res://Recursos/Tilemaps/SPRITES.webp<>uid://7je0l4k3i20b::::res://Escenes/Personatge.tscn
+ia.tscn::PackedScene::4372039192370127425::1717677589::0::1::::<><>::res://Scripts/PersonatgeIA.gd<>uid://dmbwxm0gim8uc::::res://Recursos/Tilemaps/59894.png
+inici.tscn::PackedScene::2524215036447306299::1717677588::0::1::::<><>::uid://dmbwxm0gim8uc::::res://Recursos/Tilemaps/59894.png<>res://Scripts/Terra.gd<>uid://cdqtgjttec2b3::::res://Recursos/Tilemaps/598942.png<>uid://coa2h52ejspmb::::res://icon.svg<>res://Scripts/AnimationPlayer.gd<>uid://nvq3j6kv7vjk::::res://Recursos/Tilemaps/SPRITES.webp<>res://Scripts/Button.gd
+obstacles.tscn::PackedScene::4061441097397118087::1717677588::0::1::::<><>::res://Scripts/Obstacles.gd<>uid://dmbwxm0gim8uc::::res://Recursos/Tilemaps/59894.png
+Personatge.tscn::PackedScene::2264910532070560319::1717677588::0::1::::<><>::res://Scripts/Personatge.gd<>uid://dmbwxm0gim8uc::::res://Recursos/Tilemaps/59894.png
+::res://NEAT/::1717579512
+config.txt::TextFile::-1::1717492039::0::1::::<><>::
+XarxaNeuronal.gd::GDScript::-1::1717579512::0::1::::<>Node<>::
+::res://Recursos/::1717410118
+flappy-font.ttf::FontFile::6091493479256536936::1717410095::1717410118::1::::<><>::
+::res://Recursos/Tilemaps/::1717328459
+59894.png::CompressedTexture2D::8004970068774552206::1717324868::1717324876::1::::<><>::
+598942.png::CompressedTexture2D::5017602782921411354::1717328449::1717328459::1::::<><>::
+SPRITES.webp::CompressedTexture2D::956828895326064608::1717324313::1717324766::1::::<><>::
+::res://Scripts/::1717796263
+AnimationPlayer.gd::GDScript::-1::1717417260::0::1::::<>AnimationPlayer<>::
+Button.gd::GDScript::-1::1717420512::0::1::::<>Button<>::
+Colisions.txt::TextFile::-1::1717405742::0::1::::<><>::
+Creador_de_IAs.gd::GDScript::-1::1717796263::0::1::::<>Node2D<>::
+Escena principal.gd::GDScript::-1::1717517728::0::1::::<>Node2D<>::
+escena_ia.gd::GDScript::-1::1717657541::0::1::::<>Node2D<>::
+Global.gd::GDScript::-1::1717657541::0::1::::<>Node<>::
+Obstacles.gd::GDScript::-1::1717591103::0::1::::<>Node2D<>::
+Personatge.gd::GDScript::-1::1717423930::0::1::::<>CharacterBody2D<>::
+PersonatgeIA.gd::GDScript::-1::1717765037::0::1::::<>CharacterBody2D<>::
+Terra.gd::GDScript::-1::1717591103::0::1::::<>Area2D<>::
