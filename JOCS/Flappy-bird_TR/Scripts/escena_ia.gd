@@ -116,5 +116,5 @@ func _on_button_pressed():
 func _on_puntuacio_area_exited(area):
 	Global.punts += 1
 	Global.distancia += 50
-	Global.posicio_obstacle_continua = Vector2(490, -10)
+	Global.posicio_obstacle_continua = Vector2(490, 400)
 	#print(Global.punts)
