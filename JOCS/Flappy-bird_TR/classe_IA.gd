@@ -1,11 +1,11 @@
-extends Node
+class_name IA extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+var neurons = []
+var connections = []
+var fitness := 0.0	
+	
+func _init(n_inputs, n_hidden, n_outputs):
+	var num_inputs = n_inputs
+	var num_hidden = n_hidden
+	var num_outputs = n_outputs
+#holaaa
