@@ -209,3 +209,13 @@ func mutar():
 func _on_area_2d_body_entered(body):
 	# Muerte del pájaro
 	mort = true
+
+
+
+func mateixa_especie(xarxaNeuronal):
+	if len(connections) != len(xarxaNeuronal.connections):
+		return false
+	for _i in len(connections):
+		if not connections[_i].to_neuron == xarxaNeuronal.connections[_i].to_neuron and connections[_i].from_neuron == xarxaNeuronal.connections[_i].from_neuron:
+			return false
+	return true
