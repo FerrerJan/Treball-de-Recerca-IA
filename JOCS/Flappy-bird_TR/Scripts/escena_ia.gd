@@ -76,7 +76,7 @@ func _process(delta):
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
 	if Input.is_action_just_pressed("R"):
-		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+		Global.mort = true
 		
 	if Input.is_action_just_pressed("Xarxa_aleatoria"): #Tecla 'A'
 		for ia in Global.population:
