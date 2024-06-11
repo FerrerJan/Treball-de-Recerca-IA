@@ -73,12 +73,8 @@ func _process(delta):
 		
 		
 	if Input.is_action_just_pressed("I"):
-		if Global.IA == true:
-			Global.IA = false
-			Global.noIA = true
-		else:
-			Global.IA = true
-			Global.noIA = false
+		Global.IA = !Global.IA
+		Global.noIA = !Global.noIA
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
 	if Input.is_action_just_pressed("R"):
