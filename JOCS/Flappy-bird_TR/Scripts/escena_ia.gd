@@ -40,8 +40,6 @@ func _process(delta):
 			Global.Z = 0
 	if Global.morts_ia >= Global.num_IA and Global.IA == true:
 		Global.mort = true
-	else:
-		pass
 		
 	$Contador.text = str(Global.punts)
 	$Contador2.text = str(Global.punts)
