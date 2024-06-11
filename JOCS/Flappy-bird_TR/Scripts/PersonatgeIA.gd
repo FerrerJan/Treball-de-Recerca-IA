@@ -17,7 +17,7 @@ var p := 0
 func _physics_process(delta):
 	# Verificar si el pájaro está muerto
 	
-	if mort == false:
+	if mort == false and Global.mort == false:
 		# Actualizar la fitness        
 		Global.population[p].fitness = Global.distancia        
 		# Aplicar gravedad si no está en el suelo        
