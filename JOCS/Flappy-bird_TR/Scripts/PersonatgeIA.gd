@@ -17,6 +17,7 @@ var num_hidden = 2
 var num_outputs = 1
 var mort := false
 var life := true
+var p := 0
 
 #Classes necesarias para la red neuronal
 class NEATNeuron:
@@ -72,8 +73,9 @@ func _physics_process(delta):
 		if not is_on_floor():            
 			velocity.y += gravity * delta        
 		# Saltar si la salida de la red neuronal es mayor que 0.6        
-		if feedforward(inputs())[0] > 0.9:            
+		if Global.population[p].feedforward(inputs())[0] > 0.9:            
 			velocity.y = JUMP_VELOCITY        
+			print(p)
 		# Animación y movimiento si está vivo        
 		if life == true:            
 			if velocity.y < 0:
