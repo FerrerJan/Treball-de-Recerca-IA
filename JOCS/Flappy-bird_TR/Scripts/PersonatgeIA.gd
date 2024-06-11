@@ -13,20 +13,22 @@ var mort := false
 var life := true
 var p := 0
 
+func _ready():
+	Global.population[p].fitness = 0
 
 func _physics_process(delta):
 	# Verificar si el pájaro está muerto
 	
 	if mort == false and Global.mort == false:
-		# Actualizar la fitness        
-		Global.population[p].fitness = Global.distancia        
+		# Actualizar la fitness 
+		Global.population[p].fitness = Global.distancia  
 		# Aplicar gravedad si no está en el suelo        
 		if not is_on_floor():            
 			velocity.y += gravity * delta        
 		# Saltar si la salida de la red neuronal es mayor que 0.6        
-		if Global.population[p].feedforward(inputs())[0] > 0.9:            
-			velocity.y = JUMP_VELOCITY        
-			print(p)
+		if Global.population[p].feedforward(inputs())[0] > 0.9:    
+			print(p)        
+			velocity.y = JUMP_VELOCITY
 		# Animación y movimiento si está vivo        
 		if life == true:            
 			if velocity.y < 0:

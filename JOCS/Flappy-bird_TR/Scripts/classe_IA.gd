@@ -9,6 +9,9 @@ class ia:
 	var num_outputs :int = 1
 		
 	func _init(n_inputs, n_hidden, n_outputs):
+		neurons = []
+		connections = []
+		fitness = 0
 		num_inputs = n_inputs
 		num_hidden = n_hidden
 		num_outputs = n_outputs
@@ -77,19 +80,20 @@ class ia:
 			elif conection.to_neuron == n and neurons[conection.from_neuron].output == 0:
 				output += valor(conection.from_neuron)
 		neurons[n].output = output
+		return output
 
 
 	func mutar():
 		# Mutación de la red neuronal
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
-		var num_neurons := 6
+		var num_neurons := neurons.size()
 		var num_connections := connections.size()
 		if rng.randf() <= 1:
 			var n :int = rng.randi_range(0, 4)
 			if n == 0:
 				# Cambio de peso
-				connections[rng.randi_range(0, num_connections)].weight = rng.randf_range(-1, 1)
+				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1, 1)
 			elif n == 1:
 				for connection in connections:
 					if connection.to_neuron == num_neurons - 1:
@@ -117,10 +121,11 @@ class ia:
 				connections[num_connections - 2].from_neuron = rng.randi_range(0, num_neurons - 3)
 				connections[num_connections - 2].to_neuron = num_neurons - 1
 				connections[num_connections - 2].weight = rng.randf_range(-1.0, 1.0)
+				num_hidden += 1
 			elif n == 3:
 				# Eliminar conexión
 				connections.remove_at(rng.randi_range(0, num_connections - 1))
-			elif n == 4:
+			elif n == 4 and num_neurons > 4:
 				# Eliminar neurona
 				var m := rng.randi_range(num_inputs, num_neurons - 2)
 				neurons.remove_at(m)
@@ -131,6 +136,8 @@ class ia:
 						connection.to_neuron -= 1
 					if connection.from_neuron > m:
 						connection.from_neuron -= 1
+				num_hidden -= 1
+			
 
 
 	func mateixa_especie(xarxaNeuronal):
