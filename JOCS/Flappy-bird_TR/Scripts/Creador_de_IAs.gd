@@ -16,10 +16,9 @@ func _process(delta):
 			add_child(IA.instantiate())
 			get_child(i).p = i
 		Global.Z += 1 
-	'''
 	if Global.mort and train_enable:
 		train_enable = !train_enable
-		var mostra := int(num_IA * 0.1 + 2)
+		var mostra := 1 #int(num_IA * 0.1 + 2)
 		var millors := []
 		var fitness := []
 		for i in Global.population:
@@ -31,17 +30,22 @@ func _process(delta):
 		for _i in range(mostra, num_IA):
 			var rng = RandomNumberGenerator.new()
 			rng.randomize()
-			var r := rng.randi_range(0, mostra -1)
+			var r := rng.randi_range(0, mostra - 1)
 			Global.population.append(ClasseIa.ia.new())
-			Global.population[_i].neurons = Global.population[r].neurons
-			Global.population[_i].connections = Global.population[r].connections 
+			Global.population[_i].neurons = []
+			for _j in range(Global.population[r].neurons.size()):
+				Global.population[_i].neurons.append(Global.population[r].neurons[_j])
+			Global.population[_i].connections = []
+			for _j in range(Global.population[r].connections.size()):
+				Global.population[_i].connections.append(Global.population[r].connections[_j])
 			Global.population[_i].num_inputs = Global.population[r].num_inputs
 			Global.population[_i].num_hidden = Global.population[r].num_hidden
 			Global.population[_i].num_outputs = Global.population[r].num_outputs
 			Global.population[_i].fitness = 0
 			Global.population[_i].mutar()
+			print('m')
 
 			
 			
 	elif !Global.mort and !train_enable:
-		train_enable = !train_enable'''
+		train_enable = !train_enable
