@@ -27,7 +27,6 @@ func _physics_process(delta):
 			velocity.y += gravity * delta        
 		# Saltar si la salida de la red neuronal es mayor que 0.6        
 		if Global.population[p].feedforward(inputs())[0] > 0.9:    
-			print(p)        
 			velocity.y = JUMP_VELOCITY
 		# Animación y movimiento si está vivo        
 		if life == true:            

@@ -7,14 +7,8 @@ class ia:
 	var num_inputs :int = 3
 	var num_hidden :int = 2
 	var num_outputs :int = 1
-		
-	func _init(n_inputs, n_hidden, n_outputs):
-		neurons = []
-		connections = []
-		fitness = 0
-		num_inputs = n_inputs
-		num_hidden = n_hidden
-		num_outputs = n_outputs
+	
+	func _init():
 		xarxa_aleatoria()
 		
 
@@ -48,9 +42,10 @@ class ia:
 				connections[index].to_neuron = num_inputs + _j
 				connections[index].weight = rng.randf_range(-1.0, 1.0)
 				index += 1
+				
 		for _i in range(num_outputs):
 			for _j in range(num_hidden):
-				connections[index].from_neuron = _j
+				connections[index].from_neuron = _j + num_inputs
 				connections[index].to_neuron = num_inputs + num_hidden + _i
 				connections[index].weight = rng.randf_range(-1.0, 1.0)
 				index += 1

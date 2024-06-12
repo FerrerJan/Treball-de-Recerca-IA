@@ -8,7 +8,7 @@ var train_enable := true
 func _ready():
 	Global.num_IA = num_IA
 	for i in range(num_IA):
-		Global.population.append(ClasseIa.ia.new(3, 2, 1))
+		Global.population.append(ClasseIa.ia.new())
 
 func _process(delta):
 	if Global.iniciat == true and Global.Z == 0:
@@ -16,7 +16,7 @@ func _process(delta):
 			add_child(IA.instantiate())
 			get_child(i).p = i
 		Global.Z += 1 
-	
+	'''
 	if Global.mort and train_enable:
 		train_enable = !train_enable
 		var mostra := int(num_IA * 0.1 + 2)
@@ -32,7 +32,7 @@ func _process(delta):
 			var rng = RandomNumberGenerator.new()
 			rng.randomize()
 			var r := rng.randi_range(0, mostra -1)
-			Global.population.append(ClasseIa.ia.new(3, 2, 1))
+			Global.population.append(ClasseIa.ia.new())
 			Global.population[_i].neurons = Global.population[r].neurons
 			Global.population[_i].connections = Global.population[r].connections 
 			Global.population[_i].num_inputs = Global.population[r].num_inputs
@@ -40,8 +40,8 @@ func _process(delta):
 			Global.population[_i].num_outputs = Global.population[r].num_outputs
 			Global.population[_i].fitness = 0
 			Global.population[_i].mutar()
-		print(len(Global.population))
+
 			
 			
 	elif !Global.mort and !train_enable:
-		train_enable = !train_enable
+		train_enable = !train_enable'''
