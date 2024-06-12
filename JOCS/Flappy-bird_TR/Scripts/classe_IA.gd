@@ -4,7 +4,7 @@ class ia:
 	var neurons = []
 	var connections = []
 	var fitness :int = 0
-	var num_inputs :int = 3
+	var num_inputs :int = 2
 	var num_hidden :int = 0
 	var num_outputs :int = 1
 	
@@ -152,3 +152,18 @@ class ia:
 			if not connections[_i].to_neuron == xarxaNeuronal.connections[_i].to_neuron and connections[_i].from_neuron == xarxaNeuronal.connections[_i].from_neuron:
 				return false
 		return true
+		
+	func copia(xarxaNeuronal):
+		neurons = []
+		for _j in range(xarxaNeuronal.neurons.size()):
+			neurons.append(NEATNeuron.new())
+		connections = []
+		for _j in range(xarxaNeuronal.connections.size()):
+			connections.append(NEATConnection.new())
+			connections[connections.size() - 1].to_neuron = xarxaNeuronal.connections[_j].to_neuron
+			connections[connections.size() - 1].from_neuron = xarxaNeuronal.connections[_j].from_neuron
+			connections[connections.size() - 1].weight = xarxaNeuronal.connections[_j].weight
+		num_inputs = xarxaNeuronal.num_inputs
+		num_hidden = xarxaNeuronal.num_hidden
+		num_outputs = xarxaNeuronal.num_outputs
+		fitness = 0
