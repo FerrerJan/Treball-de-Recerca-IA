@@ -18,7 +18,8 @@ func _ready():
 
 func _physics_process(delta):
 	# Verificar si el pájaro está muerto
-	
+	if global_position.y < 0:
+		Global.population[p].fitness -= 10 * delta
 	if mort == false and Global.mort == false:
 		# Actualizar la fitness 
 		Global.population[p].fitness = Global.distancia  
@@ -51,7 +52,8 @@ func _physics_process(delta):
 		# Animación de muerte        
 		if not is_on_floor():            
 			velocity.y += gravity * delta * 2        
-		else:            
+		else:   
+			Global.population[p].fitness -= 100    
 			velocity = Vector2(-200, 0)        
 		$AnimatedSprite2D.stop()
 		if animacio == 0 and velocity.y > 0:
@@ -65,9 +67,12 @@ func _physics_process(delta):
 func inputs():
 	# Entradas para la red neuronal
 	var pos_y_bird :float = get_global_position().y
-	var pos_x_obstacle :float = Global.posicio_obstacle_continua[1]
-	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1] 
-	return [pos_y_bird, pos_x_obstacle, pos_y_obstacle]
+	var pos_x_obstacle :float = Global.posicio_obstacle_continua[0]
+	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
+	var velocitat :float = velocity.y
+	var top :float = 0.0
+	var bot :float = 395.0
+	return [pos_y_bird, pos_y_obstacle, pos_x_obstacle]
 
 
 func _on_area_2d_body_entered(body):

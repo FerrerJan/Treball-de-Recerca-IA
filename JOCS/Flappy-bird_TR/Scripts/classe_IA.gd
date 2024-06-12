@@ -4,8 +4,8 @@ class ia:
 	var neurons = []
 	var connections = []
 	var fitness :int = 0
-	var num_inputs :int = 3
-	var num_hidden :int = 2
+	var num_inputs :int = 2
+	var num_hidden :int = 0
 	var num_outputs :int = 1
 	
 	func _init():
@@ -29,26 +29,36 @@ class ia:
 			neurons.append(NEATNeuron.new())
 		for _i in range(num_outputs):  # 1 neurona de salida
 			neurons.append(NEATNeuron.new())
-		# Creación de conexiones entre neuronas
-		for _i in range(num_inputs * num_hidden + num_hidden * num_outputs):  # Conexiones entre neuronas
-			connections.append(NEATConnection.new())
 		# Inicialización de pesos aleatorios
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
 		var index := 0
-		for _i in range(num_inputs):
-			for _j in range(num_hidden):
-				connections[index].from_neuron = _i
-				connections[index].to_neuron = num_inputs + _j
-				connections[index].weight = rng.randf_range(-1.0, 1.0)
-				index += 1
-				
-		for _i in range(num_outputs):
-			for _j in range(num_hidden):
-				connections[index].from_neuron = _j + num_inputs
-				connections[index].to_neuron = num_inputs + num_hidden + _i
-				connections[index].weight = rng.randf_range(-1.0, 1.0)
-				index += 1
+		if num_hidden > 0:
+			for _i in range(num_inputs * num_hidden + num_hidden * num_outputs):  # Conexiones entre neuronas
+				connections.append(NEATConnection.new())
+			for _i in range(num_inputs):
+				for _j in range(num_hidden):
+					connections[index].from_neuron = _i
+					connections[index].to_neuron = num_inputs + _j
+					connections[index].weight = rng.randf_range(-1.0, 1.0)
+					index += 1
+					
+			for _i in range(num_outputs):
+				for _j in range(num_hidden):
+					connections[index].from_neuron = _j + num_inputs
+					connections[index].to_neuron = num_inputs + num_hidden + _i
+					connections[index].weight = rng.randf_range(-1.0, 1.0)
+					index += 1
+		
+		else:
+			for _i in range(num_inputs * num_outputs):  # Conexiones entre neuronas
+				connections.append(NEATConnection.new())
+			for _i in range(num_inputs):
+				for _j in range(num_outputs):
+					connections[index].from_neuron = _i
+					connections[index].to_neuron = num_inputs + _j
+					connections[index].weight = rng.randf_range(-1.0, 1.0)
+					index += 1
 
 
 	func feedforward(inputs):
@@ -85,10 +95,10 @@ class ia:
 		var num_neurons := neurons.size()
 		var num_connections := connections.size()
 		if rng.randf() <= 1:
-			var n :int = rng.randi_range(0, 4)
+			var n :int = 0 # rng.randi_range(0, 4)
 			if n == 0:
 				# Cambio de peso
-				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1, 1)
+				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1.0, 1.0)
 			elif n == 1:
 				for connection in connections:
 					if connection.to_neuron == num_neurons - 1:
@@ -142,3 +152,18 @@ class ia:
 			if not connections[_i].to_neuron == xarxaNeuronal.connections[_i].to_neuron and connections[_i].from_neuron == xarxaNeuronal.connections[_i].from_neuron:
 				return false
 		return true
+		
+	func copia(xarxaNeuronal):
+		neurons = []
+		for _j in range(xarxaNeuronal.neurons.size()):
+			neurons.append(NEATNeuron.new())
+		connections = []
+		for _j in range(xarxaNeuronal.connections.size()):
+			connections.append(NEATConnection.new())
+			connections[connections.size() - 1].to_neuron = xarxaNeuronal.connections[_j].to_neuron
+			connections[connections.size() - 1].from_neuron = xarxaNeuronal.connections[_j].from_neuron
+			connections[connections.size() - 1].weight = xarxaNeuronal.connections[_j].weight
+		num_inputs = xarxaNeuronal.num_inputs
+		num_hidden = xarxaNeuronal.num_hidden
+		num_outputs = xarxaNeuronal.num_outputs
+		fitness = 0
