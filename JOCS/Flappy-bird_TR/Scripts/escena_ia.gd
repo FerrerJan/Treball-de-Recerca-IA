@@ -32,6 +32,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if !Global.mort:
+		var fitness := []
+		for i in Global.population:
+				fitness.append(i.fitness)
+		print(fitness)
 	if Global.repetir == true and Global.iniciat == false:
 		Global.iniciat = true
 		$Obstacles/Timer.start()
@@ -58,7 +63,7 @@ func _process(delta):
 		
 		Global.mort = true
 		
-	print(str(Global.morts_ia)+' / '+str(Global.num_IA) )
+	#print(str(Global.morts_ia)+' / '+str(Global.num_IA) )
 	
 	$Contador.text = str(Global.punts)
 	$Contador2.text = str(Global.punts)

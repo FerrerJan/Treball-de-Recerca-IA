@@ -21,10 +21,10 @@ func _physics_process(delta):
 	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
 	# Verificar si el pájaro está muerto
 	if global_position.y < 0:
-		Global.population[p].fitness -= 10 * delta
+		Global.population[p].fitness -= 100
 	if mort == false and Global.mort == false:
 		# Actualizar la fitness 
-		Global.population[p].fitness = Global.distancia
+		Global.population[p].fitness += Global.distancia
 		#Añadir fitness relativo a la distancia y del pajaro respecto la altura de la tuberia
 		Global.population[p].fitness += 100 - ((100/395) * abs(pos_y_obstacle - pos_y_bird))
 		# Aplicar gravedad si no está en el suelo        
