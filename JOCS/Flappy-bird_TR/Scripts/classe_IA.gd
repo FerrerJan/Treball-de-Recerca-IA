@@ -109,15 +109,18 @@ class ia:
 				if maxconnections() > num_connections:
 					connections.append(NEATConnection.new())
 					var enable := false
-					while connections[num_connections].from_neuron == connections[num_connections].to_neuron or !enable:
-						connections[num_connections - 1].from_neuron = rng.randi_range(0, num_neurons - 2)
-						connections[num_connections - 1].to_neuron = rng.randi_range(num_inputs, num_neurons - 1)
-						for connection in connections:
-							if connections[num_connections - 1].from_neuron == connection.to_neuron and connections[num_connections - 1].to_neuron ==connection.from_neuron:
-								enable = false
-								break
-							enable = true
-					connections[num_connections - 1].weight = rng.randf_range(-1.0, 1.0)
+					for _i in range(1000):
+						if connections[num_connections].from_neuron == connections[num_connections].to_neuron or !enable:
+							connections[num_connections].from_neuron = rng.randi_range(0, num_neurons - 2)
+							connections[num_connections].to_neuron = rng.randi_range(0, num_neurons - 1)
+							for connection in connections:
+								enable = true
+								if connections[num_connections].from_neuron == connection.to_neuron and connections[num_connections].to_neuron == connection.from_neuron:
+									enable = false
+									break
+						else:
+							break
+					connections[num_connections].weight = rng.randf_range(-1.0, 1.0)
 				else:
 					n += 1
 			elif n == 2:
