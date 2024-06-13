@@ -95,7 +95,7 @@ class ia:
 		var num_neurons := neurons.size()
 		var num_connections := connections.size()
 		if rng.randf() <= 1:
-			var n :int = 1 # rng.randi_range(0, 4)
+			var n :int = 0 # rng.randi_range(0, 4)
 			if n == 0:
 				# Cambio de peso
 				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1.0, 1.0)
@@ -175,3 +175,9 @@ class ia:
 		num_hidden = xarxaNeuronal.num_hidden
 		num_outputs = xarxaNeuronal.num_outputs
 		fitness = 0
+		
+	func maxconnections():
+		var maxconnections :int = 0
+		
+		func maxconnectionsinlayer(numneurons):
+			var numconnections :int = 0
