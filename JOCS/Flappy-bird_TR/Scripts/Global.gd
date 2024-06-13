@@ -17,3 +17,4 @@ var noIA := false
 var num_IA : int = 0
 var morts_ia: int = 0
 var population := []
+var repetir := false

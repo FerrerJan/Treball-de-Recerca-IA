@@ -10,10 +10,22 @@ var Vpos_personatge : Vector2
 @onready var collision = $CollisionShape2D
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.mort = false
-	Global.iniciat = false
+	if Global.repetir == false:
+		Global.iniciat = false
+		Global.Z = 1
+	else:
+		Global.iniciat = true
+		$Obstacles/Timer.start()
+		$volar_principi/CollisionShape2D.disabled = true
+		$clicar.visible = false
+		$clicar2.visible = false
+		$CharacterBody2D.queue_free()
+		Global.Z = 0
+		
 	Global.punts = 0
 	Global.distancia = 0
 	Global.posicio_obstacle = 0
@@ -22,7 +34,6 @@ func _ready():
 	$maxim.visible = false
 	Global.I = 0
 	posicio = 0
-	Global.Z = 1
 	Global.morts_ia = 0
 	
 
@@ -38,9 +49,13 @@ func _process(delta):
 		if Global.IA == true:
 			$CharacterBody2D.queue_free()
 			Global.Z = 0
+			
 	if Global.morts_ia >= Global.num_IA and Global.IA == true:
+		
 		Global.mort = true
 		
+	print(str(Global.morts_ia)+' / '+str(Global.num_IA) )
+	
 	$Contador.text = str(Global.punts)
 	$Contador2.text = str(Global.punts)
 	$maxim.text = str(Global.maxim)
@@ -48,11 +63,15 @@ func _process(delta):
 		Global.maxim = Global.punts 
 		
 	if Global.mort == true:
-		$Obstacles/Timer.stop()
-		$resultat.visible = true
-		$Contador.visible = false
-		$Contador2.visible = true
-		$maxim.visible = true
+		if Global.repetir == false:
+			$Obstacles/Timer.stop()
+			$resultat.visible = true
+			$Contador.visible = false
+			$Contador2.visible = true
+			$maxim.visible = true
+		else:
+			get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+			
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
@@ -81,7 +100,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("Xarxa_aleatoria"): #Tecla 'A'
 		for ia in Global.population:
 			ia.xarxa_aleatoria()
-		
+	if Input.is_action_just_pressed("K"):
+		Global.repetir = true
+		print('a')
 		
 func _on_timer_timeout():
 	if Global.iniciat == true:
