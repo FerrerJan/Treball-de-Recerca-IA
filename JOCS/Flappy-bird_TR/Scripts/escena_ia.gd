@@ -37,6 +37,7 @@ func _process(delta):
 		for i in Global.population:
 				fitness.append(i.fitness)
 		print(fitness)
+		Global.max_fitness_index = fitness.find(fitness.max())
 	if Global.repetir == true and Global.iniciat == false:
 		Global.iniciat = true
 		$Obstacles/Timer.start()

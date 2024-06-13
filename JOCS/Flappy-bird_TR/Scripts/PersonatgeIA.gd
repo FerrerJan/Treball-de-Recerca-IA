@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 # Constantes
 const SPEED = 300.0
 const JUMP_VELOCITY = -200.0
@@ -7,7 +8,7 @@ var animacio = 0
 
 # Constantes de gravedad y velocidad
 var gravity = (ProjectSettings.get_setting("physics/2d/default_gravity"))/1.4
-
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 var mort := false
 var life := true
@@ -27,6 +28,11 @@ func _physics_process(delta):
 		Global.population[p].fitness += Global.distancia
 		#Añadir fitness relativo a la distancia y del pajaro respecto la altura de la tuberia
 		Global.population[p].fitness += 100 - ((100/395) * abs(pos_y_obstacle - pos_y_bird))
+		#resaltar pajaro con mayor popolación
+		if p == Global.max_fitness_index:
+			animated_sprite_2d.set_self_modulate(Color8(255, 255, 255, 255))
+		else:
+			animated_sprite_2d.set_self_modulate(Color8(255, 255, 255, 100)) 
 		# Aplicar gravedad si no está en el suelo        
 		if not is_on_floor():            
 			velocity.y += gravity * delta        
