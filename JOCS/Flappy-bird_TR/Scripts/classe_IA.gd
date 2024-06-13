@@ -95,27 +95,31 @@ class ia:
 		var num_neurons := neurons.size()
 		var num_connections := connections.size()
 		if rng.randf() <= 1:
-			var n :int = 0 # rng.randi_range(0, 4)
+			var n :int = 1 # rng.randi_range(0, 4)
 			if n == 0:
 				# Cambio de peso
 				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1.0, 1.0)
 			elif n == 1:
+				'''
 				for connection in connections:
 					if connection.to_neuron == num_neurons - 1:
 						connection.to_neuron += 1
+					'''
 				# Agregar conexión
-				
-				connections.append(NEATConnection.new())
-				var enable := false
-				while connections[num_connections - 1].from_neuron == connections[num_connections - 2].to_neuron or !enable:
-					connections[num_connections - 1].from_neuron = rng.randi_range(0, num_neurons - 2)
-					connections[num_connections - 1].to_neuron = rng.randi_range(num_inputs, num_neurons - 1)
-					for connection in connections:
-						if connections[num_connections - 1].from_neuron == connection.to_neuron and connections[num_connections - 1].to_neuron ==connection.from_neuron:
-							enable = false
-							break
-						enable = true
-				connections[num_connections - 1].weight = rng.randf_range(-1.0, 1.0)
+				if maxconnections() > num_connections:
+					connections.append(NEATConnection.new())
+					var enable := false
+					while connections[num_connections - 1].from_neuron == connections[num_connections - 2].to_neuron or !enable:
+						connections[num_connections - 1].from_neuron = rng.randi_range(0, num_neurons - 2)
+						connections[num_connections - 1].to_neuron = rng.randi_range(num_inputs, num_neurons - 1)
+						for connection in connections:
+							if connections[num_connections - 1].from_neuron == connection.to_neuron and connections[num_connections - 1].to_neuron ==connection.from_neuron:
+								enable = false
+								break
+							enable = true
+					connections[num_connections - 1].weight = rng.randf_range(-1.0, 1.0)
+				else:
+					n += 1
 			elif n == 2:
 				# Agregar neurona y conexión
 				neurons.insert(num_neurons - 1, NEATNeuron.new())
@@ -178,6 +182,14 @@ class ia:
 		
 	func maxconnections():
 		var maxconnections :int = 0
-		
-		func maxconnectionsinlayer(numneurons):
-			var numconnections :int = 0
+		maxconnections += num_inputs * num_hidden + num_inputs * num_outputs + num_hidden * num_outputs
+		maxconnections += maxconnectionsinlayer(num_inputs)
+		maxconnections += maxconnectionsinlayer(num_hidden)
+		maxconnections += maxconnectionsinlayer(num_outputs)
+		return maxconnections
+	func maxconnectionsinlayer(numneurons):
+		var numconnections :int = 0
+		for n in range(numneurons):
+			numconnections += n
+		return numconnections
+	

@@ -36,6 +36,7 @@ func _process(delta):
 			Global.population.append(ClasseIa.ia.new())
 			Global.population[_i].copia(Global.population[r])
 			Global.population[_i].mutar()
+			print('m')
 
 			
 			
