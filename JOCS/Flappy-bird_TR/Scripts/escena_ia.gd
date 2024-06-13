@@ -8,24 +8,15 @@ var posicio: float
 var posicio_obstacles = Vector2(0,0)
 var Vpos_personatge : Vector2
 @onready var collision = $CollisionShape2D
+var activat := false
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.mort = false
-	if Global.repetir == false:
-		Global.iniciat = false
-		Global.Z = 1
-	else:
-		Global.iniciat = true
-		$Obstacles/Timer.start()
-		$volar_principi/CollisionShape2D.disabled = true
-		$clicar.visible = false
-		$clicar2.visible = false
-		$CharacterBody2D.queue_free()
-		Global.Z = 0
-		
+	Global.iniciat = false
+	Global.Z = 1
 	Global.punts = 0
 	Global.distancia = 0
 	Global.posicio_obstacle = 0
@@ -36,9 +27,22 @@ func _ready():
 	posicio = 0
 	Global.morts_ia = 0
 	
+	 
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Global.repetir == true and Global.iniciat == false:
+		Global.iniciat = true
+		$Obstacles/Timer.start()
+		$volar_principi/CollisionShape2D.disabled = true
+		$clicar.visible = false
+		$clicar2.visible = false
+		
+		if Global.IA == true:
+			$CharacterBody2D.queue_free()
+			Global.Z = 0
+		
 	if Input.is_action_just_pressed("espai") and Global.iniciat == false:
 		Global.iniciat = true
 		$Obstacles/Timer.start()
@@ -100,9 +104,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("Xarxa_aleatoria"): #Tecla 'A'
 		for ia in Global.population:
 			ia.xarxa_aleatoria()
+			
 	if Input.is_action_just_pressed("K"):
-		Global.repetir = true
-		print('a')
+		Global.repetir = !Global.repetir
+		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 		
 func _on_timer_timeout():
 	if Global.iniciat == true:
