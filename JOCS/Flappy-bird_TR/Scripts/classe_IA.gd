@@ -5,7 +5,7 @@ class ia:
 	var connections = []
 	var fitness :int = 0
 	var num_inputs :int = 2
-	var num_hidden :int = 0
+	var num_hidden :int = 1
 	var num_outputs :int = 1
 	
 	func _init():
@@ -124,24 +124,26 @@ class ia:
 				else:
 					n += 1
 			elif n == 2:
-				# Agregar neurona y conexión
+				# Agregar neurona y conexiónes a esta
+				for connection in connections:
+					if connection.to_neuron == num_neurons - 1:
+						connection.to_neuron = num_neurons
 				neurons.insert(num_neurons - 1, NEATNeuron.new())
-				connections.insert(num_connections - 1, NEATConnection.new())
-				var enable := false
-				while connections[num_connections - 2].from_neuron == connections[num_connections - 2].to_neuron or !enable:
-					for i in range(num_connections):
-						if connections[num_connections - 2].from_neuron == connections[i].to_neuron and connections[num_connections - 2].to_neuron == connections[i].from_neuron:
-							enable = false
-							break
-						enable = true
-					connections[num_connections - 2].from_neuron = num_neurons - 2
-					connections[num_connections - 2].to_neuron = rng.randi_range(num_inputs, num_neurons - 1)
-				connections[num_connections - 2].weight = rng.randf_range(-1.0, 1.0)
-				connections.insert(num_connections - 1, NEATConnection.new())
-				connections[num_connections - 2].from_neuron = rng.randi_range(0, num_neurons - 3)
-				connections[num_connections - 2].to_neuron = num_neurons - 1
-				connections[num_connections - 2].weight = rng.randf_range(-1.0, 1.0)
+				connections.append(NEATConnection.new())
+				for i in range(1000):
+					connections[num_connections].to_neuron = rng.randi_range(num_inputs, num_neurons)
+					if connections[num_connections].to_neuron != num_neurons - 1:
+						break
+					else:
+						connections[num_connections].to_neuron = num_neurons
+				connections[num_connections].from_neuron = num_neurons - 1
+				connections[num_connections].weight = rng.randf_range(-1.0, 1.0)
+				connections.append(NEATConnection.new())
+				connections[num_connections + 1].from_neuron = rng.randi_range(0, num_neurons - 2)
+				connections[num_connections + 1].to_neuron = num_neurons - 1
+				connections[num_connections + 1].weight = rng.randf_range(-1.0, 1.0)
 				num_hidden += 1
+				print('fet')
 			elif n == 3:
 				# Eliminar conexión
 				connections.remove_at(rng.randi_range(0, num_connections - 1))
