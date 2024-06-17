@@ -19,3 +19,4 @@ var morts_ia: int = 0
 var population := []
 var repetir := false
 var max_fitness_index: int = 0 
+var gen := 0

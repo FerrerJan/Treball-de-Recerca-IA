@@ -32,11 +32,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(Global.gen)
 	if !Global.mort:
 		var fitness := []
 		for i in Global.population:
 				fitness.append(i.fitness)
-		print(fitness)
 		Global.max_fitness_index = fitness.find(fitness.max())
 	if Global.repetir == true and Global.iniciat == false:
 		Global.iniciat = true
