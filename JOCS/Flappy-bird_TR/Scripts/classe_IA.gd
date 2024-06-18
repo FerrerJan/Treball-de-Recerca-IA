@@ -87,7 +87,6 @@ class ia:
 		neurons[n].output = output
 		return output
 
-
 	func mutar():
 		# Mutación de la red neuronal
 		var rng = RandomNumberGenerator.new()
@@ -114,10 +113,10 @@ class ia:
 							connections[num_connections].from_neuron = rng.randi_range(0, num_neurons - 2)
 							connections[num_connections].to_neuron = rng.randi_range(0, num_neurons - 1)
 							for connection in connections:
-								enable = true
 								if connections[num_connections].from_neuron == connection.to_neuron and connections[num_connections].to_neuron == connection.from_neuron:
 									enable = false
 									break
+								enable = true
 						else:
 							break
 					connections[num_connections].weight = rng.randf_range(-1.0, 1.0)
@@ -136,7 +135,7 @@ class ia:
 						break
 					else:
 						connections[num_connections].to_neuron = num_neurons
-				connections[num_connections].from_neuron = num_neurons - 1
+				#connections[num_connections].from_neuron = num_neurons - 1
 				connections[num_connections].weight = rng.randf_range(-1.0, 1.0)
 				connections.append(NEATConnection.new())
 				connections[num_connections + 1].from_neuron = rng.randi_range(0, num_neurons - 2)
@@ -159,8 +158,6 @@ class ia:
 						connection.from_neuron -= 1
 				num_hidden -= 1
 			
-
-
 	func mateixa_especie(xarxaNeuronal):
 		if connections.size() != len(xarxaNeuronal.connections):
 			return false
@@ -183,7 +180,7 @@ class ia:
 		num_hidden = xarxaNeuronal.num_hidden
 		num_outputs = xarxaNeuronal.num_outputs
 		fitness = 0
-		
+
 	func maxconnections():
 		var maxconnections :int = 0
 		maxconnections += num_inputs * num_hidden + num_inputs * num_outputs + num_hidden * num_outputs
@@ -191,6 +188,7 @@ class ia:
 		maxconnections += maxconnectionsinlayer(num_hidden)
 		maxconnections += maxconnectionsinlayer(num_outputs)
 		return maxconnections
+
 	func maxconnectionsinlayer(numneurons):
 		var numconnections :int = 0
 		for n in range(numneurons):
