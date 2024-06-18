@@ -5,7 +5,7 @@ class ia:
 	var connections = []
 	var fitness :int = 0
 	var num_inputs :int = 2
-	var num_hidden :int = 1
+	var num_hidden :int = 0
 	var num_outputs :int = 1
 	
 	func _init():
@@ -95,7 +95,7 @@ class ia:
 		var num_neurons := neurons.size()
 		var num_connections := connections.size()
 		if rng.randf() <= 1:
-			var n :int = 2 # rng.randi_range(0, 4)
+			var n :int =  rng.randi_range(0, 3)
 			if n == 0:
 				# Cambio de peso
 				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1.0, 1.0)
@@ -143,11 +143,10 @@ class ia:
 				connections[num_connections + 1].to_neuron = num_neurons - 1
 				connections[num_connections + 1].weight = rng.randf_range(-1.0, 1.0)
 				num_hidden += 1
-				print('fet')
 			elif n == 3:
 				# Eliminar conexión
 				connections.remove_at(rng.randi_range(0, num_connections - 1))
-			elif n == 4 and num_neurons > 4:
+			elif n == 4 and num_neurons > num_inputs + num_outputs:
 				# Eliminar neurona
 				var m := rng.randi_range(num_inputs, num_neurons - 2)
 				neurons.remove_at(m)
