@@ -113,7 +113,7 @@ func _process(delta):
 			
 	if Input.is_action_just_pressed("K"):
 		Global.repetir = !Global.repetir
-		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+		#get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 		
 func _on_timer_timeout():
 	if Global.iniciat == true:

@@ -94,16 +94,11 @@ class ia:
 		var num_neurons := neurons.size()
 		var num_connections := connections.size()
 		if rng.randf() <= 1:
-			var n :int =  rng.randi_range(0, 3)
+			var n :int = rng.randi_range(0, 3)
 			if n == 0:
 				# Cambio de peso
 				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1.0, 1.0)
 			elif n == 1:
-				'''
-				for connection in connections:
-					if connection.to_neuron == num_neurons - 1:
-						connection.to_neuron += 1
-					'''
 				# Agregar conexión
 				if maxconnections() > num_connections:
 					connections.append(NEATConnection.new())
@@ -149,13 +144,14 @@ class ia:
 				# Eliminar neurona
 				var m := rng.randi_range(num_inputs, num_neurons - 2)
 				neurons.remove_at(m)
-				for connection in connections:
-					if connection.to_neuron == m or connection.from_neuron == m:
-						connections.erase(connection)
-					if connection.to_neuron > m:
-						connection.to_neuron -= 1
-					if connection.from_neuron > m:
-						connection.from_neuron -= 1
+				for i in range(num_connections - 1, -1, -1):
+					if connections[i].to_neuron == m or connections[i].from_neuron == m:
+						connections.remove_at(i)
+					else:
+						if connections[i].to_neuron > m:
+							connections[i].to_neuron -= 1
+						if connections[i].from_neuron > m:
+							connections[i].from_neuron -= 1
 				num_hidden -= 1
 			
 	func mateixa_especie(xarxaNeuronal):
