@@ -3,6 +3,7 @@ extends Node2D
 @export var num_IA := 0
 var IA_vives
 @onready var IA = preload("res://Escenes/ia.tscn")
+var xarxa_neuronal_preparada := false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.num_IA = num_IA
@@ -30,10 +31,11 @@ func _ready():
 			Global.population[_i].copia(Global.population[r])
 			Global.population[_i].mutar()
 	Global.gen += 1
+	xarxa_neuronal_preparada = true
 	
 
 func _process(delta):
-	if Global.iniciat == true and Global.Z == 0:
+	if Global.iniciat == true and Global.Z == 0 and xarxa_neuronal_preparada:
 		for i in range(num_IA):
 			add_child(IA.instantiate())
 			get_child(i).p = i

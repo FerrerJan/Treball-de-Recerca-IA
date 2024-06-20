@@ -79,7 +79,8 @@ class ia:
 	func valor(n, m):
 		# Valor de una neurona
 		var output :float = 0.0
-		if m > 1022:
+		if m > 1000:
+			neurons[n].output = 0
 			return 0
 		for conection in connections:
 			if conection.to_neuron == n and neurons[conection.from_neuron].output != 0:
