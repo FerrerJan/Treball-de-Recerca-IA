@@ -9,13 +9,15 @@ var animacio = 0
 # Constantes de gravedad y velocidad
 var gravity = (ProjectSettings.get_setting("physics/2d/default_gravity"))/1.4
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var label = $Label
 
 var mort := false
 var life := true
 var p := 0
 
-func _ready():
+func inici():
 	Global.population[p].fitness = 0
+	label.text = str(p)
 
 func _physics_process(delta):
 	var pos_y_bird :float = get_global_position().y

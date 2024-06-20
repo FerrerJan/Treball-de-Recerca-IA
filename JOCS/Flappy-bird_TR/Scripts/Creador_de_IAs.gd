@@ -37,4 +37,5 @@ func _process(delta):
 		for i in range(num_IA):
 			add_child(IA.instantiate())
 			get_child(i).p = i
+			get_child(i).inici()
 		Global.Z += 1 

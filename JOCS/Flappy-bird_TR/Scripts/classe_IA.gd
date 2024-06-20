@@ -124,16 +124,16 @@ class ia:
 						connection.to_neuron = num_neurons
 				neurons.insert(num_neurons - 1, NEATNeuron.new())
 				connections.append(NEATConnection.new())
+				connections.append(NEATConnection.new())
 				for i in range(1000):
 					connections[num_connections].to_neuron = rng.randi_range(num_inputs, num_neurons)
-					if connections[num_connections].to_neuron != num_neurons - 1:
+					connections[num_connections + 1].from_neuron = rng.randi_range(0, num_neurons - 2)
+					if connections[num_connections].to_neuron != num_neurons - 1 and connections[num_connections].to_neuron != connections[num_connections + 1].from_neuron:
 						break
 					else:
 						connections[num_connections].to_neuron = num_neurons
-				#connections[num_connections].from_neuron = num_neurons - 1
+				connections[num_connections].from_neuron = num_neurons - 1
 				connections[num_connections].weight = rng.randf_range(-1.0, 1.0)
-				connections.append(NEATConnection.new())
-				connections[num_connections + 1].from_neuron = rng.randi_range(0, num_neurons - 2)
 				connections[num_connections + 1].to_neuron = num_neurons - 1
 				connections[num_connections + 1].weight = rng.randf_range(-1.0, 1.0)
 				num_hidden += 1

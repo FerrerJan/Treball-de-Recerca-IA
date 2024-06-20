@@ -32,12 +32,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(Global.gen)
+	#print(Global.gen)
 	if !Global.mort:
 		var fitness := []
 		for i in Global.population:
 				fitness.append(i.fitness)
 		Global.max_fitness_index = fitness.find(fitness.max())
+		print(Global.max_fitness_index)
 	if Global.repetir == true and Global.iniciat == false:
 		Global.iniciat = true
 		$Obstacles/Timer.start()
@@ -145,5 +146,5 @@ func _on_button_pressed():
 func _on_puntuacio_area_exited(area):
 	Global.punts += 1
 	Global.distancia += 50
-	Global.posicio_obstacle_continua = Vector2(490, 400)
+	Global.posicio_obstacle_continua = Vector2(490, 300)
 	#print(Global.punts)
