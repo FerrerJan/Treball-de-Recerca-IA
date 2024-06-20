@@ -67,7 +67,7 @@ class ia:
 		for _i in range(num_inputs):
 			neurons[_i].output = inputs[_i]
 		for _i in range(num_outputs):
-			valor(_i + num_inputs + num_hidden)
+			valor(_i + num_inputs + num_hidden, 1)
 			outputs.append(sigmoid(neurons[_i + num_inputs + num_hidden].output))
 		return outputs
 
@@ -76,14 +76,16 @@ class ia:
 		# Función sigmoide
 		return 1 / (1 + exp(-x))
 
-	func valor(n):
+	func valor(n, m):
 		# Valor de una neurona
 		var output :float = 0.0
+		if m > 1022:
+			return 0
 		for conection in connections:
 			if conection.to_neuron == n and neurons[conection.from_neuron].output != 0:
 				output += neurons[conection.from_neuron].output * conection.weight
 			elif conection.to_neuron == n and neurons[conection.from_neuron].output == 0:
-				output += valor(conection.from_neuron)
+				output += valor(conection.from_neuron, m + 1)
 		neurons[n].output = output
 		return output
 

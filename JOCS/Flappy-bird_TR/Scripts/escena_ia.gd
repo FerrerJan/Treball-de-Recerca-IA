@@ -9,7 +9,7 @@ var posicio_obstacles = Vector2(0,0)
 var Vpos_personatge : Vector2
 @onready var collision = $CollisionShape2D
 var activat := false
-
+var repetir_escena_enable := true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -73,15 +73,17 @@ func _process(delta):
 	if Global.punts > Global.maxim:
 		Global.maxim = Global.punts 
 		
-	if Global.mort == true:
+	if Global.mort:
 		if Global.repetir == false:
 			$Obstacles/Timer.stop()
 			$resultat.visible = true
 			$Contador.visible = false
 			$Contador2.visible = true
 			$maxim.visible = true
-		else:
-			get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+		elif repetir_escena_enable:
+			print('time starts')
+			repetir_escena_enable = false
+			$Repetir_escena.start()
 			
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
@@ -148,3 +150,8 @@ func _on_puntuacio_area_exited(area):
 	Global.distancia += 50
 	Global.posicio_obstacle_continua = Vector2(490, 300)
 	#print(Global.punts)
+
+
+func _on_repetir_escena_timeout():
+	print('time out')
+	get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
