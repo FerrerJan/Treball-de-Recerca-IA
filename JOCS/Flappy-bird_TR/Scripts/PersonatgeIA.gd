@@ -23,13 +23,9 @@ func _physics_process(delta):
 	var pos_y_bird :float = get_global_position().y
 	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
 	# Verificar si el pájaro está muerto
-	if global_position.y < 0:
-		Global.population[p].fitness -= 100
 	if mort == false and Global.mort == false:
 		# Actualizar la fitness 
-		Global.population[p].fitness += Global.distancia
-		#Añadir fitness relativo a la distancia y del pajaro respecto la altura de la tuberia
-		Global.population[p].fitness += 100 - ((100/395) * abs(pos_y_obstacle - pos_y_bird))
+		actualizar_fitness(delta)
 		#resaltar pajaro con mayor popolación
 		if p == Global.max_fitness_index:
 			animated_sprite_2d.set_self_modulate(Color8(255, 255, 255, 255))
@@ -90,4 +86,16 @@ func inputs():
 func _on_area_2d_body_entered(body):
 	# Muerte del pájaro
 	mort = true
+
+func actualizar_fitness(delta):
+	Global.population[p].fitness += 1.0 * delta
+	if abs(global_position.y - Global.posicio_obstacle_continua[1]) < 10:
+		Global.population[p].fitness += 100.0 * delta
+	elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 50:
+		Global.population[p].fitness += 50.0 * delta
+	elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 100:
+		Global.population[p].fitness += 10.0 * delta
+	elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 200:
+		Global.population[p].fitness += 5.0 * delta
+
 

@@ -25,6 +25,7 @@ func _ready():
 	Global.I = 0
 	posicio = 0
 	Global.morts_ia = 0
+	Global.posicio_obstacle_continua = Vector2(490, 207)
 	
 	 
 	
@@ -37,7 +38,7 @@ func _process(delta):
 		for i in Global.population:
 				fitness.append(i.fitness)
 		Global.max_fitness_index = fitness.find(fitness.max())
-		print(Global.max_fitness_index)
+		#print(fitness)
 	if Global.repetir == true and Global.iniciat == false:
 		Global.iniciat = true
 		$Obstacles/Timer.start()
@@ -128,10 +129,10 @@ func crea_obstacle(posicio: Vector2):
 	nou_obstacle.global_position = posicio + Vector2(0,random_number)
 	$Obstacles.add_child(nou_obstacle)
 
-
+'''
 func _on_puntuacio_area_entered(area):
-	Global.distancia += 5
-
+	Global.population[area.p].fitness += 200.0
+'''
 
 func _on_obsacles_eliminar_area_entered(area):
 	area.queue_free()
@@ -144,6 +145,8 @@ func _on_button_pressed():
 
 func _on_puntuacio_area_exited(area):
 	Global.punts += 1
-	Global.distancia += 50
-	Global.posicio_obstacle_continua = Vector2(490, 300)
+	for i in range($Creador_de_IAs.get_child_count()):
+		Global.population[$Creador_de_IAs.get_child(i).p].fitness += 1000.0
+	#Global.population[get_parent().area.p].fitness += 1000.0
+	Global.posicio_obstacle_continua[0] = 490
 	#print(Global.punts)

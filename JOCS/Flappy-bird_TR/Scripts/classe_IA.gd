@@ -3,7 +3,7 @@ extends Node2D
 class ia:
 	var neurons = []
 	var connections = []
-	var fitness :int = 0
+	var fitness :float = 0.0
 	var num_inputs :int = 2
 	var num_hidden :int = 0
 	var num_outputs :int = 1
