@@ -30,6 +30,7 @@ func _ready():
 			var r := rng.randi_range(0, mostra - 1)
 			Global.population.append(ClasseIa.ia.new())
 			Global.population[_i].copia(Global.population[r])
+			#for _j in range(rng.randi_range(0, 5)):
 			Global.population[_i].mutar()
 	Global.gen += 1
 	xarxa_neuronal_preparada = true
