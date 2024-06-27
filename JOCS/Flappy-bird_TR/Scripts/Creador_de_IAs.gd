@@ -16,6 +16,8 @@ func _ready():
 		var mostra := int(num_IA * 0.1 + 1)
 		var millors := []
 		var fitness := []
+		if Global.gen % 10 == 0:
+			print(Global.gen)
 		for i in Global.population:
 			fitness.append(i.fitness)
 		for _i in range(mostra):

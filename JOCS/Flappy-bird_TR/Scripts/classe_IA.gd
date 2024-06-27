@@ -4,7 +4,7 @@ class ia:
 	var neurons = []
 	var connections = []
 	var fitness :float = 0.0
-	var num_inputs :int = 2
+	var num_inputs :int = 4
 	var num_hidden :int = 0
 	var num_outputs :int = 1
 	
@@ -97,7 +97,7 @@ class ia:
 		var num_neurons := neurons.size()
 		var num_connections := connections.size()
 		if rng.randf() <= 1:
-			var n :int = 0# rng.randi_range(0, 4)
+			var n :int = rng.randi_range(0, 2)
 			if n == 0:
 				# Cambio de peso
 				connections[rng.randi_range(0, num_connections) - 1].weight = rng.randf_range(-1.0, 1.0)
@@ -109,7 +109,7 @@ class ia:
 					for _i in range(1000):
 						if connections[num_connections].from_neuron == connections[num_connections].to_neuron or !enable:
 							connections[num_connections].from_neuron = rng.randi_range(0, num_neurons - 2)
-							connections[num_connections].to_neuron = rng.randi_range(0, num_neurons - 1)
+							connections[num_connections].to_neuron = rng.randi_range(num_inputs, num_neurons - 1)
 							for connection in connections:
 								if connections[num_connections].from_neuron == connection.to_neuron and connections[num_connections].to_neuron == connection.from_neuron:
 									enable = false
@@ -120,7 +120,7 @@ class ia:
 					connections[num_connections].weight = rng.randf_range(-1.0, 1.0)
 				else:
 					n += 1
-			elif n == 2:
+			elif n == 3:
 				# Agregar neurona y conexiónes a esta
 				for connection in connections:
 					if connection.to_neuron == num_neurons - 1:
@@ -140,7 +140,7 @@ class ia:
 				connections[num_connections + 1].to_neuron = num_neurons - 1
 				connections[num_connections + 1].weight = rng.randf_range(-1.0, 1.0)
 				num_hidden += 1
-			elif n == 3:
+			elif n == 2:
 				# Eliminar conexión
 				connections.remove_at(rng.randi_range(0, num_connections - 1))
 			elif n == 4 and num_neurons > num_inputs + num_outputs:

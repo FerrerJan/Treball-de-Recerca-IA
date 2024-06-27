@@ -80,7 +80,7 @@ func inputs():
 	var velocitat :float = velocity.y
 	var top :float = 0.0
 	var bot :float = 395.0
-	return [pos_y_bird, pos_y_obstacle, pos_x_obstacle]
+	return [pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat, top, bot]
 
 
 func _on_area_2d_body_entered(body):
