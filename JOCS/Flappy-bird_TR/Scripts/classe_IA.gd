@@ -4,7 +4,7 @@ class ia:
 	var neurons = []
 	var connections = []
 	var fitness :float = 0.0
-	var num_inputs :int = 4
+	var num_inputs :int = 5
 	var num_hidden :int = 0
 	var num_outputs :int = 1
 	

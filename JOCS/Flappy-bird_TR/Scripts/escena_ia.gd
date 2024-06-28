@@ -119,8 +119,8 @@ func _process(delta):
 func _on_timer_timeout():
 	if Global.iniciat == true:
 		$Obstacles/Timer.start()
-		crea_obstacle(posicio_obstacles)
 		random_number = randi_range(min, max)
+		crea_obstacle(posicio_obstacles)
 	else:
 		$Obstacles/Timer.stop()
 	
