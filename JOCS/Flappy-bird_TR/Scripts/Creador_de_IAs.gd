@@ -16,6 +16,8 @@ func _ready():
 		var mostra := int(num_IA * 0.1 + 1)
 		var millors := []
 		var fitness := []
+		if Global.gen % 10 == 0:
+			print(Global.gen)
 		for i in Global.population:
 			fitness.append(i.fitness)
 		for _i in range(mostra):
@@ -30,6 +32,7 @@ func _ready():
 			var r := rng.randi_range(0, mostra - 1)
 			Global.population.append(ClasseIa.ia.new())
 			Global.population[_i].copia(Global.population[r])
+			#for _j in range(rng.randi_range(0, 5)):
 			Global.population[_i].mutar()
 	Global.gen += 1
 	xarxa_neuronal_preparada = true

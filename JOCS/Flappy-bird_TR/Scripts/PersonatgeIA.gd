@@ -35,7 +35,7 @@ func _physics_process(delta):
 		if not is_on_floor():            
 			velocity.y += gravity * delta        
 		# Saltar si la salida de la red neuronal es mayor que 0.6        
-		if Global.population[p].feedforward(inputs())[0] > 0.9:    
+		if Global.population[p].feedforward(inputs())[0] > 0.7:    
 			velocity.y = JUMP_VELOCITY
 		# Animación y movimiento si está vivo        
 		if life == true:            
@@ -80,7 +80,7 @@ func inputs():
 	var velocitat :float = velocity.y
 	var top :float = 0.0
 	var bot :float = 395.0
-	return [pos_y_bird, pos_y_obstacle, pos_x_obstacle]
+	return [pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat, top, bot]
 
 
 func _on_area_2d_body_entered(body):
