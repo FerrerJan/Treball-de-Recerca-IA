@@ -14,7 +14,9 @@ func _ready():
 		
 	else:
 		var mostra := int(num_IA * 0.1 + 1)
+		var pares := int(mostra * 0.5)
 		var millors := []
+		var fills := []
 		var fitness := []
 		if Global.gen % 10 == 0:
 			print(Global.gen)
@@ -25,7 +27,13 @@ func _ready():
 			millors[_i].copia(Global.population[fitness.find(fitness.max())])
 			Global.population.pop_at(fitness.find(fitness.max()))
 			fitness.pop_at(fitness.find(fitness.max()))
-		Global.population = [] + millors
+		for _i in range(pares):
+			for _j in range(_i + 1, mostra):
+				if millors[_i].mateixa_especie(millors[_j]):
+					fills.append(ClasseIa.ia.new())
+					fills[-1].crossover(millors[_i], millors[_j])
+		Global.population = [] + millors + fills
+		var numero_inicial_de_IAs := len(Global.population)
 		for _i in range(mostra, num_IA):
 			var rng = RandomNumberGenerator.new()
 			rng.randomize()
