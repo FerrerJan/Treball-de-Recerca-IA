@@ -194,3 +194,8 @@ class ia:
 			numconnections += n
 		return numconnections
 	
+	func crossover(x1, x2):
+		if x1.mateixa_especie(x2):
+			copia(x1)
+			for i in range(len(connections)):
+				connections[i].weight = (x1.connections[i].weight + x2.connections[i].weight) / 2
