@@ -78,9 +78,11 @@ func inputs():
 	var pos_x_obstacle :float = Global.posicio_obstacle_continua[0]
 	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
 	var velocitat :float = velocity.y
-	var top :float = 0.0
-	var bot :float = 395.0
-	return [pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat, top, bot]
+	var all_inputs := [pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat]
+	var inputs := []
+	for i in Global.inputs:
+		inputs.append(all_inputs[i])
+	return inputs
 
 
 func _on_area_2d_body_entered(body):

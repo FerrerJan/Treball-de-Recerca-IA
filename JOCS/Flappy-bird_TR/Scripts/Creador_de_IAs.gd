@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var num_IA := 0
+var num_IA := Global.num_poblacio
 var IA_vives
 @onready var IA = preload("res://Escenes/ia.tscn")
 var xarxa_neuronal_preparada := false
