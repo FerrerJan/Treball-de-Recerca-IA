@@ -90,13 +90,13 @@ class ia:
 		neurons[n].output = output
 		return output
 
-	func mutar():
+	func mutar(xarxaNeuronalOriginal):
 		# Mutación de la red neuronal
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
 		var num_neurons := neurons.size()
 		var num_connections := connections.size()
-		if rng.randf() <= 1:
+		for _j in range(1000):
 			var n :int = rng.randi_range(0, 2)
 			if n == 0:
 				# Cambio de peso
@@ -156,6 +156,8 @@ class ia:
 						if connections[i].from_neuron > m:
 							connections[i].from_neuron -= 1
 				num_hidden -= 1
+			if !iguals(xarxaNeuronalOriginal):
+				break
 			
 	func mateixa_especie(xarxaNeuronal):
 		if connections.size() != len(xarxaNeuronal.connections):
@@ -199,3 +201,11 @@ class ia:
 			copia(x1)
 			for i in range(len(connections)):
 				connections[i].weight = (x1.connections[i].weight + x2.connections[i].weight) / 2
+
+	func iguals(xarxaNeuronal):
+		if !mateixa_especie(xarxaNeuronal):
+			return false
+		for i in connections.size():
+			if connections[i].weight != xarxaNeuronal.connections[i].weight:
+				return false
+		return true

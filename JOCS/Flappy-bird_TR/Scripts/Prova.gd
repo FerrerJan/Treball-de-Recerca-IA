@@ -5,9 +5,8 @@ var list := [0, 1, 3]
 func _ready():
 	var rng = RandomNumberGenerator.new()
 	 # Replace with function body.
-	list.insert(len(list) - 2, 2)
-	
-	print(list)
+	for i in 10:
+		print(i)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

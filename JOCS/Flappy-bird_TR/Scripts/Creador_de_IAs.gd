@@ -41,7 +41,7 @@ func _ready():
 			Global.population.append(ClasseIa.ia.new())
 			Global.population[_i].copia(Global.population[r])
 			#for _j in range(rng.randi_range(0, 5)):
-			Global.population[_i].mutar()
+			Global.population[_i].mutar(Global.population[r])
 	Global.gen += 1
 	xarxa_neuronal_preparada = true
 	
