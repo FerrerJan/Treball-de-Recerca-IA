@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvqr12kn7ptkr"]
+
+[ext_resource type="Script" path="res://Inteficie.gd" id="1_fjbrk"]
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="2_83x84"]
+[ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="3_0pc8a"]
+[ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="4_7iuk1"]
+
+[node name="Inteficie" type="Node2D"]
+script = ExtResource("1_fjbrk")
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160.005, 240)
+scale = Vector2(2.238, 1.882)
+texture = ExtResource("2_83x84")
+region_enabled = true
+region_rect = Rect2(0.100723, -0.0463715, 143.753, 255.855)
+
+[node name="Terra" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(2245.6, 439.529)
+scale = Vector2(1.5, 1.563)
+texture = ExtResource("3_0pc8a")
+region_enabled = true
+region_rect = Rect2(-68.035, -0.237, 3000, 55.886)
+
+[node name="Start" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(158, 148)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_7iuk1")
+region_enabled = true
+region_rect = Rect2(240.295, 212.133, 43.3769, 16.0805)
+
+[node name="Start" type="Button" parent="Start"]
+show_behind_parent = true
+offset_left = -20.0
+offset_top = -7.0
+offset_right = 20.0
+offset_bottom = 7.0
+
+[node name="Menu" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(154, 215)
+scale = Vector2(3.44197, 3.44197)
+texture = ExtResource("4_7iuk1")
+region_enabled = true
+region_rect = Rect2(243.526, 116.784, 43.3769, 16.6211)
+
+[node name="Menu" type="Button" parent="Menu"]
+show_behind_parent = true
+offset_left = -18.8846
+offset_top = -6.68223
+offset_right = 20.1154
+offset_bottom = 6.31777
+
+[node name="Sprites" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(154, 278)
+scale = Vector2(3.4375, 3.4375)
+texture = ExtResource("4_7iuk1")
+region_enabled = true
+region_rect = Rect2(244.039, 132.688, 42.958, 16.3508)
+
+[connection signal="pressed" from="Start/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/Menu" to="." method="_on_menu_pressed"]

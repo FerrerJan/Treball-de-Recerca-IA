@@ -8,6 +8,7 @@ var xarxa_neuronal_preparada := false
 func _ready():
 	Global.num_IA = num_IA
 	if Global.gen == 0:
+		Global.population = []
 		for i in range(num_IA):
 			Global.population.append(ClasseIa.ia.new())
 		

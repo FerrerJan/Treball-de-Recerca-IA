@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwjy4yaxpsu7i"]
+
+[ext_resource type="Script" path="res://Escenes/config.gd" id="1_gvcx6"]
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_p1e6r"]
+[ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="2_cqqxq"]
+[ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="5_vf7e5"]
+
+[node name="Config" type="Node2D"]
+script = ExtResource("1_gvcx6")
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160.005, 240)
+scale = Vector2(2.238, 1.882)
+texture = ExtResource("1_p1e6r")
+region_enabled = true
+region_rect = Rect2(0.100723, -0.0463715, 143.753, 255.855)
+
+[node name="Terra" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(2245.6, 439.529)
+scale = Vector2(1.5, 1.563)
+texture = ExtResource("2_cqqxq")
+region_enabled = true
+region_rect = Rect2(-68.035, -0.237, 3000, 55.886)
+
+[node name="Poblacio" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 154.0
+offset_bottom = 104.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "POBLACIÓ:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Num" type="TextEdit" parent="Poblacio"]
+offset_left = 136.0
+offset_top = -8.0
+offset_right = 219.0
+offset_bottom = 32.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Puntuacio_max" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 176.0
+offset_right = 168.0
+offset_bottom = 200.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "GENERACIONS:"
+
+[node name="Num" type="TextEdit" parent="Puntuacio_max"]
+offset_left = 152.0
+offset_top = -8.0
+offset_right = 235.0
+offset_bottom = 32.0
+
+[node name="Generacions" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 128.0
+offset_right = 192.0
+offset_bottom = 152.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "PUNTUACIÓ MÀXIMA:"
+
+[node name="Num" type="TextEdit" parent="Generacions"]
+offset_left = 176.0
+offset_top = -8.0
+offset_right = 259.0
+offset_bottom = 32.0
+
+[node name="Partides" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 232.0
+offset_right = 152.0
+offset_bottom = 256.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "PARTIDES:"
+
+[node name="Num" type="TextEdit" parent="Partides"]
+offset_left = 136.0
+offset_top = -8.0
+offset_right = 219.0
+offset_bottom = 32.0
+
+[node name="OK" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(256, 368)
+scale = Vector2(2.21875, 2.21875)
+texture = ExtResource("5_vf7e5")
+region_enabled = true
+region_rect = Rect2(244.039, 132.688, 42.958, 16.3508)
+
+[node name="OK" type="Button" parent="OK"]
+show_behind_parent = true
+offset_left = -19.0
+offset_top = -7.0
+offset_right = 20.0
+offset_bottom = 7.0
+
+[connection signal="pressed" from="OK/OK" to="." method="_on_ok_pressed"]
