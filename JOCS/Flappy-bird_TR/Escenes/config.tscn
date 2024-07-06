@@ -45,7 +45,7 @@ offset_right = 219.0
 offset_bottom = 32.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Puntuacio_max" type="Label" parent="."]
+[node name="Generacions" type="Label" parent="."]
 offset_left = 48.0
 offset_top = 176.0
 offset_right = 168.0
@@ -56,14 +56,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "GENERACIONS:"
 
-[node name="Num" type="TextEdit" parent="Puntuacio_max"]
+[node name="Num" type="TextEdit" parent="Generacions"]
 layout_mode = 0
 offset_left = 152.0
 offset_top = -8.0
 offset_right = 235.0
 offset_bottom = 32.0
 
-[node name="Generacions" type="Label" parent="."]
+[node name="Puntuacio_max" type="Label" parent="."]
 offset_left = 24.0
 offset_top = 128.0
 offset_right = 192.0
@@ -74,7 +74,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "PUNTUACIÓ MÀXIMA:"
 
-[node name="Num" type="TextEdit" parent="Generacions"]
+[node name="Num" type="TextEdit" parent="Puntuacio_max"]
 layout_mode = 0
 offset_left = 176.0
 offset_top = -8.0
