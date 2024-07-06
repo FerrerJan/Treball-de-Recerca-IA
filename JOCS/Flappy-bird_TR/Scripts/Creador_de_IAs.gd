@@ -6,7 +6,6 @@ var IA_vives
 var xarxa_neuronal_preparada := false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(Global.gen)
 	Global.num_IA = num_IA
 	if Global.gen == 0:
 		for i in range(num_IA):
@@ -34,7 +33,7 @@ func _ready():
 					fills[-1].crossover(millors[_i], millors[_j])
 		Global.population = [] + millors + fills
 		var numero_inicial_de_IAs := len(Global.population)
-		for _i in range(mostra, num_IA):
+		for _i in range(numero_inicial_de_IAs, num_IA):
 			var rng = RandomNumberGenerator.new()
 			rng.randomize()
 			var r := rng.randi_range(0, mostra - 1)
