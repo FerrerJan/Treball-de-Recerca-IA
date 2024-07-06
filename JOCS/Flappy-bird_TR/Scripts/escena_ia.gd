@@ -3,6 +3,12 @@ extends Node2D
 @export var escena_obstacle: PackedScene
 @export var min : float = -150
 @export var max : float = 130
+
+var num_generacions : int = 0
+var max_puntuacio : int = 0
+var num_ia : int = 0
+var num_joc : int = 0 
+
 var random_number: float
 var posicio: float
 var posicio_obstacles = Vector2(0,0)
@@ -70,10 +76,24 @@ func _process(delta):
 	$Contador.text = str(Global.punts)
 	$Contador2.text = str(Global.punts)
 	$maxim.text = str(Global.maxim)
+	
 	if Global.punts > Global.maxim:
 		Global.maxim = Global.punts 
+	
+	if Global.punts >= Global.puntuacio_max:
+		Global.mort = true
 		
 	if Global.mort:
+		
+		if Global.gen >= Global.num_gen_max:
+			Global.gen = 0
+			Global.partidas += 1
+			
+		if Global.partidas >= Global.num_partidas:
+			pass
+			#canviar escena a la interfaz
+			
+			
 		if Global.repetir == false:
 			$Obstacles/Timer.stop()
 			$resultat.visible = true
@@ -98,6 +118,12 @@ func _process(delta):
 		print('-------------------------------------------------')
 		print('')
 	
+	
+	
+			
+		
+		
+		
 		
 		
 	if Input.is_action_just_pressed("I"):

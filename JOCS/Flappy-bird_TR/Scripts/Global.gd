@@ -24,7 +24,8 @@ var gen := 0
 
 #Variables per la configuració de la IA
 var inputs := [0, 1]
-var num_poblacio := 20
-var num_gen_max := 50
-var puntuacio_max := 100
-var num_partidas := 10
+var num_poblacio : int = 20
+var num_gen_max : int = 20
+var puntuacio_max : int= 100
+var num_partidas : int = 1
+var partidas : int = 0
