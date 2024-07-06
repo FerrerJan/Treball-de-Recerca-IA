@@ -59,7 +59,7 @@ region_enabled = true
 region_rect = Rect2(0.100723, -0.0463715, 143.753, 255.855)
 
 [node name="Obstacles" type="Sprite2D" parent="."]
-position = Vector2(490, 207)
+position = Vector2(393, 207)
 scale = Vector2(0.907, 1)
 texture = ExtResource("2_ebxrb")
 

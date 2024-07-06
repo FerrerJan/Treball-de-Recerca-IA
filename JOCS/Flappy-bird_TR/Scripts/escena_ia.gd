@@ -1,8 +1,8 @@
 extends Node2D
 
 @export var escena_obstacle: PackedScene
-@export var min : float = -150
-@export var max : float = 130
+@export var min : float = -145
+@export var max : float = 126
 
 var num_generacions : int = 0
 var max_puntuacio : int = 0
@@ -152,7 +152,7 @@ func _on_timer_timeout():
 	
 func crea_obstacle(posicio: Vector2):
 	var nou_obstacle = escena_obstacle.instantiate()
-	nou_obstacle.global_position = posicio + Vector2(0,random_number)
+	nou_obstacle.global_position = posicio + Vector2(0, random_number)
 	$Obstacles.add_child(nou_obstacle)
 
 '''

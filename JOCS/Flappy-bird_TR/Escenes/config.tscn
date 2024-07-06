@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwjy4yaxpsu7i"]
 
-[ext_resource type="Script" path="res://Escenes/config.gd" id="1_gvcx6"]
+[ext_resource type="Script" path="res://Scripts/config.gd" id="1_gvcx6"]
 [ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_p1e6r"]
 [ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="2_cqqxq"]
 [ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="5_vf7e5"]
@@ -38,6 +38,7 @@ text = "POBLACIÓ:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Num" type="TextEdit" parent="Poblacio"]
+layout_mode = 0
 offset_left = 136.0
 offset_top = -8.0
 offset_right = 219.0
@@ -56,6 +57,7 @@ theme_override_font_sizes/font_size = 16
 text = "GENERACIONS:"
 
 [node name="Num" type="TextEdit" parent="Puntuacio_max"]
+layout_mode = 0
 offset_left = 152.0
 offset_top = -8.0
 offset_right = 235.0
@@ -73,6 +75,7 @@ theme_override_font_sizes/font_size = 16
 text = "PUNTUACIÓ MÀXIMA:"
 
 [node name="Num" type="TextEdit" parent="Generacions"]
+layout_mode = 0
 offset_left = 176.0
 offset_top = -8.0
 offset_right = 259.0
@@ -90,6 +93,7 @@ theme_override_font_sizes/font_size = 16
 text = "PARTIDES:"
 
 [node name="Num" type="TextEdit" parent="Partides"]
+layout_mode = 0
 offset_left = 136.0
 offset_top = -8.0
 offset_right = 219.0
