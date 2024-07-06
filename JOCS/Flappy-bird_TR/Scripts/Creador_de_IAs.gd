@@ -34,7 +34,7 @@ func _ready():
 					fills[-1].crossover(millors[_i], millors[_j])
 		Global.population = [] + millors + fills
 		var numero_inicial_de_IAs := len(Global.population)
-		for _i in range(mostra, num_IA):
+		for _i in range(numero_inicial_de_IAs, num_IA):
 			var rng = RandomNumberGenerator.new()
 			rng.randomize()
 			var r := rng.randi_range(0, mostra - 1)
