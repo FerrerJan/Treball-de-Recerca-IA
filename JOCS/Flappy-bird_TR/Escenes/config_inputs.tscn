@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh4qtbtorein8"]
+
+[ext_resource type="Script" path="res://Config_inputs.gd" id="1_u1r1e"]
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="2_ovvyg"]
+[ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="3_in4ji"]
+[ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="4_en3bb"]
+
+[node name="Config_inputs" type="Node2D"]
+script = ExtResource("1_u1r1e")
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160.005, 240)
+scale = Vector2(2.238, 1.882)
+texture = ExtResource("2_ovvyg")
+region_enabled = true
+region_rect = Rect2(0.100723, -0.0463715, 143.753, 255.855)
+
+[node name="Terra" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(2245.6, 439.529)
+scale = Vector2(1.5, 1.563)
+texture = ExtResource("3_in4ji")
+region_enabled = true
+region_rect = Rect2(-68.035, -0.237, 3000, 55.886)
+
+[node name="PosYOcell" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 192.0
+offset_bottom = 104.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Posició Y de l'ocell:"
+
+[node name="CheckButton" type="CheckButton" parent="PosYOcell"]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 220.0
+offset_bottom = 24.0
+
+[node name="PosYObs" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 128.0
+offset_right = 205.0
+offset_bottom = 152.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Posició Y de l'obstacle:"
+
+[node name="CheckButton" type="CheckButton" parent="PosYObs"]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 236.0
+offset_bottom = 24.0
+
+[node name="PosXObs" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 176.0
+offset_right = 206.0
+offset_bottom = 200.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Posició X de l'obstacle:"
+
+[node name="CheckButton" type="CheckButton" parent="PosXObs"]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 236.0
+offset_bottom = 24.0
+
+[node name="VelYOcell" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 232.0
+offset_right = 198.0
+offset_bottom = 256.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Velocitat Y de l'ocell:"
+
+[node name="CheckButton" type="CheckButton" parent="VelYOcell"]
+layout_mode = 0
+offset_left = 184.0
+offset_right = 228.0
+offset_bottom = 24.0
+
+[node name="OK" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(256, 368)
+scale = Vector2(2.21875, 2.21875)
+texture = ExtResource("4_en3bb")
+region_enabled = true
+region_rect = Rect2(244.039, 132.688, 42.958, 16.3508)
+
+[node name="OK" type="Button" parent="OK"]
+show_behind_parent = true
+offset_left = -19.0
+offset_top = -7.0
+offset_right = 20.0
+offset_bottom = 7.0
+
+[connection signal="pressed" from="OK/OK" to="." method="_on_ok_pressed"]
