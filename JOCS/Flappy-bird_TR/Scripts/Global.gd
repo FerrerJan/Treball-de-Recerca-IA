@@ -19,13 +19,20 @@ var morts_ia: int = 0
 var population := []
 var repetir := true
 var max_fitness_index: int = 0 
-var gen := 0
 
 
-#Variables per la configuració de la IA
+#Variables que es guarden per cada arxiu (Després de canviar la config)
 var inputs := [0, 1]
 var num_poblacio : int = 9
 var num_gen_max : int = 150
 var puntuacio_max : int= 150
 var num_partidas : int = 1
+
+#Variables que es guarden per cada partida
 var partidas : int = 0
+var max_fitness_partida := -1.0
+var millor_ocell_partida
+
+#Variables que es guarden per cada generació
+var max_fitness_gen := -1.0
+var gen := 0

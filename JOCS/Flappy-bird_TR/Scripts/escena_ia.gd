@@ -43,6 +43,10 @@ func _process(delta):
 		var fitness := []
 		for i in Global.population:
 				fitness.append(i.fitness)
+		Global.max_fitness_gen = fitness.max()
+		if Global.max_fitness_partida < fitness.max():
+			Global.max_fitness_partida = fitness.max()
+			Global.millor_ocell_partida.copia(Global.population[fitness.find(fitness.max())])
 		Global.max_fitness_index = fitness.find(fitness.max())
 		#print(fitness)
 	if Global.repetir == true and Global.iniciat == false:
@@ -82,26 +86,6 @@ func _process(delta):
 	
 	if Global.punts >= Global.puntuacio_max:
 		Global.mort = true
-		
-	if Global.mort:
-		
-		if Global.gen >= Global.num_gen_max:
-			Global.gen = 0
-			Global.partidas += 1
-			
-		if Global.partidas >= Global.num_partidas:
-			pass
-			#canviar escena a la interfaz
-			
-			
-		if Global.repetir == false:
-			$Obstacles/Timer.stop()
-			$resultat.visible = true
-			$Contador.visible = false
-			$Contador2.visible = true
-			$maxim.visible = true
-		else:
-			get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 			
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
@@ -119,13 +103,6 @@ func _process(delta):
 		print('')
 	
 	
-	
-			
-		
-		
-		
-		
-		
 	if Input.is_action_just_pressed("I"):
 		Global.IA = !Global.IA
 		Global.noIA = !Global.noIA
@@ -141,6 +118,24 @@ func _process(delta):
 	if Input.is_action_just_pressed("K"):
 		Global.repetir = !Global.repetir
 		#get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
+	
+	if Global.mort:
+		if Global.gen >= Global.num_gen_max:
+			Global.gen = 0
+			Global.partidas += 1
+			
+		if Global.partidas >= Global.num_partidas:
+			get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
+			
+			
+		elif Global.repetir == false:
+			$Obstacles/Timer.stop()
+			$resultat.visible = true
+			$Contador.visible = false
+			$Contador2.visible = true
+			$maxim.visible = true
+		else:
+			get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 		
 func _on_timer_timeout():
 	if Global.iniciat == true:

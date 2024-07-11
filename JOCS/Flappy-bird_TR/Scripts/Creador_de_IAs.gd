@@ -8,6 +8,8 @@ var xarxa_neuronal_preparada := false
 func _ready():
 	Global.num_IA = num_IA
 	if Global.gen == 0:
+		Global.max_fitness_partida = -1.0
+		Global.millor_ocell_partida = ClasseIa.ia.new()
 		Global.population = []
 		for i in range(num_IA):
 			Global.population.append(ClasseIa.ia.new())
