@@ -16,6 +16,8 @@ var Vpos_personatge : Vector2
 @onready var collision = $CollisionShape2D
 var activat := false
 
+var dades : String
+# var document =
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,7 +35,6 @@ func _ready():
 	Global.morts_ia = 0
 	Global.posicio_obstacle_continua = Vector2(490, 207)
 	
-	 
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -120,13 +121,15 @@ func _process(delta):
 		#get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
 	if Global.mort:
+		guardar_dades_gen()
+		
 		if Global.gen >= Global.num_gen_max:
 			Global.gen = 0
 			Global.partidas += 1
 			
 		if Global.partidas >= Global.num_partidas:
 			get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
-			
+			desa_arxiu()
 			
 		elif Global.repetir == false:
 			$Obstacles/Timer.stop()
@@ -171,3 +174,50 @@ func _on_puntuacio_area_exited(area):
 	#Global.population[get_parent().area.p].fitness += 1000.0
 	Global.posicio_obstacle_continua[0] = 490
 	#print(Global.punts)
+	
+func guardar_dades_gen():
+	'''
+	Global.max_fitness_gen
+	Global.gen
+	'''
+	
+	dades += 'dades_gen' + ';' + str(Global.max_fitness_gen) + ';' + str(Global.gen) + '\n'
+	
+func guardar_dades_partida():
+	'''
+	Global.partidas
+	Global.max_fitness_partida
+	Global.millor_ocell_partida
+	'''
+	
+	dades += 'dades_partida' + ';' + str(Global.partidas) + ';' + str(Global.max_fitness_partida) + ';' + str(Global.millor_ocell_partida) + '\n'
+	
+func guardar_dades_arxiu():
+	'''
+	Global.inputs
+	Global.num_poblacio
+	Global.num_gen_max
+	Global.puntuacio_max
+	Global.num_partidas
+	'''
+	dades += 'dades_arxiu' + ';' + str(Global.inputs) + ';' + str(Global.num_poblacio) + ';' + str(Global.num_gen_max) + ';' + str(Global.puntuacio_max) + ';' + str(Global.num_partidas) + '\n'
+	
+func desa_arxiu():
+
+	var file_name = "res://dades/jan.txt" # Cambia això per la ruta i nom que desitgis
+	var content = "Les dades que vols guardar\n"  # El contingut que vols escriure al fitxer
+
+	# Crea o obre el fitxer
+	var file = FileAccess.open(file_name, FileAccess.WRITE_READ)
+	
+	# Mou el punter de l'arxiu al final del fitxer
+	file.seek_end()
+	
+	# Escriu les dades al fitxer
+	file.store_string(dades)
+	
+	# Tanca el fitxer
+	file.close()
+	print("Dades guardades correctament.")
+
+	

@@ -36,3 +36,5 @@ var millor_ocell_partida
 #Variables que es guarden per cada generació
 var max_fitness_gen := -1.0
 var gen := 0
+
+var canvi_dades : int = 0
