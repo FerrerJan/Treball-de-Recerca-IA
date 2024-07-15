@@ -184,7 +184,7 @@ func guardar_dades_gen():
 	Global.gen
 	'''
 	
-	Global.dades += 'dades_gen' + ';' + str(Global.max_fitness_gen) + ';' + str(Global.gen) + '\n'
+	Global.dades += 'Generació: ' + str(Global.gen) + ' - Fitness: ' + str(Global.max_fitness_gen) + '\n'
 	
 func guardar_dades_partida():
 	'''
@@ -193,7 +193,7 @@ func guardar_dades_partida():
 	Global.millor_ocell_partida
 	'''
 	
-	Global.dades += 'dades_partida' + ';' + str(Global.partidas) + ';' + str(Global.max_fitness_partida) + ';' + str(Global.millor_ocell_partida) + '\n'
+	Global.dades += 'Partida: ' + str(Global.partidas) + '\nMàxim fitness de la partida: ' + str(Global.max_fitness_partida) + '\nMillor ocell de la partida: ' + str(Global.millor_ocell_partida) + '\n------------------------------------------------------------------------\n'
 	
 func guardar_dades_arxiu():
 	'''
@@ -203,8 +203,14 @@ func guardar_dades_arxiu():
 	Global.puntuacio_max
 	Global.num_partidas
 	'''
-	Global.dades += 'dades_arxiu' + ';' + str(Global.inputs) + ';' + str(Global.num_poblacio) + ';' + str(Global.num_gen_max) + ';' + str(Global.puntuacio_max) + ';' + str(Global.num_partidas) + '\n'
-	
+	Global.dades += 'Configuració:'
+	Global.dades += '\nPoblació: ' + str(Global.num_poblacio)
+	Global.dades += '\nInputs: ' + str(Global.inputs)
+	Global.dades += '\nMutacions: ' + str(Global.mutacions)
+	Global.dades += '\nPartides totals: ' + str(Global.num_partidas)
+	Global.dades += '\nGeneracions totals: ' + str(Global.num_gen_max)
+	Global.dades += '\nPuntuació màxima: ' + str(Global.puntuacio_max)
+	 	
 '''func desa_arxiu():
 	
 	

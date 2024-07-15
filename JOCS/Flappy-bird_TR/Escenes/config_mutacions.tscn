@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct0wnasjlnu5e"]
+
+[ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_txfna"]
+[ext_resource type="Script" path="res://Scripts/config_mutacions.gd" id="1_w0ueu"]
+[ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="2_ccphh"]
+[ext_resource type="Texture2D" uid="uid://nvq3j6kv7vjk" path="res://Recursos/Tilemaps/SPRITES.webp" id="3_uao60"]
+
+[node name="Config_mutacions" type="Node2D"]
+script = ExtResource("1_w0ueu")
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(160.005, 240)
+scale = Vector2(2.238, 1.882)
+texture = ExtResource("1_txfna")
+region_enabled = true
+region_rect = Rect2(0.100723, -0.0463715, 143.753, 255.855)
+
+[node name="Terra" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(2245.6, 439.529)
+scale = Vector2(1.5, 1.563)
+texture = ExtResource("2_ccphh")
+region_enabled = true
+region_rect = Rect2(-68.035, -0.237, 3000, 55.886)
+
+[node name="MutEst" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 131.0
+offset_right = 224.0
+offset_bottom = 155.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Mutacions estructurals:"
+
+[node name="CheckButton" type="CheckButton" parent="MutEst"]
+layout_mode = 0
+offset_left = 183.0
+offset_right = 227.0
+offset_bottom = 24.0
+
+[node name="MutNoEst" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 184.0
+offset_right = 223.0
+offset_bottom = 208.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Mutacions no estructurals:"
+
+[node name="CheckButton" type="CheckButton" parent="MutNoEst"]
+layout_mode = 0
+offset_left = 208.0
+offset_right = 252.0
+offset_bottom = 24.0
+
+[node name="Crossover" type="Label" parent="."]
+offset_left = 140.0
+offset_top = 239.0
+offset_right = 228.0
+offset_bottom = 263.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Crossover:"
+
+[node name="CheckButton" type="CheckButton" parent="Crossover"]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 128.0
+offset_bottom = 24.0
+
+[node name="OK" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(256, 368)
+scale = Vector2(2.21875, 2.21875)
+texture = ExtResource("3_uao60")
+region_enabled = true
+region_rect = Rect2(244.039, 132.688, 42.958, 16.3508)
+
+[node name="Button" type="Button" parent="OK"]
+show_behind_parent = true
+offset_left = -19.0
+offset_top = -6.0
+offset_right = 20.0
+offset_bottom = 7.0
+
+[connection signal="pressed" from="OK/Button" to="." method="_on_button_pressed"]

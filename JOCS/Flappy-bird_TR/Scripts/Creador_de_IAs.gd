@@ -31,7 +31,7 @@ func _ready():
 			fitness.pop_at(fitness.find(fitness.max()))
 		for _i in range(pares):
 			for _j in range(_i + 1, mostra):
-				if millors[_i].mateixa_especie(millors[_j]):
+				if millors[_i].mateixa_especie(millors[_j]) and Global.mutacions.find(2) != -1:
 					fills.append(ClasseIa.ia.new())
 					fills[-1].crossover(millors[_i], millors[_j])
 		Global.population = [] + millors + fills

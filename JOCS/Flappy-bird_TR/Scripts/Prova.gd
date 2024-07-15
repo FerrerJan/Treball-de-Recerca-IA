@@ -5,8 +5,11 @@ var list := [0, 1, 3]
 func _ready():
 	var rng = RandomNumberGenerator.new()
 	 # Replace with function body.
-	for i in 10:
-		print(i)
+	for i in range(10):
+		if list.find(i) != -1:
+			print('El número ' + str(i) + ' és a la llista')
+		else:
+			print('El número ' + str(i) + ' no és a la llista')
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

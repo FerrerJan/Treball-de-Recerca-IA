@@ -32,21 +32,21 @@ func _process(delta):
 
 
 func _on_ok_pressed():
-	if poblacio.text.to_int() != 0:
-		Global.num_poblacio = poblacio.text.to_int()
-	if puntuacio_max.text.to_int() != 0:
-		Global.puntuacio_max = puntuacio_max.text.to_int()
-	if generacions.text.to_int() != 0:
-		Global.num_gen_max = generacions.text.to_int()
-	if partides.text.to_int() != 0:
-		Global.num_partidas = partides.text.to_int()
-	if dades.text != '':
-		Global.nom = dades.text
-	
+	guardar_dades()
 	get_tree().change_scene_to_file("res://Escenes/inteficie.tscn") # Replace with function body.
 
 
 func _on_inputs_pressed():
+	guardar_dades()
+	get_tree().change_scene_to_file("res://Escenes/config_inputs.tscn") # Replace with function body.
+
+
+func _on_mutacions_pressed():
+	guardar_dades()
+	get_tree().change_scene_to_file("res://Escenes/config_mutacions.tscn") # Replace with function body.
+
+
+func guardar_dades():
 	if poblacio.text.to_int() != 0:
 		Global.num_poblacio = poblacio.text.to_int()
 	if puntuacio_max.text.to_int() != 0:
@@ -57,4 +57,3 @@ func _on_inputs_pressed():
 		Global.num_partidas = partides.text.to_int()
 	if dades.text != '':
 		Global.nom = dades.text
-	get_tree().change_scene_to_file("res://Escenes/config_inputs.tscn") # Replace with function body.

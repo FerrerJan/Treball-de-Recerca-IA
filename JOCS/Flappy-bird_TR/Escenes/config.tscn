@@ -111,13 +111,13 @@ text = "Nom:"
 [node name="text" type="TextEdit" parent="dades"]
 layout_mode = 0
 offset_left = 52.0
-offset_top = -8.0
+offset_top = -10.0
 offset_right = 263.0
-offset_bottom = 32.0
+offset_bottom = 37.0
 
 [node name="OK" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(256, 368)
+position = Vector2(270, 367)
 scale = Vector2(2.21875, 2.21875)
 texture = ExtResource("5_vf7e5")
 region_enabled = true
@@ -131,11 +131,19 @@ offset_right = 20.0
 offset_bottom = 7.0
 
 [node name="Inputs" type="Button" parent="."]
-offset_left = 31.0
-offset_top = 351.0
-offset_right = 124.0
-offset_bottom = 382.0
+offset_left = 8.0
+offset_top = 352.0
+offset_right = 100.0
+offset_bottom = 383.0
 text = "INPUTS"
+
+[node name="Mutacions" type="Button" parent="."]
+offset_left = 107.0
+offset_top = 352.0
+offset_right = 219.0
+offset_bottom = 383.0
+text = "MUTACIONS"
 
 [connection signal="pressed" from="OK/OK" to="." method="_on_ok_pressed"]
 [connection signal="pressed" from="Inputs" to="." method="_on_inputs_pressed"]
+[connection signal="pressed" from="Mutacions" to="." method="_on_mutacions_pressed"]

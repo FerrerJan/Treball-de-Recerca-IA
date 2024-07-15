@@ -23,6 +23,7 @@ var max_fitness_index: int = 0
 
 #Variables que es guarden per cada arxiu (Després de canviar la config)
 var inputs := [0, 1]
+var mutacions := [0, 1, 2]
 var num_poblacio : int = 10
 var num_gen_max : int = 5
 var puntuacio_max : int= 10
@@ -39,5 +40,5 @@ var gen := 0
 
 
 var dades : String = ''
-var nom : String = ''
+var nom : String = 'Població:' + str(num_poblacio) + '_Inputs:' + str(inputs) + '_Mutacions:' + str(mutacions)
 var num := 0
