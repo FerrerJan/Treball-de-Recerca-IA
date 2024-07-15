@@ -19,6 +19,7 @@ var morts_ia: int = 0
 var population := []
 var repetir := true
 var max_fitness_index: int = 0 
+var partides_seguides_amb_puntuació_maxima :int = 0
 
 
 #Variables que es guarden per cada arxiu (Després de canviar la config)
