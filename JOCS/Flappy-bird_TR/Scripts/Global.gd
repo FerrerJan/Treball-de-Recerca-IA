@@ -23,9 +23,9 @@ var max_fitness_index: int = 0
 
 #Variables que es guarden per cada arxiu (Després de canviar la config)
 var inputs := [0, 1]
-var num_poblacio : int = 9
-var num_gen_max : int = 150
-var puntuacio_max : int= 150
+var num_poblacio : int = 10
+var num_gen_max : int = 5
+var puntuacio_max : int= 10
 var num_partidas : int = 1
 
 #Variables que es guarden per cada partida
@@ -37,4 +37,7 @@ var millor_ocell_partida
 var max_fitness_gen := -1.0
 var gen := 0
 
-var canvi_dades : int = 0
+
+var dades : String = ''
+var nom : String = ''
+var num := 0

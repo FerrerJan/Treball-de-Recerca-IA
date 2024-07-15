@@ -16,8 +16,7 @@ var Vpos_personatge : Vector2
 @onready var collision = $CollisionShape2D
 var activat := false
 
-var dades : String
-# var document =
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -122,14 +121,18 @@ func _process(delta):
 	
 	if Global.mort:
 		guardar_dades_gen()
+		print (Global.dades)
 		
 		if Global.gen >= Global.num_gen_max:
+			guardar_dades_partida()
 			Global.gen = 0
 			Global.partidas += 1
 			
 		if Global.partidas >= Global.num_partidas:
 			get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
+			guardar_dades_arxiu()
 			desa_arxiu()
+			Global.dades = ''
 			
 		elif Global.repetir == false:
 			$Obstacles/Timer.stop()
@@ -181,7 +184,7 @@ func guardar_dades_gen():
 	Global.gen
 	'''
 	
-	dades += 'dades_gen' + ';' + str(Global.max_fitness_gen) + ';' + str(Global.gen) + '\n'
+	Global.dades += 'dades_gen' + ';' + str(Global.max_fitness_gen) + ';' + str(Global.gen) + '\n'
 	
 func guardar_dades_partida():
 	'''
@@ -190,7 +193,7 @@ func guardar_dades_partida():
 	Global.millor_ocell_partida
 	'''
 	
-	dades += 'dades_partida' + ';' + str(Global.partidas) + ';' + str(Global.max_fitness_partida) + ';' + str(Global.millor_ocell_partida) + '\n'
+	Global.dades += 'dades_partida' + ';' + str(Global.partidas) + ';' + str(Global.max_fitness_partida) + ';' + str(Global.millor_ocell_partida) + '\n'
 	
 func guardar_dades_arxiu():
 	'''
@@ -200,24 +203,48 @@ func guardar_dades_arxiu():
 	Global.puntuacio_max
 	Global.num_partidas
 	'''
-	dades += 'dades_arxiu' + ';' + str(Global.inputs) + ';' + str(Global.num_poblacio) + ';' + str(Global.num_gen_max) + ';' + str(Global.puntuacio_max) + ';' + str(Global.num_partidas) + '\n'
+	Global.dades += 'dades_arxiu' + ';' + str(Global.inputs) + ';' + str(Global.num_poblacio) + ';' + str(Global.num_gen_max) + ';' + str(Global.puntuacio_max) + ';' + str(Global.num_partidas) + '\n'
+	
+'''func desa_arxiu():
+	
+	
+	var file_name = 'res://dades/' + nom + str(num) + '.txt'
+	#canviar per cada persona 
+	var file = FileAccess.open(file_name, FileAccess.READ)
+	
+	
+	if file == null:
+		#file.seek_end()
+		file.store_string(dades + "\n")
+		print(dades)
+		file.close()
+	else:
+		num += 1
+		desa_arxiu()
+		file.close()
+	'''
 	
 func desa_arxiu():
+	var file_name = "res://dades(NO OBRIR DESDE GODOT)/" + Global.nom + str(Global.num) + '.txt'
+	var file = null
+	# Intenta obrir el fitxer en mode lectura per comprovar si existeix
+	var file_exists = false
+	file = FileAccess.open(file_name, FileAccess.READ)
+	if file != null:
+		file_exists = true
+	else:
+		file_exists = false
 
-	var file_name = "res://dades/jan.txt" # Cambia això per la ruta i nom que desitgis
-	var content = "Les dades que vols guardar\n"  # El contingut que vols escriure al fitxer
+	# Si el fitxer no existeix, crea'l i desa les dades
+	if not file_exists:
+		file = FileAccess.open(file_name, FileAccess.WRITE)
+		file.store_string(Global.dades + "\n")
+		print(Global.dades)
+		file.close()
+	else:
+		Global.num += 1
+		desa_arxiu()
+		file.close()
 
-	# Crea o obre el fitxer
-	var file = FileAccess.open(file_name, FileAccess.WRITE_READ)
-	
-	# Mou el punter de l'arxiu al final del fitxer
-	file.seek_end()
-	
-	# Escriu les dades al fitxer
-	file.store_string(dades)
-	
-	# Tanca el fitxer
-	file.close()
-	print("Dades guardades correctament.")
 
-	
+		
