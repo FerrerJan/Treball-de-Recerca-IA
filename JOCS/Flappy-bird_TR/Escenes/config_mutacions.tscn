@@ -25,28 +25,11 @@ texture = ExtResource("2_ccphh")
 region_enabled = true
 region_rect = Rect2(-68.035, -0.237, 3000, 55.886)
 
-[node name="MutEst" type="Label" parent="."]
-offset_left = 41.0
-offset_top = 131.0
-offset_right = 224.0
-offset_bottom = 155.0
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Mutacions estructurals:"
-
-[node name="CheckButton" type="CheckButton" parent="MutEst"]
-layout_mode = 0
-offset_left = 183.0
-offset_right = 227.0
-offset_bottom = 24.0
-
 [node name="MutNoEst" type="Label" parent="."]
 offset_left = 16.0
-offset_top = 184.0
+offset_top = 131.0
 offset_right = 223.0
-offset_bottom = 208.0
+offset_bottom = 155.0
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -57,6 +40,23 @@ text = "Mutacions no estructurals:"
 layout_mode = 0
 offset_left = 208.0
 offset_right = 252.0
+offset_bottom = 24.0
+
+[node name="MutEst" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 184.0
+offset_right = 246.0
+offset_bottom = 208.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Mutacions estructurals:"
+
+[node name="CheckButton" type="CheckButton" parent="MutEst"]
+layout_mode = 0
+offset_left = 185.0
+offset_right = 229.0
 offset_bottom = 24.0
 
 [node name="Crossover" type="Label" parent="."]
