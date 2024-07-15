@@ -232,6 +232,7 @@ func guardar_dades_arxiu():
 	
 func desa_arxiu():
 	Global.nom = ('Població:' + str(Global.num_poblacio) + '_Inputs:' + str(Global.inputs) + '_Mutacions:' + str(Global.mutacions)).replace(' ', '')
+	
 	var file_name = "res://dades(NO OBRIR DESDE GODOT)/" + Global.nom + '_' + str(Global.num) + '.txt'
 	var PY_file_name = "res://dades(NO OBRIR DESDE GODOT)/" + "PY_" + Global.nom + '_' + str(Global.num) + '.txt'
 	var file = null
