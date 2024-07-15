@@ -1,0 +1,44 @@
+Generació: 1 - Fitness: 133.383333333333
+Generació: 2 - Fitness: 222.050000000001
+Generació: 3 - Fitness: 134.216666666667
+Generació: 4 - Fitness: 129.133333333333
+Generació: 5 - Fitness: 1156
+Partida: 0
+Màxim fitness de la partida: 1156
+Millor ocell de la partida:
+Neurones input: 4
+Neurones amagades: 0
+Neuornes output: 1
+Conexions:
+Desde: 1 - Fins: 4 - Importancia: -0.33920657634735
+Desde: 2 - Fins: 4 - Importancia: -0.27559983730316
+Desde: 3 - Fins: 4 - Importancia: 0.91096770763397
+Desde: 0 - Fins: 4 - Importancia: -0.08534395694733
+------------------------------------------------------------------------
+Generació: 1 - Fitness: 184.550000000001
+Generació: 2 - Fitness: 113.8
+Generació: 3 - Fitness: 190.883333333335
+Generació: 4 - Fitness: 195.466666666668
+Generació: 5 - Fitness: 201.300000000001
+Partida: 1
+Màxim fitness de la partida: 201.300000000001
+Millor ocell de la partida:
+Neurones input: 4
+Neurones amagades: 2
+Neuornes output: 1
+Conexions:
+Desde: 0 - Fins: 6 - Importancia: 0.50177597999573
+Desde: 2 - Fins: 6 - Importancia: -0.59292137622833
+Desde: 3 - Fins: 6 - Importancia: 0.91452288627625
+Desde: 4 - Fins: 6 - Importancia: -0.42996340990067
+Desde: 0 - Fins: 4 - Importancia: 0.52144849300385
+Desde: 5 - Fins: 6 - Importancia: 0.31404185295105
+Desde: 3 - Fins: 5 - Importancia: 0.7098799943924
+------------------------------------------------------------------------
+Configuració:
+Població: 45
+Inputs: [0, 1, 2, 3]
+Mutacions: [0, 1, 2]
+Partides totals: 2
+Generacions totals: 5
+Puntuació màxima: 10
