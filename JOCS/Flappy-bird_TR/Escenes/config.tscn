@@ -97,6 +97,24 @@ offset_top = -8.0
 offset_right = 219.0
 offset_bottom = 32.0
 
+[node name="dades" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 286.0
+offset_right = 142.0
+offset_bottom = 310.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Nom:"
+
+[node name="text" type="TextEdit" parent="dades"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = -8.0
+offset_right = 263.0
+offset_bottom = 32.0
+
 [node name="OK" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(256, 368)

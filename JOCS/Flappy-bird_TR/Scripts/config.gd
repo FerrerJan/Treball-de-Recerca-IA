@@ -5,6 +5,7 @@ extends Node2D
 @onready var generacions = $Generacions/Num
 @onready var partides = $Partides/Num
 @onready var terra = $Terra
+@onready var dades = $dades/text
 var velocitat := 138
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +14,7 @@ func _ready():
 	puntuacio_max.text = str(Global.puntuacio_max)
 	generacions.text = str(Global.num_gen_max)
 	partides.text = str(Global.num_partidas)
+	dades.text = str(Global.nom)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -38,6 +40,9 @@ func _on_ok_pressed():
 		Global.num_gen_max = generacions.text.to_int()
 	if partides.text.to_int() != 0:
 		Global.num_partidas = partides.text.to_int()
+	if dades.text != '':
+		Global.nom = dades.text
+	
 	get_tree().change_scene_to_file("res://Escenes/inteficie.tscn") # Replace with function body.
 
 
@@ -50,4 +55,6 @@ func _on_inputs_pressed():
 		Global.num_gen_max = generacions.text.to_int()
 	if partides.text.to_int() != 0:
 		Global.num_partidas = partides.text.to_int()
+	if dades.text != '':
+		Global.nom = dades.text
 	get_tree().change_scene_to_file("res://Escenes/config_inputs.tscn") # Replace with function body.
