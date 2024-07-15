@@ -2,7 +2,9 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import random
 
-with open("/media/teo/1T Disc Dur/TRABAJO DE RECERCA/Treball-de-Recerca-IA/TR/DATOS/datos.txt") as f:
+nombre = "datos"
+
+with open("E:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\DATOS\datos.txt") as f:
     contents = f.readlines()
     matrix = []
     for i in range(len(contents)):

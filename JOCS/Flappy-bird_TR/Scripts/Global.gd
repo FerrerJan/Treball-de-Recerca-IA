@@ -40,5 +40,6 @@ var gen := 0
 
 
 var dades : String = ''
+var dades_PY : String = ''
 var nom : String = ('Població:' + str(num_poblacio) + '_Inputs:' + str(inputs) + '_Mutacions:' + str(mutacions)).replace(' ', '')
 var num := 0
