@@ -138,6 +138,7 @@ func _process(delta):
 			get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
 			guardar_dades_arxiu()
 			desa_arxiu()
+			desa_dades()
 			Global.dades = ''
 			
 		elif Global.repetir == false:
@@ -245,6 +246,7 @@ func desa_arxiu():
 	# Intenta obrir el fitxer en mode lectura per comprovar si existeix
 	var file_exists = false
 	file = FileAccess.open(file_name, FileAccess.READ)
+	
 	if file != null:
 		file_exists = true
 	else:
@@ -256,12 +258,18 @@ func desa_arxiu():
 		file.store_string(Global.dades + "\n")
 		print(Global.dades)
 		file.close()
+		Global.num = 0
 	else:
 		Global.num += 1
 		desa_arxiu()
 		file.close()
 		
-	
+		
+func desa_dades():
+	var file_name = "res://dades(NO OBRIR DESDE GODOT)/" + Global.nom + '_' + str(Global.num) + '.txt'
+	var PY_file_name = "res://dades(NO OBRIR DESDE GODOT)/" + "PY_" + Global.nom + '_' + str(Global.num) + '.txt'
+	var file = null
+	var file_exists = false
 	# REPETIR EL PROCES AMB UN FITXER QUE EL CODI DE PYTHON PROCESSI
 	file = null
 	file_exists = false
@@ -277,10 +285,14 @@ func desa_arxiu():
 		file.store_string(Global.dades_PY + "\n")
 		print(Global.dades_PY)
 		file.close()
+		Global.num = 0
 	else:
 		Global.num += 1
-		desa_arxiu()
-		file.close()	
+		desa_dades()
+		file.close()
+		
+	
+	
 
 
 		
