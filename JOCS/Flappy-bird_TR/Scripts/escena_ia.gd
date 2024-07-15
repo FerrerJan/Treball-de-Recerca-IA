@@ -191,7 +191,7 @@ func guardar_dades_gen():
 	'''
 	
 	Global.dades += 'Generació: ' + str(Global.gen) + ' - Fitness: ' + str(Global.max_fitness_gen) + '\n'
-	
+	Global.dades_PY += str(Global.max_fitness_gen) + ", "
 func guardar_dades_partida():
 	'''
 	Global.partidas
@@ -200,7 +200,7 @@ func guardar_dades_partida():
 	'''
 	
 	Global.dades += 'Partida: ' + str(Global.partidas) + '\nMàxim fitness de la partida: ' + str(Global.max_fitness_partida) + '\nMillor ocell de la partida:\n' + Global.millor_ocell_partida.mostra() + '\n------------------------------------------------------------------------\n'
-	
+	Global.dades_PY += "\n"
 func guardar_dades_arxiu():
 	'''
 	Global.inputs
@@ -238,7 +238,9 @@ func guardar_dades_arxiu():
 	
 func desa_arxiu():
 	Global.nom = ('Població:' + str(Global.num_poblacio) + '_Inputs:' + str(Global.inputs) + '_Mutacions:' + str(Global.mutacions)).replace(' ', '')
+	
 	var file_name = "res://dades(NO OBRIR DESDE GODOT)/" + Global.nom + '_' + str(Global.num) + '.txt'
+	var PY_file_name = "res://dades(NO OBRIR DESDE GODOT)/" + "PY_" + Global.nom + '_' + str(Global.num) + '.txt'
 	var file = null
 	# Intenta obrir el fitxer en mode lectura per comprovar si existeix
 	var file_exists = false
@@ -258,6 +260,27 @@ func desa_arxiu():
 		Global.num += 1
 		desa_arxiu()
 		file.close()
+		
+	
+	# REPETIR EL PROCES AMB UN FITXER QUE EL CODI DE PYTHON PROCESSI
+	file = null
+	file_exists = false
+	file = FileAccess.open(PY_file_name, FileAccess.READ)
+	if file != null:
+		file_exists = true
+	else:
+		file_exists = false
+
+	# Si el fitxer no existeix, crea'l i desa les dades
+	if not file_exists:
+		file = FileAccess.open(PY_file_name, FileAccess.WRITE)
+		file.store_string(Global.dades_PY + "\n")
+		print(Global.dades_PY)
+		file.close()
+	else:
+		Global.num += 1
+		desa_arxiu()
+		file.close()	
 
 
 		
