@@ -20,7 +20,7 @@ var population := []
 var repetir := true
 var max_fitness_index: int = 0 
 var gen_seguides_amb_puntuació_maxima :int = 0
-var velocitat_joc := 5
+var velocitat_joc := 1
 
 
 #Variables que es guarden per cada arxiu (Després de canviar la config)
