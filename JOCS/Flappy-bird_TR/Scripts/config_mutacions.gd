@@ -9,9 +9,9 @@ var mutacions := Global.mutacions
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in mutacions:
-		if i == 0:
+		if i == 1:
 			MutEst.button_pressed = true
-		elif i == 1:
+		elif i == 0:
 			MutNoEst.button_pressed = true
 		elif i == 2:
 			Crossover.button_pressed = true
@@ -27,9 +27,9 @@ func _process(delta):
 func _on_button_pressed():
 	Global.mutacions = []
 	if MutEst.button_pressed == true:
-		Global.mutacions.append(0)
-	if MutNoEst.button_pressed == true:
 		Global.mutacions.append(1)
+	if MutNoEst.button_pressed == true:
+		Global.mutacions.append(0)
 	if Crossover.button_pressed == true:
 		Global.mutacions.append(2)
 	if Global.mutacions.size() == 0:
