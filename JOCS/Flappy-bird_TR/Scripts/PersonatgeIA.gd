@@ -20,6 +20,7 @@ func inici():
 	label.text = str(p)
 
 func _physics_process(delta):
+	delta *= Global.velocitat_joc
 	var pos_y_bird :float = get_global_position().y
 	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
 	# Verificar si el pájaro está muerto

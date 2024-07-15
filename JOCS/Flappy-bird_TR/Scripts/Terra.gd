@@ -9,6 +9,7 @@ func _ready():
 
 
 func _process(delta):
+	delta *= Global.velocitat_joc
 	#var desp := Vector2(velocitat,0)*(-1)
 	if Global.mort == false:
 		var desp := Vector2(velocitat,0)*(-1)

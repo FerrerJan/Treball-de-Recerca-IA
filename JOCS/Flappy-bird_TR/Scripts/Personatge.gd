@@ -9,6 +9,7 @@ var gravity = (ProjectSettings.get_setting("physics/2d/default_gravity"))/1.4
 
 
 func _physics_process(delta):
+	delta *= Global.velocitat_joc
 	if Global.mort == false:
 		if not is_on_floor():
 			velocity.y += gravity * delta

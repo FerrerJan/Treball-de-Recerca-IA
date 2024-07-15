@@ -49,6 +49,7 @@ func _ready():
 	
 
 func _process(delta):
+	delta *= Global.velocitat_joc
 	if Global.iniciat == true and Global.Z == 0 and xarxa_neuronal_preparada:
 		for i in range(num_IA):
 			add_child(IA.instantiate())

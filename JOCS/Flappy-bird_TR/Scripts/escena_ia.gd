@@ -3,6 +3,7 @@ extends Node2D
 @export var escena_obstacle: PackedScene
 @export var min : float = -145
 @export var max : float = 126
+@onready var timer = $Obstacles/Timer
 
 var num_generacions : int = 0
 var max_puntuacio : int = 0
@@ -34,11 +35,13 @@ func _ready():
 	Global.morts_ia = 0
 	Global.posicio_obstacle_continua = Vector2(490, 207)
 	print(Global.gen_seguides_amb_puntuació_maxima)
+	timer.wait_time /= Global.velocitat_joc
 	
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	delta *= Global.velocitat_joc
 	#print(Global.gen)
 	if !Global.mort:
 		var fitness := []

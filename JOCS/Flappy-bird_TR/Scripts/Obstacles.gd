@@ -8,6 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	delta *= Global.velocitat_joc
 	if Global.mort == false:
 		var desp := Vector2(velocitat,0) * (-1)
 		position += desp * delta
