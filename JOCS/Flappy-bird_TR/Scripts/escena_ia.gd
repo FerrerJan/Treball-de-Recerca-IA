@@ -33,7 +33,7 @@ func _ready():
 	posicio = 0
 	Global.morts_ia = 0
 	Global.posicio_obstacle_continua = Vector2(490, 207)
-	print(Global.partides_seguides_amb_puntuació_maxima)
+	print(Global.gen_seguides_amb_puntuació_maxima)
 	
 	
 
@@ -73,7 +73,7 @@ func _process(delta):
 			Global.Z = 0
 			
 	if Global.morts_ia >= Global.num_IA and Global.IA == true:
-		Global.partides_seguides_amb_puntuació_maxima = 0
+		Global.gen_seguides_amb_puntuació_maxima = 0
 		Global.mort = true
 		
 	#print(str(Global.morts_ia)+' / '+str(Global.num_IA) )
@@ -86,7 +86,7 @@ func _process(delta):
 		Global.maxim = Global.punts 
 	
 	if Global.punts >= Global.puntuacio_max:
-		Global.partides_seguides_amb_puntuació_maxima += 1
+		Global.gen_seguides_amb_puntuació_maxima += 1
 		Global.mort = true
 			
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
@@ -125,13 +125,13 @@ func _process(delta):
 		guardar_dades_gen()
 		print (Global.dades)
 		
-		if Global.gen >= Global.num_gen_max:
+		if Global.gen >= Global.num_gen_max or Global.gen_seguides_amb_puntuació_maxima >= 3:
 			guardar_dades_partida()
 			Global.gen = 0
 			Global.partidas += 1
+			Global.gen_seguides_amb_puntuació_maxima = 0
 			
-		if Global.partidas >= Global.num_partidas or Global.partides_seguides_amb_puntuació_maxima >= 3:
-			Global.partides_seguides_amb_puntuació_maxima = 0
+		if Global.partidas >= Global.num_partidas:
 			get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
 			guardar_dades_arxiu()
 			desa_arxiu()
