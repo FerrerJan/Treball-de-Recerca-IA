@@ -5,7 +5,7 @@ extends Node2D
 @onready var generacions = $Generacions/Num
 @onready var partides = $Partides/Num
 @onready var terra = $Terra
-@onready var dades = $dades/text
+@onready var velocitat_joc = $VelJoc/VelocitatJoc
 var velocitat := 138
 
 # Called when the node enters the scene tree for the first time.
@@ -14,7 +14,7 @@ func _ready():
 	puntuacio_max.text = str(Global.puntuacio_max)
 	generacions.text = str(Global.num_gen_max)
 	partides.text = str(Global.num_partidas)
-	dades.text = str(Global.nom)
+	velocitat_joc.text = str(Global.velocitat_joc)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -29,6 +29,8 @@ func _process(delta):
 		generacions.text = str(generacions.text.to_int())
 	if !partides.text.is_valid_int() and !partides.text.is_empty():
 		partides.text = str(partides.text.to_int())
+	if !velocitat_joc.text.is_valid_int() and !velocitat_joc.text.is_empty():
+		velocitat_joc.text = str(velocitat_joc.text.to_int())
 
 
 func _on_ok_pressed():
@@ -47,13 +49,13 @@ func _on_mutacions_pressed():
 
 
 func guardar_dades():
-	if poblacio.text.to_int() != 0:
+	if not poblacio.text.to_int() <= 0:
 		Global.num_poblacio = poblacio.text.to_int()
-	if puntuacio_max.text.to_int() != 0:
+	if not puntuacio_max.text.to_int() <= 0:
 		Global.puntuacio_max = puntuacio_max.text.to_int()
-	if generacions.text.to_int() != 0:
+	if not generacions.text.to_int() <= 0:
 		Global.num_gen_max = generacions.text.to_int()
-	if partides.text.to_int() != 0:
+	if not partides.text.to_int() <= 0:
 		Global.num_partidas = partides.text.to_int()
-	if dades.text != '':
-		Global.nom = dades.text
+	if not velocitat_joc.text.to_int() <= 0:
+		Global.velocitat_joc = velocitat_joc.text.to_int()
