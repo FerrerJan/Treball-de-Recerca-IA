@@ -193,7 +193,7 @@ func guardar_dades_partida():
 	Global.millor_ocell_partida
 	'''
 	
-	Global.dades += 'Partida: ' + str(Global.partidas) + '\nMàxim fitness de la partida: ' + str(Global.max_fitness_partida) + '\nMillor ocell de la partida: ' + str(Global.millor_ocell_partida) + '\n------------------------------------------------------------------------\n'
+	Global.dades += 'Partida: ' + str(Global.partidas) + '\nMàxim fitness de la partida: ' + str(Global.max_fitness_partida) + '\nMillor ocell de la partida:\n' + Global.millor_ocell_partida.mostra() + '\n------------------------------------------------------------------------\n'
 	
 func guardar_dades_arxiu():
 	'''
@@ -231,6 +231,7 @@ func guardar_dades_arxiu():
 	'''
 	
 func desa_arxiu():
+	Global.nom = ('Població:' + str(Global.num_poblacio) + '_Inputs:' + str(Global.inputs) + '_Mutacions:' + str(Global.mutacions)).replace(' ', '')
 	var file_name = "res://dades(NO OBRIR DESDE GODOT)/" + Global.nom + '_' + str(Global.num) + '.txt'
 	var file = null
 	# Intenta obrir el fitxer en mode lectura per comprovar si existeix

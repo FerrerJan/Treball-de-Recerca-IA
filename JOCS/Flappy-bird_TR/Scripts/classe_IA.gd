@@ -209,3 +209,14 @@ class ia:
 			if connections[i].weight != xarxaNeuronal.connections[i].weight:
 				return false
 		return true
+		
+	func mostra():
+		var visualitzacio := ''
+		visualitzacio += 'Neurones input: ' + str(num_inputs)
+		visualitzacio += '\nNeurones amagades: ' + str(num_hidden)
+		visualitzacio += '\nNeuornes output: ' + str(num_outputs)
+		visualitzacio += '\nConexions:'
+		for connection in connections: 
+			visualitzacio += '\nDesde: ' + str(connection.from_neuron) + ' - Fins: ' + str(connection.to_neuron) + ' - Importancia: ' + str(connection.weight)
+		return visualitzacio
+		
