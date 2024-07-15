@@ -20,3 +20,7 @@ func _on_start_pressed():
 
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://Escenes/config.tscn") # Replace with function body.
+
+
+func _on_ok_pressed():
+	get_tree().quit()

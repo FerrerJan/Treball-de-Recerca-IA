@@ -55,7 +55,7 @@ offset_top = -6.68223
 offset_right = 20.1154
 offset_bottom = 6.31777
 
-[node name="Sprites" type="Sprite2D" parent="."]
+[node name="Ok" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(154, 278)
 scale = Vector2(3.4375, 3.4375)
@@ -63,5 +63,13 @@ texture = ExtResource("4_7iuk1")
 region_enabled = true
 region_rect = Rect2(244.039, 132.688, 42.958, 16.3508)
 
+[node name="Ok" type="Button" parent="Ok"]
+show_behind_parent = true
+offset_left = -19.0
+offset_top = -6.0
+offset_right = 20.0
+offset_bottom = 6.0
+
 [connection signal="pressed" from="Start/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Menu/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Ok/Ok" to="." method="_on_ok_pressed"]
