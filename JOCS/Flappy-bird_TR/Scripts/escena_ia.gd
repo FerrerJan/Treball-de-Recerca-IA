@@ -34,7 +34,6 @@ func _ready():
 	posicio = 0
 	Global.morts_ia = 0
 	Global.posicio_obstacle_continua = Vector2(490, 207)
-	print(Global.gen_seguides_amb_puntuació_maxima)
 	timer.wait_time /= Global.velocitat_joc
 	
 	
@@ -126,7 +125,6 @@ func _process(delta):
 	
 	if Global.mort:
 		guardar_dades_gen()
-		print (Global.dades)
 		
 		if Global.gen >= Global.num_gen_max or Global.gen_seguides_amb_puntuació_maxima >= 3:
 			guardar_dades_partida()
@@ -135,6 +133,7 @@ func _process(delta):
 			Global.gen_seguides_amb_puntuació_maxima = 0
 			
 		if Global.partidas >= Global.num_partidas:
+			print(Global.partidas)
 			get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
 			guardar_dades_arxiu()
 			desa_arxiu()
@@ -256,7 +255,6 @@ func desa_arxiu():
 	if not file_exists:
 		file = FileAccess.open(file_name, FileAccess.WRITE)
 		file.store_string(Global.dades + "\n")
-		print(Global.dades)
 		file.close()
 		Global.num = 0
 	else:
@@ -266,8 +264,8 @@ func desa_arxiu():
 		
 		
 func desa_dades():
-	var file_name = "res://dades(NO OBRIR DESDE GODOT)/" + Global.nom + '_' + str(Global.num) + '.txt'
-	var PY_file_name = "res://dades(NO OBRIR DESDE GODOT)/" + "PY_" + Global.nom + '_' + str(Global.num) + '.txt'
+	var file_name = "res://Dades/" + Global.nom + '_' + str(Global.num) + '.txt'
+	var PY_file_name = "res://DadesExcel/" + "PY_" + Global.nom + '_' + str(Global.num) + '.txt'
 	var file = null
 	var file_exists = false
 	# REPETIR EL PROCES AMB UN FITXER QUE EL CODI DE PYTHON PROCESSI
@@ -283,7 +281,6 @@ func desa_dades():
 	if not file_exists:
 		file = FileAccess.open(PY_file_name, FileAccess.WRITE)
 		file.store_string(Global.dades_PY + "\n")
-		print(Global.dades_PY)
 		file.close()
 		Global.num = 0
 	else:
