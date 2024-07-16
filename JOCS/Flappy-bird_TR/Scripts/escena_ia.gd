@@ -239,8 +239,8 @@ func guardar_dades_arxiu():
 func desa_arxiu():
 	Global.nom = ('Població-' + str(Global.num_poblacio) + '_Inputs-' + str(Global.inputs) + '_Mutacions-' + str(Global.mutacions)).replace(' ', '')
 	
-	var file_name = "res://dades(NO OBRIR DESDE GODOT)/" + Global.nom + '_' + str(Global.num) + '.txt'
-	var PY_file_name = "res://dades(NO OBRIR DESDE GODOT)/" + "PY_" + Global.nom + '_' + str(Global.num) + '.txt'
+	var file_name = "res://Dades/" + Global.nom + '_' + str(Global.num) + '.txt'
+	var PY_file_name = "res://DadesExcel/" + "PY_" + Global.nom + '_' + str(Global.num) + '.txt'
 	var file = null
 	# Intenta obrir el fitxer en mode lectura per comprovar si existeix
 	var file_exists = false
