@@ -220,3 +220,26 @@ class ia:
 			visualitzacio += '\nDesde: ' + str(connection.from_neuron) + ' - Fins: ' + str(connection.to_neuron) + ' - Importancia: ' + str(connection.weight)
 		return visualitzacio
 		
+	func asignar_val_global(num):
+		var f = 0
+		var conexions_millor : = ''
+		if num == 0: 
+			return str(num_inputs)
+		elif num == 1:
+			return str(num_hidden)
+		elif num == 2:
+			return str(num_outputs)
+		elif num == 3:
+			for i in connections:
+				if f == 0:
+					conexions_millor += '{\n"desde" :' + str(i.from_neuron) + ',\n"fins" :' + str(i.to_neuron) + ',\n"importancia" :' + str(i.weight) + '}'
+				else:
+					conexions_millor += ',\n{\n"desde" :' + str(i.from_neuron) + ',\n"fins" :' + str(i.to_neuron) + ',\n"importancia" :' + str(i.weight) + '}'
+				f += 1
+			return conexions_millor 
+					
+					
+		
+		
+		
+		

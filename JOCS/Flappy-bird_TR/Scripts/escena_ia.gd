@@ -18,7 +18,8 @@ var Vpos_personatge : Vector2
 var activat := false
 
 
-
+	
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.mort = false
@@ -36,7 +37,7 @@ func _ready():
 	Global.posicio_obstacle_continua = Vector2(490, 207)
 	timer.wait_time /= Global.velocitat_joc
 	
-	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -138,7 +139,10 @@ func _process(delta):
 			guardar_dades_arxiu()
 			desa_arxiu()
 			desa_dades()
+			desa_json()
+			#dades json
 			Global.dades = ''
+			Global.dades_json = ''
 			
 		elif Global.repetir == false:
 			$Obstacles/Timer.stop()
@@ -192,6 +196,12 @@ func guardar_dades_gen():
 	
 	Global.dades += 'Generació: ' + str(Global.gen) + ' - Fitness: ' + str(Global.max_fitness_gen) + '\n'
 	Global.dades_PY += str(Global.max_fitness_gen) + ", "
+	
+	#-------------------------------------------------
+	if Global.gen != 1:
+		Global.dades_gen_json += ',\n{\n' + '"num_generacio" : ' + str(Global.gen) + ',\n' + '"fitness" : ' + str(Global.max_fitness_gen) + '\n}'
+	else:
+		Global.dades_gen_json += '{\n' + '"num_generacio" : ' + str(Global.gen) + ',\n' + '"fitness" : ' + str(Global.max_fitness_gen) + '\n}'
 func guardar_dades_partida():
 	'''
 	Global.partidas
@@ -201,6 +211,15 @@ func guardar_dades_partida():
 	
 	Global.dades += 'Partida: ' + str(Global.partidas) + '\nMàxim fitness de la partida: ' + str(Global.max_fitness_partida) + '\nMillor ocell de la partida:\n' + Global.millor_ocell_partida.mostra() + '\n------------------------------------------------------------------------\n'
 	Global.dades_PY += "\n"
+	
+	#------------------------------------------------------------
+	if Global.partidas != 0:
+		Global.dades_json += ',\n{\n' + '"num_partida" :' + str(Global.partidas) + ',\n"generacions" :' + '\n[\n' + str(Global.dades_gen_json) + '\n],\n' + '"màxim_fitness" :' + str(Global.max_fitness_partida) + ',\n"millor_ocell" :' +  '\n{\n' + '"neurones_input" : ' + str(Global.millor_ocell_partida.asignar_val_global(0)) + ',\n"neurones_amagades" :' + str(Global.millor_ocell_partida.asignar_val_global(1)) + ',\n"neuornes_output" :' + str(Global.millor_ocell_partida.asignar_val_global(2)) + ',\n"conexions" : [\n' + str(Global.millor_ocell_partida.asignar_val_global(3)) + '\n]' +'\n}\n' + '}'                                                   
+	else:
+		Global.dades_json += '{\n' + '"num_partida" :' + str(Global.partidas) + ',\n"generacions" :' + '\n[\n' + str(Global.dades_gen_json) + '\n],\n' + '"màxim_fitness" :' + str(Global.max_fitness_partida) + ',\n"millor_ocell" :' +  '\n{\n' + '"neurones_input" : ' + str(Global.millor_ocell_partida.asignar_val_global(0)) + ',\n"neurones_amagades" :' + str(Global.millor_ocell_partida.asignar_val_global(1)) + ',\n"neuornes_output" :' + str(Global.millor_ocell_partida.asignar_val_global(2)) + ',\n"conexions" :[\n' + str(Global.millor_ocell_partida.asignar_val_global(3)) + '\n]' +'\n}\n' + '}'
+		
+	Global.dades_gen_json = ''
+	
 func guardar_dades_arxiu():
 	'''
 	Global.inputs
@@ -288,6 +307,40 @@ func desa_dades():
 		desa_dades()
 		file.close()
 		
+func desa_json():
+	
+	var current_time = Time.get_datetime_dict_from_system()
+	
+	var data : String = str(current_time['day']) + '/' + str(current_time['month']) + '/' + str(current_time['year']) + ' ' + str(current_time['hour']) + ':' + str(current_time['minute']) + ':' + str(current_time['second']) 
+	
+	
+	var file_name = "res://Dades Json/" + Global.nom + '_' + str(Global.num) + '.json'
+	var file = null
+	var file_exists = false
+	
+	var dades : String = '{\n' + '"nom_fitxer" : "' + str(file_name) + '",\n"data_mostra" : "' + str(data) + '",\n"configuracio" :\n{\n"població" : ' + str(Global.num_poblacio) + ',\n"inputs" : ' + str(Global.inputs) + ',\n"mutacions" : ' + str(Global.mutacions) + ',\n"partides_totals" : ' + str(Global.num_partidas) + ',\n"generacions totals" : ' + str(Global.num_gen_max) + ',\n"Puntuació màxima" : ' + str(Global.puntuacio_max) + '\n},\n"partides" : [\n' + str(Global.dades_json) + '\n]\n}'
+	
+	file = null
+	file_exists = false
+	file = FileAccess.open(file_name, FileAccess.READ)
+	if file != null:
+		file_exists = true
+	else:
+		file_exists = false
+
+	
+	if not file_exists:
+		file = FileAccess.open(file_name, FileAccess.WRITE)
+		file.store_string(dades + "\n")
+		file.close()
+		Global.num = 0
+	else:
+		Global.num += 1
+		desa_json()
+		file.close()
+
+
+	
 	
 	
 
