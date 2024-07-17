@@ -1,0 +1,152 @@
+{
+"nom_fitxer" : "res://Dades Json/Població-5_Inputs-[0,1]_Mutacions-[0,1,2]_0.json",
+"data_mostra" : "17/7/2024 22:40:0",
+"configuracio" :
+{
+"població" : 5,
+"inputs" : [0, 1],
+"mutacions" : [0, 1, 2],
+"partides_totals" : 3,
+"generacions totals" : 5,
+"Puntuació màxima" : 5
+},
+"partides" : [
+{
+"num_partida" :0,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 62.6666666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 73.4166666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 27.25
+},
+{
+"num_generacio" : 4,
+"fitness" : 28.1666666666667
+},
+{
+"num_generacio" : 5,
+"fitness" : 28.1666666666667
+}
+],
+"màxim_fitness" :73.4166666666667,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" :[
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.68789994716644},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.98790818452835},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :0.08711791038513}
+]
+}
+},
+{
+"num_partida" :1,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 13.8333333333333
+},
+{
+"num_generacio" : 2,
+"fitness" : 34.8333333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 46.5
+},
+{
+"num_generacio" : 4,
+"fitness" : 46.5
+},
+{
+"num_generacio" : 5,
+"fitness" : 50.75
+}
+],
+"màxim_fitness" :50.75,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.83160662651062},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.40286427736282},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.52289032936096}
+]
+}
+},
+{
+"num_partida" :2,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 28.25
+},
+{
+"num_generacio" : 2,
+"fitness" : 27.75
+},
+{
+"num_generacio" : 3,
+"fitness" : 28.25
+},
+{
+"num_generacio" : 4,
+"fitness" : 29.1666666666667
+},
+{
+"num_generacio" : 5,
+"fitness" : 28.25
+}
+],
+"màxim_fitness" :29.1666666666667,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.45242142677307},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.67114365100861}
+]
+}
+}
+]
+}
