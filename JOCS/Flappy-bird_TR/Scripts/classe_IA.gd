@@ -98,7 +98,7 @@ class ia:
 		var num_connections := connections.size()
 		for _j in range(1000):
 			var n :int = rng.randi_range(0, 4)
-			if n == 0 and Global.mutacions.find(0) != -1:
+			if n == 0 and num_connections > 0 and Global.mutacions.find(0) != -1:
 				# Cambio de peso
 				connections[rng.randi_range(0, num_connections - 1)].weight = rng.randf_range(-1.0, 1.0)
 			elif n == 1 and Global.mutacions.find(1) != -1:
