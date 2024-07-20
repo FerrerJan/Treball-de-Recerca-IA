@@ -128,13 +128,13 @@ func _process(delta):
 		guardar_dades_gen()
 		
 		if Global.gen >= Global.num_gen_max or Global.gen_seguides_amb_puntuació_maxima >= 3:
+			print(Global.partidas)
 			guardar_dades_partida()
 			Global.gen = 0
 			Global.partidas += 1
 			Global.gen_seguides_amb_puntuació_maxima = 0
 			
 		if Global.partidas >= Global.num_partidas:
-			print(Global.partidas)
 			get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
 			guardar_dades_arxiu()
 			desa_arxiu()

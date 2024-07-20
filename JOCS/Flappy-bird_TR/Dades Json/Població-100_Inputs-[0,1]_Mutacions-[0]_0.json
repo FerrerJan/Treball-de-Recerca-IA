@@ -1,0 +1,1353 @@
+{
+"nom_fitxer" : "res://Dades Json/Població-100_Inputs-[0,1]_Mutacions-[0]_0.json",
+"data_mostra" : "19/7/2024 10:28:20",
+"configuracio" :
+{
+"població" : 100,
+"inputs" : [0, 1],
+"mutacions" : [0],
+"partides_totals" : 30,
+"generacions totals" : 125,
+"Puntuació màxima" : 150
+},
+"partides" : [
+{
+"num_partida" :0,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 1313.73333333333
+},
+{
+"num_generacio" : 2,
+"fitness" : 163468.866666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 164102.600000008
+},
+{
+"num_generacio" : 4,
+"fitness" : 162888.333333341
+}
+],
+"màxim_fitness" :164102.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" :[
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.41838824748993},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.42845970392227}
+]
+}
+},
+{
+"num_partida" :1,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 23068.3999999999
+},
+{
+"num_generacio" : 2,
+"fitness" : 163788.266666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 163540.000000008
+},
+{
+"num_generacio" : 4,
+"fitness" : 73821.999999999
+},
+{
+"num_generacio" : 5,
+"fitness" : 163881.266666675
+},
+{
+"num_generacio" : 6,
+"fitness" : 163810.266666675
+},
+{
+"num_generacio" : 7,
+"fitness" : 163666.600000008
+}
+],
+"màxim_fitness" :163881.266666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.61201250553131},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.62921380996704}
+]
+}
+},
+{
+"num_partida" :2,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 43130.8666666663
+},
+{
+"num_generacio" : 2,
+"fitness" : 94435.6666666645
+},
+{
+"num_generacio" : 3,
+"fitness" : 44154.7333333329
+},
+{
+"num_generacio" : 4,
+"fitness" : 164568.866666674
+},
+{
+"num_generacio" : 5,
+"fitness" : 164685.600000008
+},
+{
+"num_generacio" : 6,
+"fitness" : 163681.333333341
+}
+],
+"màxim_fitness" :164685.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.75873494148254},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.81459760665894}
+]
+}
+},
+{
+"num_partida" :3,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163440.600000008
+},
+{
+"num_generacio" : 2,
+"fitness" : 38593.7999999996
+},
+{
+"num_generacio" : 3,
+"fitness" : 163335.333333341
+},
+{
+"num_generacio" : 4,
+"fitness" : 22218.6
+},
+{
+"num_generacio" : 5,
+"fitness" : 163827.466666675
+},
+{
+"num_generacio" : 6,
+"fitness" : 163902.266666675
+},
+{
+"num_generacio" : 7,
+"fitness" : 163502.933333342
+}
+],
+"màxim_fitness" :163902.266666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.79985427856445},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.82017421722412}
+]
+}
+},
+{
+"num_partida" :4,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163849.200000009
+},
+{
+"num_generacio" : 2,
+"fitness" : 163127.466666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 163842.800000008
+}
+],
+"màxim_fitness" :163849.200000009,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.70917737483978},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.73116135597229}
+]
+}
+},
+{
+"num_partida" :5,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163658.933333341
+},
+{
+"num_generacio" : 2,
+"fitness" : 11201.0666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 163675.666666675
+},
+{
+"num_generacio" : 4,
+"fitness" : 163772.000000008
+},
+{
+"num_generacio" : 5,
+"fitness" : 164023.933333342
+}
+],
+"màxim_fitness" :164023.933333342,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.83062887191772},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.85281151533127}
+]
+}
+},
+{
+"num_partida" :6,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 40731.7999999997
+},
+{
+"num_generacio" : 2,
+"fitness" : 97682.3333333309
+},
+{
+"num_generacio" : 3,
+"fitness" : 40713.7999999996
+},
+{
+"num_generacio" : 4,
+"fitness" : 163610.933333342
+},
+{
+"num_generacio" : 5,
+"fitness" : 94116.3999999978
+},
+{
+"num_generacio" : 6,
+"fitness" : 163445.266666674
+},
+{
+"num_generacio" : 7,
+"fitness" : 164828.600000008
+},
+{
+"num_generacio" : 8,
+"fitness" : 163388.666666674
+}
+],
+"màxim_fitness" :164828.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.73210954666138},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.77592617273331}
+]
+}
+},
+{
+"num_partida" :7,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 1307.6
+},
+{
+"num_generacio" : 2,
+"fitness" : 164943.266666674
+},
+{
+"num_generacio" : 3,
+"fitness" : 163683.000000008
+},
+{
+"num_generacio" : 4,
+"fitness" : 165307.933333342
+}
+],
+"màxim_fitness" :165307.933333342,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.52798283100128},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.57142859697342}
+]
+}
+},
+{
+"num_partida" :8,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 164007.666666675
+},
+{
+"num_generacio" : 2,
+"fitness" : 65332.9999999997
+},
+{
+"num_generacio" : 3,
+"fitness" : 163080.933333342
+},
+{
+"num_generacio" : 4,
+"fitness" : 33198.8666666664
+},
+{
+"num_generacio" : 5,
+"fitness" : 163333.666666674
+},
+{
+"num_generacio" : 6,
+"fitness" : 163161.333333341
+},
+{
+"num_generacio" : 7,
+"fitness" : 163307.600000008
+}
+],
+"màxim_fitness" :164007.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.56992626190186},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.58817327022552}
+]
+}
+},
+{
+"num_partida" :9,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 77153.1999999986
+},
+{
+"num_generacio" : 2,
+"fitness" : 162912.000000008
+},
+{
+"num_generacio" : 3,
+"fitness" : 52789.6666666663
+},
+{
+"num_generacio" : 4,
+"fitness" : 52723.6666666663
+},
+{
+"num_generacio" : 5,
+"fitness" : 163574.666666675
+},
+{
+"num_generacio" : 6,
+"fitness" : 164259.666666675
+},
+{
+"num_generacio" : 7,
+"fitness" : 163682.933333342
+}
+],
+"màxim_fitness" :164259.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.88469958305359},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.93167382478714}
+]
+}
+},
+{
+"num_partida" :10,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163247.333333341
+},
+{
+"num_generacio" : 2,
+"fitness" : 163915.666666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 163416.000000008
+}
+],
+"màxim_fitness" :163915.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.79497134685516},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.82372730970383}
+]
+}
+},
+{
+"num_partida" :11,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163720.933333342
+},
+{
+"num_generacio" : 2,
+"fitness" : 98735.3333333309
+},
+{
+"num_generacio" : 3,
+"fitness" : 163717.200000007
+},
+{
+"num_generacio" : 4,
+"fitness" : 164208.600000009
+},
+{
+"num_generacio" : 5,
+"fitness" : 164023.600000008
+}
+],
+"màxim_fitness" :164208.600000009,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.65215361118317},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.68039280176163}
+]
+}
+},
+{
+"num_partida" :12,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 100940.533333331
+},
+{
+"num_generacio" : 2,
+"fitness" : 163944.000000009
+},
+{
+"num_generacio" : 3,
+"fitness" : 163903.933333342
+},
+{
+"num_generacio" : 4,
+"fitness" : 164200.666666675
+}
+],
+"màxim_fitness" :164200.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.59841191768646},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.62530505657196}
+]
+}
+},
+{
+"num_partida" :13,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 122281.399999996
+},
+{
+"num_generacio" : 2,
+"fitness" : 162929.266666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 23219.7333333333
+},
+{
+"num_generacio" : 4,
+"fitness" : 139427.466666666
+},
+{
+"num_generacio" : 5,
+"fitness" : 163176.466666675
+},
+{
+"num_generacio" : 6,
+"fitness" : 163300.333333341
+},
+{
+"num_generacio" : 7,
+"fitness" : 163556.000000008
+}
+],
+"màxim_fitness" :163556.000000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.67836499214172},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.67480373382568}
+]
+}
+},
+{
+"num_partida" :14,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163458.933333341
+},
+{
+"num_generacio" : 2,
+"fitness" : 68881.3333333328
+},
+{
+"num_generacio" : 3,
+"fitness" : 163965.666666675
+},
+{
+"num_generacio" : 4,
+"fitness" : 164340.933333342
+},
+{
+"num_generacio" : 5,
+"fitness" : 162964.266666674
+}
+],
+"màxim_fitness" :164340.933333342,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.73410081863403},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.77763384580612}
+]
+}
+},
+{
+"num_partida" :15,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163977.266666675
+},
+{
+"num_generacio" : 2,
+"fitness" : 152145.333333338
+},
+{
+"num_generacio" : 3,
+"fitness" : 128159.066666662
+},
+{
+"num_generacio" : 4,
+"fitness" : 164226.000000008
+},
+{
+"num_generacio" : 5,
+"fitness" : 163794.333333342
+},
+{
+"num_generacio" : 6,
+"fitness" : 163263.266666675
+}
+],
+"màxim_fitness" :164226.000000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.28997707366943},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.30146962404251}
+]
+}
+},
+{
+"num_partida" :16,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 3591.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 143026.666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 122472.999999996
+},
+{
+"num_generacio" : 4,
+"fitness" : 163378.266666675
+},
+{
+"num_generacio" : 5,
+"fitness" : 163263.266666674
+},
+{
+"num_generacio" : 6,
+"fitness" : 164198.000000009
+}
+],
+"màxim_fitness" :164198.000000009,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.85862362384796},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.90729993581772}
+]
+}
+},
+{
+"num_partida" :17,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 67592.5999999997
+},
+{
+"num_generacio" : 2,
+"fitness" : 2348.4
+},
+{
+"num_generacio" : 3,
+"fitness" : 163042.933333341
+},
+{
+"num_generacio" : 4,
+"fitness" : 163515.000000008
+},
+{
+"num_generacio" : 5,
+"fitness" : 164276.333333342
+}
+],
+"màxim_fitness" :164276.333333342,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.83313941955566},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.86368268728256}
+]
+}
+},
+{
+"num_partida" :18,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 148956.666666669
+},
+{
+"num_generacio" : 2,
+"fitness" : 59506.266666666
+},
+{
+"num_generacio" : 3,
+"fitness" : 43650.1999999997
+},
+{
+"num_generacio" : 4,
+"fitness" : 105575.066666663
+},
+{
+"num_generacio" : 5,
+"fitness" : 164444.200000008
+},
+{
+"num_generacio" : 6,
+"fitness" : 163603.933333341
+},
+{
+"num_generacio" : 7,
+"fitness" : 55048.3999999996
+},
+{
+"num_generacio" : 8,
+"fitness" : 163764.666666675
+},
+{
+"num_generacio" : 9,
+"fitness" : 164044.266666675
+},
+{
+"num_generacio" : 10,
+"fitness" : 163519.000000008
+}
+],
+"màxim_fitness" :164444.200000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.30805039405823},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.32637238502502}
+]
+}
+},
+{
+"num_partida" :19,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163560.600000008
+},
+{
+"num_generacio" : 2,
+"fitness" : 162990.000000008
+},
+{
+"num_generacio" : 3,
+"fitness" : 163296.666666675
+}
+],
+"màxim_fitness" :163560.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.79900002479553},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.807945728302}
+]
+}
+},
+{
+"num_partida" :20,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163262.600000008
+},
+{
+"num_generacio" : 2,
+"fitness" : 100876.533333331
+},
+{
+"num_generacio" : 3,
+"fitness" : 163120.000000008
+},
+{
+"num_generacio" : 4,
+"fitness" : 164644.600000008
+},
+{
+"num_generacio" : 5,
+"fitness" : 3459.13333333333
+},
+{
+"num_generacio" : 6,
+"fitness" : 164016.266666675
+},
+{
+"num_generacio" : 7,
+"fitness" : 163829.266666675
+},
+{
+"num_generacio" : 8,
+"fitness" : 163675.666666675
+}
+],
+"màxim_fitness" :164644.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.2035459280014},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.21408206224442}
+]
+}
+},
+{
+"num_partida" :21,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 30784.5999999997
+},
+{
+"num_generacio" : 2,
+"fitness" : 162971.000000008
+},
+{
+"num_generacio" : 3,
+"fitness" : 164076.866666675
+},
+{
+"num_generacio" : 4,
+"fitness" : 163757.666666675
+}
+],
+"màxim_fitness" :164076.866666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.54400587081909},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.56627935171127}
+]
+}
+},
+{
+"num_partida" :22,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163124.600000008
+},
+{
+"num_generacio" : 2,
+"fitness" : 163850.600000008
+},
+{
+"num_generacio" : 3,
+"fitness" : 90955.0666666649
+},
+{
+"num_generacio" : 4,
+"fitness" : 164060.266666675
+},
+{
+"num_generacio" : 5,
+"fitness" : 138949.733333332
+},
+{
+"num_generacio" : 6,
+"fitness" : 163881.600000008
+},
+{
+"num_generacio" : 7,
+"fitness" : 163926.000000008
+},
+{
+"num_generacio" : 8,
+"fitness" : 87455.6666666648
+},
+{
+"num_generacio" : 9,
+"fitness" : 163897.933333342
+},
+{
+"num_generacio" : 10,
+"fitness" : 163329.266666675
+},
+{
+"num_generacio" : 11,
+"fitness" : 163487.000000008
+}
+],
+"màxim_fitness" :164060.266666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.52622866630554},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.5397852063179}
+]
+}
+},
+{
+"num_partida" :23,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 164334.600000008
+},
+{
+"num_generacio" : 2,
+"fitness" : 164510.666666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 163422.333333341
+}
+],
+"màxim_fitness" :164510.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.35320615768433},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.36588102579117}
+]
+}
+},
+{
+"num_partida" :24,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 11275.1333333334
+},
+{
+"num_generacio" : 2,
+"fitness" : 164113.266666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 163982.333333342
+},
+{
+"num_generacio" : 4,
+"fitness" : 163896.333333341
+}
+],
+"màxim_fitness" :164113.266666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.90076518058777},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.94704383611679}
+]
+}
+},
+{
+"num_partida" :25,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163725.933333341
+},
+{
+"num_generacio" : 2,
+"fitness" : 163514.666666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 163824.600000008
+}
+],
+"màxim_fitness" :163824.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.07785093784332},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.07516646385193}
+]
+}
+},
+{
+"num_partida" :26,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 143435.733333334
+},
+{
+"num_generacio" : 2,
+"fitness" : 163760.000000008
+},
+{
+"num_generacio" : 3,
+"fitness" : 164385.666666675
+},
+{
+"num_generacio" : 4,
+"fitness" : 163179.933333341
+}
+],
+"màxim_fitness" :164385.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.40734016895294},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.42851382493973}
+]
+}
+},
+{
+"num_partida" :27,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 2372.13333333333
+},
+{
+"num_generacio" : 2,
+"fitness" : 68244.7333333327
+},
+{
+"num_generacio" : 3,
+"fitness" : 164294.266666675
+},
+{
+"num_generacio" : 4,
+"fitness" : 163355.666666675
+},
+{
+"num_generacio" : 5,
+"fitness" : 163422.933333341
+}
+],
+"màxim_fitness" :164294.266666675,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.879763007164},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.91323733329773}
+]
+}
+},
+{
+"num_partida" :28,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 164166.333333342
+},
+{
+"num_generacio" : 2,
+"fitness" : 61482.1999999995
+},
+{
+"num_generacio" : 3,
+"fitness" : 163213.266666675
+},
+{
+"num_generacio" : 4,
+"fitness" : 163290.600000008
+},
+{
+"num_generacio" : 5,
+"fitness" : 163794.333333342
+}
+],
+"màxim_fitness" :164166.333333342,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.85913121700287},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.89285671710968}
+]
+}
+},
+{
+"num_partida" :29,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163462.933333341
+},
+{
+"num_generacio" : 2,
+"fitness" : 164089.666666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 164176.600000008
+}
+],
+"màxim_fitness" :164176.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.25991773605347},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.26774954795837}
+]
+}
+}
+]
+}
