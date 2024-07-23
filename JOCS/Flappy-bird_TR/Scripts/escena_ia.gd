@@ -202,6 +202,8 @@ func guardar_dades_gen():
 		Global.dades_gen_json += ',\n{\n' + '"num_generacio" : ' + str(Global.gen) + ',\n' + '"fitness" : ' + str(Global.max_fitness_gen) + '\n}'
 	else:
 		Global.dades_gen_json += '{\n' + '"num_generacio" : ' + str(Global.gen) + ',\n' + '"fitness" : ' + str(Global.max_fitness_gen) + '\n}'
+	
+	print("PARTIDA: " + str(Global.partidas) + " _________ GEN: " + str(Global.gen))
 func guardar_dades_partida():
 	'''
 	Global.partidas
@@ -219,7 +221,6 @@ func guardar_dades_partida():
 		Global.dades_json += '{\n' + '"num_partida" :' + str(Global.partidas) + ',\n"generacions" :' + '\n[\n' + str(Global.dades_gen_json) + '\n],\n' + '"màxim_fitness" :' + str(Global.max_fitness_partida) + ',\n"millor_ocell" :' +  '\n{\n' + '"neurones_input" : ' + str(Global.millor_ocell_partida.asignar_val_global(0)) + ',\n"neurones_amagades" :' + str(Global.millor_ocell_partida.asignar_val_global(1)) + ',\n"neuornes_output" :' + str(Global.millor_ocell_partida.asignar_val_global(2)) + ',\n"conexions" :[\n' + str(Global.millor_ocell_partida.asignar_val_global(3)) + '\n]' +'\n}\n' + '}'
 		
 	Global.dades_gen_json = ''
-	
 func guardar_dades_arxiu():
 	'''
 	Global.inputs

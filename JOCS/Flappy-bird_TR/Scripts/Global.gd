@@ -20,16 +20,16 @@ var population := []
 var repetir := true
 var max_fitness_index: int = 0 
 var gen_seguides_amb_puntuació_maxima :int = 0
-var velocitat_joc := 5
+var velocitat_joc := 4
 
 
 #Variables que es guarden per cada arxiu (Després de canviar la config)
 var inputs := [0, 1]
 var mutacions := [0, 1, 2]
-var num_poblacio : int = 25
+var num_poblacio : int = 5
 var num_gen_max : int = 125
 var puntuacio_max : int= 150
-var num_partidas : int = 30
+var num_partidas : int = 20
 
 #Variables que es guarden per cada partida
 var partidas : int = 0
