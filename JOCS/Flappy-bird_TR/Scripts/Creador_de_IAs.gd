@@ -20,8 +20,6 @@ func _ready():
 		var millors := []
 		var fills := []
 		var fitness := []
-		if Global.gen % 10 == 0:
-			print(Global.gen)
 		for i in Global.population:
 			fitness.append(i.fitness)
 		for _i in range(mostra):

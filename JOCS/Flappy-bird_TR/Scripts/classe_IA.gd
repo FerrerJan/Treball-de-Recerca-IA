@@ -79,26 +79,23 @@ class ia:
 	func valor(n, m):
 		# Valor de una neurona
 		var output :float = 0.0
-		if m > 1000:
-			neurons[n].output = 0
-			return 0
 		for conection in connections:
 			if conection.to_neuron == n and neurons[conection.from_neuron].output != 0:
 				output += neurons[conection.from_neuron].output * conection.weight
-			elif conection.to_neuron == n and neurons[conection.from_neuron].output == 0:
+			elif conection.to_neuron == n:
 				output += valor(conection.from_neuron, m + 1)
 		neurons[n].output = output
 		return output
 
 	func mutar(xarxaNeuronalOriginal):
 		# Mutación de la red neuronal
-		var rng = RandomNumberGenerator.new()
-		rng.randomize()
-		var num_neurons := neurons.size()
-		var num_connections := connections.size()
 		for _j in range(1000):
+			var rng = RandomNumberGenerator.new()
+			rng.randomize()
+			var num_neurons := neurons.size()
+			var num_connections := connections.size()
 			var n :int = rng.randi_range(0, 4)
-			if n == 0 and Global.mutacions.find(0) != -1:
+			if n == 0 and num_connections > 0 and Global.mutacions.find(0) != -1:
 				# Cambio de peso
 				connections[rng.randi_range(0, num_connections - 1)].weight = rng.randf_range(-1.0, 1.0)
 			elif n == 1 and Global.mutacions.find(1) != -1:
@@ -156,7 +153,7 @@ class ia:
 						if connections[i].from_neuron > m:
 							connections[i].from_neuron -= 1
 				num_hidden -= 1
-			if !iguals(xarxaNeuronalOriginal):
+			if !iguals(xarxaNeuronalOriginal) and !infinity():
 				break
 			
 	func mateixa_especie(xarxaNeuronal):
@@ -239,7 +236,20 @@ class ia:
 			return conexions_millor 
 					
 					
+	func infinity():
+		for n in range(num_inputs + num_hidden, num_inputs + num_hidden + num_outputs):
+			if neurona_anterior(n, 0):
+				return true
+		return false
 		
+	func neurona_anterior(n, m):
+			if m > 250:
+				return true
+			
+			for connection in connections:
+				if connection.to_neuron == n:
+					if neurona_anterior(connection.from_neuron, m + 1):
+						return true
 		
 		
 		
