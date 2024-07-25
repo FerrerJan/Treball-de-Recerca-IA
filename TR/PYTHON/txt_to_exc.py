@@ -49,7 +49,7 @@ for nombre in arxius:
     if nw["A1"].value != None:
         #name = "new" + str(random.randint(1,1000))
 
-        name = nombre.replace('[', '').replace(']', '').replace('oblació', '').replace('nputs', '').replace('utacions', '').replace('PY_', '')
+        name = nombre.replace('[', '').replace(']', '').replace('oblació', '').replace('nputs', '').replace('utacions', '').replace('PY_', '').replace('_0.txt', '')
         new = wb.create_sheet(name)
         new = wb[name]
         for i in range(len(lista_promedio)):
