@@ -1,0 +1,5817 @@
+{
+"nom_fitxer" : "res://Dades Json/Població-25_Inputs-[0,1,2]_Mutacions-[0,2]_0.json",
+"data_mostra" : "26/7/2024 15:8:1",
+"configuracio" :
+{
+"població" : 25,
+"inputs" : [0, 1, 2],
+"mutacions" : [0, 2],
+"partides_totals" : 30,
+"generacions totals" : 125,
+"Puntuació màxima" : 150
+},
+"partides" : [
+{
+"num_partida" :0,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 1180.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 162858.266666674
+},
+{
+"num_generacio" : 3,
+"fitness" : 108557.73333333
+},
+{
+"num_generacio" : 4,
+"fitness" : 76464.7333333323
+},
+{
+"num_generacio" : 5,
+"fitness" : 136896.33333333
+},
+{
+"num_generacio" : 6,
+"fitness" : 103088.33333333
+},
+{
+"num_generacio" : 7,
+"fitness" : 163357.933333341
+},
+{
+"num_generacio" : 8,
+"fitness" : 163575.666666675
+},
+{
+"num_generacio" : 9,
+"fitness" : 163078.333333342
+}
+],
+"màxim_fitness" :163575.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" :[
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.60149723291397},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.62453305721283},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :0.02289062738419}
+]
+}
+},
+{
+"num_partida" :1,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 110.066666666666
+},
+{
+"num_generacio" : 2,
+"fitness" : 163438.266666675
+},
+{
+"num_generacio" : 3,
+"fitness" : 164204.333333342
+},
+{
+"num_generacio" : 4,
+"fitness" : 165267.600000008
+}
+],
+"màxim_fitness" :165267.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.84945607185364},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.85460487008095},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.11628580093384}
+]
+}
+},
+{
+"num_partida" :2,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 206.4
+},
+{
+"num_generacio" : 2,
+"fitness" : 138.733333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 242.6
+},
+{
+"num_generacio" : 4,
+"fitness" : 180.4
+},
+{
+"num_generacio" : 5,
+"fitness" : 178.4
+},
+{
+"num_generacio" : 6,
+"fitness" : 196.066666666666
+},
+{
+"num_generacio" : 7,
+"fitness" : 224.066666666666
+},
+{
+"num_generacio" : 8,
+"fitness" : 193.733333333333
+},
+{
+"num_generacio" : 9,
+"fitness" : 187.4
+},
+{
+"num_generacio" : 10,
+"fitness" : 157.4
+},
+{
+"num_generacio" : 11,
+"fitness" : 1225.53333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 172.866666666667
+},
+{
+"num_generacio" : 13,
+"fitness" : 222.8
+},
+{
+"num_generacio" : 14,
+"fitness" : 10086
+},
+{
+"num_generacio" : 15,
+"fitness" : 163707.866666674
+},
+{
+"num_generacio" : 16,
+"fitness" : 164719.333333341
+},
+{
+"num_generacio" : 17,
+"fitness" : 164877.333333342
+}
+],
+"màxim_fitness" :164877.333333342,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.84577775001526},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.80763044953346},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.14360174536705}
+]
+}
+},
+{
+"num_partida" :3,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 149.066666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 139.133333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 243.733333333333
+},
+{
+"num_generacio" : 4,
+"fitness" : 246.066666666667
+},
+{
+"num_generacio" : 5,
+"fitness" : 262.466666666667
+},
+{
+"num_generacio" : 6,
+"fitness" : 143.066666666667
+},
+{
+"num_generacio" : 7,
+"fitness" : 156.733333333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 153.4
+},
+{
+"num_generacio" : 9,
+"fitness" : 1283.06666666667
+},
+{
+"num_generacio" : 10,
+"fitness" : 202.733333333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 208.733333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 184.733333333333
+},
+{
+"num_generacio" : 13,
+"fitness" : 192.333333333333
+},
+{
+"num_generacio" : 14,
+"fitness" : 164316.266666675
+},
+{
+"num_generacio" : 15,
+"fitness" : 164162.333333342
+},
+{
+"num_generacio" : 16,
+"fitness" : 164321.666666675
+}
+],
+"màxim_fitness" :164321.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.28644037246704},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.26076006889343},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.08389520645142}
+]
+}
+},
+{
+"num_partida" :4,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 76.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 3444.53333333333
+},
+{
+"num_generacio" : 4,
+"fitness" : 2421.4
+},
+{
+"num_generacio" : 5,
+"fitness" : 7744.06666666665
+},
+{
+"num_generacio" : 6,
+"fitness" : 3530.2
+},
+{
+"num_generacio" : 7,
+"fitness" : 16679.0666666668
+},
+{
+"num_generacio" : 8,
+"fitness" : 25495.0666666666
+},
+{
+"num_generacio" : 9,
+"fitness" : 163732.000000008
+},
+{
+"num_generacio" : 10,
+"fitness" : 164871.000000009
+},
+{
+"num_generacio" : 11,
+"fitness" : 164145.000000008
+}
+],
+"màxim_fitness" :164871.000000009,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.59714186191559},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.63385424017906},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.01231835782528}
+]
+}
+},
+{
+"num_partida" :5,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 116.066666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 3518.4
+},
+{
+"num_generacio" : 3,
+"fitness" : 7871.66666666665
+},
+{
+"num_generacio" : 4,
+"fitness" : 9036.86666666667
+},
+{
+"num_generacio" : 5,
+"fitness" : 164375.666666675
+},
+{
+"num_generacio" : 6,
+"fitness" : 12322.2666666667
+},
+{
+"num_generacio" : 7,
+"fitness" : 164932.000000008
+},
+{
+"num_generacio" : 8,
+"fitness" : 164319.333333341
+},
+{
+"num_generacio" : 9,
+"fitness" : 164776.000000008
+}
+],
+"màxim_fitness" :164932.000000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.58791986107826},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.60520946979523},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.06582887470722}
+]
+}
+},
+{
+"num_partida" :6,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 100.066666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 222.733333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 134.4
+},
+{
+"num_generacio" : 4,
+"fitness" : 1171.73333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 206.733333333333
+},
+{
+"num_generacio" : 6,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 7,
+"fitness" : 158.4
+},
+{
+"num_generacio" : 8,
+"fitness" : 189.4
+},
+{
+"num_generacio" : 9,
+"fitness" : 234.8
+},
+{
+"num_generacio" : 10,
+"fitness" : 220.4
+},
+{
+"num_generacio" : 11,
+"fitness" : 224.8
+},
+{
+"num_generacio" : 12,
+"fitness" : 137.066666666667
+},
+{
+"num_generacio" : 13,
+"fitness" : 171.4
+},
+{
+"num_generacio" : 14,
+"fitness" : 144.4
+},
+{
+"num_generacio" : 15,
+"fitness" : 149.066666666667
+},
+{
+"num_generacio" : 16,
+"fitness" : 237.733333333333
+},
+{
+"num_generacio" : 17,
+"fitness" : 137.066666666667
+},
+{
+"num_generacio" : 18,
+"fitness" : 135.4
+},
+{
+"num_generacio" : 19,
+"fitness" : 141.066666666667
+},
+{
+"num_generacio" : 20,
+"fitness" : 232.066666666666
+},
+{
+"num_generacio" : 21,
+"fitness" : 137.733333333333
+},
+{
+"num_generacio" : 22,
+"fitness" : 147.4
+},
+{
+"num_generacio" : 23,
+"fitness" : 1224
+},
+{
+"num_generacio" : 24,
+"fitness" : 207.733333333333
+},
+{
+"num_generacio" : 25,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 26,
+"fitness" : 179.4
+},
+{
+"num_generacio" : 27,
+"fitness" : 185.4
+},
+{
+"num_generacio" : 28,
+"fitness" : 144.066666666667
+},
+{
+"num_generacio" : 29,
+"fitness" : 162.4
+},
+{
+"num_generacio" : 30,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 31,
+"fitness" : 139.733333333333
+},
+{
+"num_generacio" : 32,
+"fitness" : 144.066666666667
+},
+{
+"num_generacio" : 33,
+"fitness" : 218.4
+},
+{
+"num_generacio" : 34,
+"fitness" : 1152.06666666667
+},
+{
+"num_generacio" : 35,
+"fitness" : 137.733333333333
+},
+{
+"num_generacio" : 36,
+"fitness" : 186.733333333333
+},
+{
+"num_generacio" : 37,
+"fitness" : 2286.2
+},
+{
+"num_generacio" : 38,
+"fitness" : 163.733333333333
+},
+{
+"num_generacio" : 39,
+"fitness" : 159.066666666667
+},
+{
+"num_generacio" : 40,
+"fitness" : 163.066666666666
+},
+{
+"num_generacio" : 41,
+"fitness" : 211.733333333333
+},
+{
+"num_generacio" : 42,
+"fitness" : 161.733333333333
+},
+{
+"num_generacio" : 43,
+"fitness" : 173.733333333333
+},
+{
+"num_generacio" : 44,
+"fitness" : 140.4
+},
+{
+"num_generacio" : 45,
+"fitness" : 176.066666666666
+},
+{
+"num_generacio" : 46,
+"fitness" : 198.4
+},
+{
+"num_generacio" : 47,
+"fitness" : 1172.73333333333
+},
+{
+"num_generacio" : 48,
+"fitness" : 1218.6
+},
+{
+"num_generacio" : 49,
+"fitness" : 179.4
+},
+{
+"num_generacio" : 50,
+"fitness" : 3425.33333333333
+},
+{
+"num_generacio" : 51,
+"fitness" : 164035.666666675
+},
+{
+"num_generacio" : 52,
+"fitness" : 23085.9333333333
+},
+{
+"num_generacio" : 53,
+"fitness" : 164204.000000008
+},
+{
+"num_generacio" : 54,
+"fitness" : 164538.000000008
+},
+{
+"num_generacio" : 55,
+"fitness" : 164240.200000008
+}
+],
+"màxim_fitness" :164538.000000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.57823693752289},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.52686780691147},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.18690401315689}
+]
+}
+},
+{
+"num_partida" :7,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 49.0666666666668
+},
+{
+"num_generacio" : 2,
+"fitness" : 106.4
+},
+{
+"num_generacio" : 3,
+"fitness" : 131.4
+},
+{
+"num_generacio" : 4,
+"fitness" : 159.066666666667
+},
+{
+"num_generacio" : 5,
+"fitness" : 15438.3333333335
+},
+{
+"num_generacio" : 6,
+"fitness" : 26459.0666666665
+},
+{
+"num_generacio" : 7,
+"fitness" : 111615.33333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 163804.333333341
+},
+{
+"num_generacio" : 9,
+"fitness" : 158599.466666674
+},
+{
+"num_generacio" : 10,
+"fitness" : 131930.799999996
+},
+{
+"num_generacio" : 11,
+"fitness" : 14382.7333333335
+},
+{
+"num_generacio" : 12,
+"fitness" : 164484.933333342
+},
+{
+"num_generacio" : 13,
+"fitness" : 143163.133333334
+},
+{
+"num_generacio" : 14,
+"fitness" : 164334.600000009
+},
+{
+"num_generacio" : 15,
+"fitness" : 46055.5999999996
+},
+{
+"num_generacio" : 16,
+"fitness" : 164366.666666675
+},
+{
+"num_generacio" : 17,
+"fitness" : 164398.000000008
+},
+{
+"num_generacio" : 18,
+"fitness" : 164151.666666675
+}
+],
+"màxim_fitness" :164484.933333342,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.89612305164337},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.81474435329437},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.29048955440521}
+]
+}
+},
+{
+"num_partida" :8,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 26.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 28.7333333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 178.866666666667
+},
+{
+"num_generacio" : 4,
+"fitness" : 4319.4
+},
+{
+"num_generacio" : 5,
+"fitness" : 3484
+},
+{
+"num_generacio" : 6,
+"fitness" : 94282.0666666645
+},
+{
+"num_generacio" : 7,
+"fitness" : 164139.000000008
+},
+{
+"num_generacio" : 8,
+"fitness" : 144313.666666667
+},
+{
+"num_generacio" : 9,
+"fitness" : 76379.9999999989
+},
+{
+"num_generacio" : 10,
+"fitness" : 46327.3999999996
+},
+{
+"num_generacio" : 11,
+"fitness" : 164253.666666676
+},
+{
+"num_generacio" : 12,
+"fitness" : 164299.000000008
+},
+{
+"num_generacio" : 13,
+"fitness" : 164400.600000008
+}
+],
+"màxim_fitness" :164400.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.74852876737714},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.73188686557114},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.10416254773736}
+]
+}
+},
+{
+"num_partida" :9,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 150.533333333333
+},
+{
+"num_generacio" : 2,
+"fitness" : 164232.333333342
+},
+{
+"num_generacio" : 3,
+"fitness" : 164542.333333341
+},
+{
+"num_generacio" : 4,
+"fitness" : 100751.999999997
+},
+{
+"num_generacio" : 5,
+"fitness" : 164948.666666675
+},
+{
+"num_generacio" : 6,
+"fitness" : 157769.800000006
+},
+{
+"num_generacio" : 7,
+"fitness" : 164706.333333342
+},
+{
+"num_generacio" : 8,
+"fitness" : 164875.666666675
+},
+{
+"num_generacio" : 9,
+"fitness" : 164470.266666675
+}
+],
+"màxim_fitness" :164948.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.87541720271111},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.84051648527384},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.16521081328392}
+]
+}
+},
+{
+"num_partida" :10,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 98.4666666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 182.8
+},
+{
+"num_generacio" : 3,
+"fitness" : 19932.6666666667
+},
+{
+"num_generacio" : 4,
+"fitness" : 22167.3333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 164807.000000008
+},
+{
+"num_generacio" : 6,
+"fitness" : 164978.933333342
+},
+{
+"num_generacio" : 7,
+"fitness" : 165066.000000008
+}
+],
+"màxim_fitness" :165066.000000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.84067088365555},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.81035417318344},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.15531063079834}
+]
+}
+},
+{
+"num_partida" :11,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 2263.26666666666
+},
+{
+"num_generacio" : 2,
+"fitness" : 38991.733333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 15452.4666666668
+},
+{
+"num_generacio" : 4,
+"fitness" : 86421.3999999985
+},
+{
+"num_generacio" : 5,
+"fitness" : 15552.4666666668
+},
+{
+"num_generacio" : 6,
+"fitness" : 5679.06666666666
+},
+{
+"num_generacio" : 7,
+"fitness" : 41581.933333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 165182.666666675
+},
+{
+"num_generacio" : 9,
+"fitness" : 164013.266666675
+},
+{
+"num_generacio" : 10,
+"fitness" : 164329.333333341
+}
+],
+"màxim_fitness" :165182.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.8950259834528},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.92071026563644},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.12160620838404}
+]
+}
+},
+{
+"num_partida" :12,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 26.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 137.066666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 137.733333333333
+},
+{
+"num_generacio" : 4,
+"fitness" : 180.4
+},
+{
+"num_generacio" : 5,
+"fitness" : 138.733333333333
+},
+{
+"num_generacio" : 6,
+"fitness" : 140.733333333333
+},
+{
+"num_generacio" : 7,
+"fitness" : 159.733333333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 241.4
+},
+{
+"num_generacio" : 9,
+"fitness" : 156.066666666667
+},
+{
+"num_generacio" : 10,
+"fitness" : 193.733333333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 190.4
+},
+{
+"num_generacio" : 12,
+"fitness" : 3358.06666666666
+},
+{
+"num_generacio" : 13,
+"fitness" : 1288.73333333333
+},
+{
+"num_generacio" : 14,
+"fitness" : 163896.666666675
+},
+{
+"num_generacio" : 15,
+"fitness" : 163777.333333341
+},
+{
+"num_generacio" : 16,
+"fitness" : 164654.666666675
+}
+],
+"màxim_fitness" :164654.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.82796084880829},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.84205800294876},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.04244470596313}
+]
+}
+},
+{
+"num_partida" :13,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 41.7333333333335
+},
+{
+"num_generacio" : 2,
+"fitness" : 70.3999999999999
+},
+{
+"num_generacio" : 3,
+"fitness" : 128.733333333333
+},
+{
+"num_generacio" : 4,
+"fitness" : 170.066666666666
+},
+{
+"num_generacio" : 5,
+"fitness" : 169.733333333333
+},
+{
+"num_generacio" : 6,
+"fitness" : 179.733333333333
+},
+{
+"num_generacio" : 7,
+"fitness" : 164.066666666667
+},
+{
+"num_generacio" : 8,
+"fitness" : 154.066666666667
+},
+{
+"num_generacio" : 9,
+"fitness" : 171.4
+},
+{
+"num_generacio" : 10,
+"fitness" : 131.333333333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 179.066666666667
+},
+{
+"num_generacio" : 12,
+"fitness" : 155.4
+},
+{
+"num_generacio" : 13,
+"fitness" : 177.4
+},
+{
+"num_generacio" : 14,
+"fitness" : 172.4
+},
+{
+"num_generacio" : 15,
+"fitness" : 176.666666666667
+},
+{
+"num_generacio" : 16,
+"fitness" : 179.4
+},
+{
+"num_generacio" : 17,
+"fitness" : 172.4
+},
+{
+"num_generacio" : 18,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 19,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 20,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 21,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 22,
+"fitness" : 158.733333333333
+},
+{
+"num_generacio" : 23,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 24,
+"fitness" : 179.066666666667
+},
+{
+"num_generacio" : 25,
+"fitness" : 181.066666666667
+},
+{
+"num_generacio" : 26,
+"fitness" : 176.4
+},
+{
+"num_generacio" : 27,
+"fitness" : 177.4
+},
+{
+"num_generacio" : 28,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 29,
+"fitness" : 180.733333333333
+},
+{
+"num_generacio" : 30,
+"fitness" : 163.4
+},
+{
+"num_generacio" : 31,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 32,
+"fitness" : 172.733333333333
+},
+{
+"num_generacio" : 33,
+"fitness" : 160.4
+},
+{
+"num_generacio" : 34,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 35,
+"fitness" : 178.333333333333
+},
+{
+"num_generacio" : 36,
+"fitness" : 168.066666666667
+},
+{
+"num_generacio" : 37,
+"fitness" : 174.733333333333
+},
+{
+"num_generacio" : 38,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 39,
+"fitness" : 163.733333333333
+},
+{
+"num_generacio" : 40,
+"fitness" : 176.4
+},
+{
+"num_generacio" : 41,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 42,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 43,
+"fitness" : 145.4
+},
+{
+"num_generacio" : 44,
+"fitness" : 148.733333333333
+},
+{
+"num_generacio" : 45,
+"fitness" : 176.066666666667
+},
+{
+"num_generacio" : 46,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 47,
+"fitness" : 179.4
+},
+{
+"num_generacio" : 48,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 49,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 50,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 51,
+"fitness" : 131.333333333333
+},
+{
+"num_generacio" : 52,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 53,
+"fitness" : 173.733333333333
+},
+{
+"num_generacio" : 54,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 55,
+"fitness" : 173.733333333333
+},
+{
+"num_generacio" : 56,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 57,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 58,
+"fitness" : 179.066666666667
+},
+{
+"num_generacio" : 59,
+"fitness" : 172.733333333333
+},
+{
+"num_generacio" : 60,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 61,
+"fitness" : 155.4
+},
+{
+"num_generacio" : 62,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 63,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 64,
+"fitness" : 155.4
+},
+{
+"num_generacio" : 65,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 66,
+"fitness" : 171.4
+},
+{
+"num_generacio" : 67,
+"fitness" : 179.733333333333
+},
+{
+"num_generacio" : 68,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 69,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 70,
+"fitness" : 181.733333333333
+},
+{
+"num_generacio" : 71,
+"fitness" : 181.4
+},
+{
+"num_generacio" : 72,
+"fitness" : 177.4
+},
+{
+"num_generacio" : 73,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 74,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 75,
+"fitness" : 163.733333333333
+},
+{
+"num_generacio" : 76,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 77,
+"fitness" : 163.066666666667
+},
+{
+"num_generacio" : 78,
+"fitness" : 177.733333333333
+},
+{
+"num_generacio" : 79,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 80,
+"fitness" : 179.066666666667
+},
+{
+"num_generacio" : 81,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 82,
+"fitness" : 181.066666666667
+},
+{
+"num_generacio" : 83,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 84,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 85,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 86,
+"fitness" : 155.733333333333
+},
+{
+"num_generacio" : 87,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 88,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 89,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 90,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 91,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 92,
+"fitness" : 158.4
+},
+{
+"num_generacio" : 93,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 94,
+"fitness" : 160.4
+},
+{
+"num_generacio" : 95,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 96,
+"fitness" : 176.066666666667
+},
+{
+"num_generacio" : 97,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 98,
+"fitness" : 176.066666666667
+},
+{
+"num_generacio" : 99,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 100,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 101,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 102,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 103,
+"fitness" : 177.4
+},
+{
+"num_generacio" : 104,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 105,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 106,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 107,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 108,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 109,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 110,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 111,
+"fitness" : 182.733333333333
+},
+{
+"num_generacio" : 112,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 113,
+"fitness" : 179.733333333333
+},
+{
+"num_generacio" : 114,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 115,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 116,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 117,
+"fitness" : 178.733333333333
+},
+{
+"num_generacio" : 118,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 119,
+"fitness" : 155.4
+},
+{
+"num_generacio" : 120,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 121,
+"fitness" : 155.733333333333
+},
+{
+"num_generacio" : 122,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 123,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 124,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 125,
+"fitness" : 179.066666666667
+}
+],
+"màxim_fitness" :182.733333333333,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.42222682666034},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :0.72227603720967},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.50418376922607}
+]
+}
+},
+{
+"num_partida" :14,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 123.666666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 150.066666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 1129.8
+},
+{
+"num_generacio" : 4,
+"fitness" : 130.066666666666
+},
+{
+"num_generacio" : 5,
+"fitness" : 127.066666666666
+},
+{
+"num_generacio" : 6,
+"fitness" : 122.066666666666
+},
+{
+"num_generacio" : 7,
+"fitness" : 130.4
+},
+{
+"num_generacio" : 8,
+"fitness" : 118.333333333333
+},
+{
+"num_generacio" : 9,
+"fitness" : 150.4
+},
+{
+"num_generacio" : 10,
+"fitness" : 122.066666666666
+},
+{
+"num_generacio" : 11,
+"fitness" : 120.733333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 142.066666666667
+},
+{
+"num_generacio" : 13,
+"fitness" : 153.733333333333
+},
+{
+"num_generacio" : 14,
+"fitness" : 157.733333333333
+},
+{
+"num_generacio" : 15,
+"fitness" : 194.4
+},
+{
+"num_generacio" : 16,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 17,
+"fitness" : 136.4
+},
+{
+"num_generacio" : 18,
+"fitness" : 148.4
+},
+{
+"num_generacio" : 19,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 20,
+"fitness" : 135.066666666667
+},
+{
+"num_generacio" : 21,
+"fitness" : 135.4
+},
+{
+"num_generacio" : 22,
+"fitness" : 135.066666666667
+},
+{
+"num_generacio" : 23,
+"fitness" : 160.733333333333
+},
+{
+"num_generacio" : 24,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 25,
+"fitness" : 135.066666666667
+},
+{
+"num_generacio" : 26,
+"fitness" : 135.066666666667
+},
+{
+"num_generacio" : 27,
+"fitness" : 201.733333333333
+},
+{
+"num_generacio" : 28,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 29,
+"fitness" : 146.733333333333
+},
+{
+"num_generacio" : 30,
+"fitness" : 137.733333333333
+},
+{
+"num_generacio" : 31,
+"fitness" : 149.4
+},
+{
+"num_generacio" : 32,
+"fitness" : 136.4
+},
+{
+"num_generacio" : 33,
+"fitness" : 147.066666666667
+},
+{
+"num_generacio" : 34,
+"fitness" : 160.733333333333
+},
+{
+"num_generacio" : 35,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 36,
+"fitness" : 176.4
+},
+{
+"num_generacio" : 37,
+"fitness" : 137.4
+},
+{
+"num_generacio" : 38,
+"fitness" : 208.4
+},
+{
+"num_generacio" : 39,
+"fitness" : 222.733333333333
+},
+{
+"num_generacio" : 40,
+"fitness" : 136.066666666667
+},
+{
+"num_generacio" : 41,
+"fitness" : 135.733333333333
+},
+{
+"num_generacio" : 42,
+"fitness" : 164.4
+},
+{
+"num_generacio" : 43,
+"fitness" : 214.066666666666
+},
+{
+"num_generacio" : 44,
+"fitness" : 178.4
+},
+{
+"num_generacio" : 45,
+"fitness" : 133.066666666667
+},
+{
+"num_generacio" : 46,
+"fitness" : 210.4
+},
+{
+"num_generacio" : 47,
+"fitness" : 135.066666666667
+},
+{
+"num_generacio" : 48,
+"fitness" : 227.933333333333
+},
+{
+"num_generacio" : 49,
+"fitness" : 137.066666666667
+},
+{
+"num_generacio" : 50,
+"fitness" : 216.4
+},
+{
+"num_generacio" : 51,
+"fitness" : 135.066666666667
+},
+{
+"num_generacio" : 52,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 53,
+"fitness" : 137.4
+},
+{
+"num_generacio" : 54,
+"fitness" : 178.4
+},
+{
+"num_generacio" : 55,
+"fitness" : 210.733333333333
+},
+{
+"num_generacio" : 56,
+"fitness" : 217.066666666666
+},
+{
+"num_generacio" : 57,
+"fitness" : 142.066666666667
+},
+{
+"num_generacio" : 58,
+"fitness" : 213.733333333333
+},
+{
+"num_generacio" : 59,
+"fitness" : 216.066666666667
+},
+{
+"num_generacio" : 60,
+"fitness" : 153.4
+},
+{
+"num_generacio" : 61,
+"fitness" : 217.133333333333
+},
+{
+"num_generacio" : 62,
+"fitness" : 216.4
+},
+{
+"num_generacio" : 63,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 64,
+"fitness" : 133.066666666667
+},
+{
+"num_generacio" : 65,
+"fitness" : 216.733333333333
+},
+{
+"num_generacio" : 66,
+"fitness" : 156.733333333333
+},
+{
+"num_generacio" : 67,
+"fitness" : 207.733333333333
+},
+{
+"num_generacio" : 68,
+"fitness" : 192.733333333333
+},
+{
+"num_generacio" : 69,
+"fitness" : 137.4
+},
+{
+"num_generacio" : 70,
+"fitness" : 153.4
+},
+{
+"num_generacio" : 71,
+"fitness" : 179.4
+},
+{
+"num_generacio" : 72,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 73,
+"fitness" : 131.4
+},
+{
+"num_generacio" : 74,
+"fitness" : 149.4
+},
+{
+"num_generacio" : 75,
+"fitness" : 211.4
+},
+{
+"num_generacio" : 76,
+"fitness" : 211.4
+},
+{
+"num_generacio" : 77,
+"fitness" : 180.4
+},
+{
+"num_generacio" : 78,
+"fitness" : 149.066666666667
+},
+{
+"num_generacio" : 79,
+"fitness" : 180.733333333333
+},
+{
+"num_generacio" : 80,
+"fitness" : 216.733333333333
+},
+{
+"num_generacio" : 81,
+"fitness" : 137.066666666667
+},
+{
+"num_generacio" : 82,
+"fitness" : 130.733333333333
+},
+{
+"num_generacio" : 83,
+"fitness" : 142.066666666667
+},
+{
+"num_generacio" : 84,
+"fitness" : 1138.06666666667
+},
+{
+"num_generacio" : 85,
+"fitness" : 217.066666666666
+},
+{
+"num_generacio" : 86,
+"fitness" : 1170.4
+},
+{
+"num_generacio" : 87,
+"fitness" : 164.066666666667
+},
+{
+"num_generacio" : 88,
+"fitness" : 1173
+},
+{
+"num_generacio" : 89,
+"fitness" : 164054.266666675
+},
+{
+"num_generacio" : 90,
+"fitness" : 121108.999999997
+},
+{
+"num_generacio" : 91,
+"fitness" : 196.466666666667
+},
+{
+"num_generacio" : 92,
+"fitness" : 5660.59999999999
+},
+{
+"num_generacio" : 93,
+"fitness" : 2294.06666666666
+},
+{
+"num_generacio" : 94,
+"fitness" : 34090.3999999996
+},
+{
+"num_generacio" : 95,
+"fitness" : 153.066666666666
+},
+{
+"num_generacio" : 96,
+"fitness" : 22107.9333333333
+},
+{
+"num_generacio" : 97,
+"fitness" : 13405.4000000001
+},
+{
+"num_generacio" : 98,
+"fitness" : 212.666666666667
+},
+{
+"num_generacio" : 99,
+"fitness" : 16568.4666666668
+},
+{
+"num_generacio" : 100,
+"fitness" : 163969.000000008
+},
+{
+"num_generacio" : 101,
+"fitness" : 164216.000000009
+},
+{
+"num_generacio" : 102,
+"fitness" : 94211.1333333311
+},
+{
+"num_generacio" : 103,
+"fitness" : 164949.333333342
+},
+{
+"num_generacio" : 104,
+"fitness" : 164792.933333342
+},
+{
+"num_generacio" : 105,
+"fitness" : 164991.666666675
+}
+],
+"màxim_fitness" :164991.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.81384658813477},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.7835944890976},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.19908845424652}
+]
+}
+},
+{
+"num_partida" :15,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 26.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 1312.4
+},
+{
+"num_generacio" : 3,
+"fitness" : 8995.20000000001
+},
+{
+"num_generacio" : 4,
+"fitness" : 13528.4666666668
+},
+{
+"num_generacio" : 5,
+"fitness" : 73796.6666666657
+},
+{
+"num_generacio" : 6,
+"fitness" : 163547.000000008
+},
+{
+"num_generacio" : 7,
+"fitness" : 164238.333333342
+},
+{
+"num_generacio" : 8,
+"fitness" : 164208.266666675
+}
+],
+"màxim_fitness" :164238.333333342,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.70828674733639},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.71484553813934},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.04124429821968}
+]
+}
+},
+{
+"num_partida" :16,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 87.8666666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 58.8
+},
+{
+"num_generacio" : 3,
+"fitness" : 245
+},
+{
+"num_generacio" : 4,
+"fitness" : 31799.3999999997
+},
+{
+"num_generacio" : 5,
+"fitness" : 126823.799999997
+},
+{
+"num_generacio" : 6,
+"fitness" : 62441.7999999996
+},
+{
+"num_generacio" : 7,
+"fitness" : 2437.73333333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 1364
+},
+{
+"num_generacio" : 9,
+"fitness" : 2503.13333333333
+},
+{
+"num_generacio" : 10,
+"fitness" : 6833.19999999999
+},
+{
+"num_generacio" : 11,
+"fitness" : 79295.3999999987
+},
+{
+"num_generacio" : 12,
+"fitness" : 47899.0666666663
+},
+{
+"num_generacio" : 13,
+"fitness" : 68575.3999999996
+},
+{
+"num_generacio" : 14,
+"fitness" : 163129.600000008
+},
+{
+"num_generacio" : 15,
+"fitness" : 164544.600000008
+},
+{
+"num_generacio" : 16,
+"fitness" : 164411.333333342
+}
+],
+"màxim_fitness" :164544.600000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.59648239612579},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.62068870710209},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.01673775911331}
+]
+}
+},
+{
+"num_partida" :17,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 29.4
+},
+{
+"num_generacio" : 2,
+"fitness" : 165.066666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 119.4
+},
+{
+"num_generacio" : 4,
+"fitness" : 125.4
+},
+{
+"num_generacio" : 5,
+"fitness" : 210.066666666667
+},
+{
+"num_generacio" : 6,
+"fitness" : 127.4
+},
+{
+"num_generacio" : 7,
+"fitness" : 200.4
+},
+{
+"num_generacio" : 8,
+"fitness" : 213.733333333333
+},
+{
+"num_generacio" : 9,
+"fitness" : 197.466666666666
+},
+{
+"num_generacio" : 10,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 159.733333333333
+},
+{
+"num_generacio" : 13,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 14,
+"fitness" : 196.066666666666
+},
+{
+"num_generacio" : 15,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 16,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 17,
+"fitness" : 150.733333333333
+},
+{
+"num_generacio" : 18,
+"fitness" : 200.133333333333
+},
+{
+"num_generacio" : 19,
+"fitness" : 208.4
+},
+{
+"num_generacio" : 20,
+"fitness" : 203.066666666667
+},
+{
+"num_generacio" : 21,
+"fitness" : 150.733333333333
+},
+{
+"num_generacio" : 22,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 23,
+"fitness" : 199.733333333333
+},
+{
+"num_generacio" : 24,
+"fitness" : 153.733333333333
+},
+{
+"num_generacio" : 25,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 26,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 27,
+"fitness" : 147.066666666667
+},
+{
+"num_generacio" : 28,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 29,
+"fitness" : 196.733333333333
+},
+{
+"num_generacio" : 30,
+"fitness" : 143.066666666667
+},
+{
+"num_generacio" : 31,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 32,
+"fitness" : 208.066666666666
+},
+{
+"num_generacio" : 33,
+"fitness" : 208.4
+},
+{
+"num_generacio" : 34,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 35,
+"fitness" : 211.4
+},
+{
+"num_generacio" : 36,
+"fitness" : 159.066666666667
+},
+{
+"num_generacio" : 37,
+"fitness" : 195.066666666666
+},
+{
+"num_generacio" : 38,
+"fitness" : 148.4
+},
+{
+"num_generacio" : 39,
+"fitness" : 207
+},
+{
+"num_generacio" : 40,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 41,
+"fitness" : 160.733333333333
+},
+{
+"num_generacio" : 42,
+"fitness" : 154.066666666667
+},
+{
+"num_generacio" : 43,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 44,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 45,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 46,
+"fitness" : 210.4
+},
+{
+"num_generacio" : 47,
+"fitness" : 207.4
+},
+{
+"num_generacio" : 48,
+"fitness" : 153.733333333333
+},
+{
+"num_generacio" : 49,
+"fitness" : 210.066666666667
+},
+{
+"num_generacio" : 50,
+"fitness" : 156.4
+},
+{
+"num_generacio" : 51,
+"fitness" : 143.066666666667
+},
+{
+"num_generacio" : 52,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 53,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 54,
+"fitness" : 209.066666666666
+},
+{
+"num_generacio" : 55,
+"fitness" : 156.4
+},
+{
+"num_generacio" : 56,
+"fitness" : 150.733333333333
+},
+{
+"num_generacio" : 57,
+"fitness" : 180.4
+},
+{
+"num_generacio" : 58,
+"fitness" : 209.066666666666
+},
+{
+"num_generacio" : 59,
+"fitness" : 143.066666666667
+},
+{
+"num_generacio" : 60,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 61,
+"fitness" : 213.466666666667
+},
+{
+"num_generacio" : 62,
+"fitness" : 197.066666666667
+},
+{
+"num_generacio" : 63,
+"fitness" : 160.733333333333
+},
+{
+"num_generacio" : 64,
+"fitness" : 138.733333333333
+},
+{
+"num_generacio" : 65,
+"fitness" : 173.4
+},
+{
+"num_generacio" : 66,
+"fitness" : 211.733333333333
+},
+{
+"num_generacio" : 67,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 68,
+"fitness" : 143.066666666667
+},
+{
+"num_generacio" : 69,
+"fitness" : 143.066666666667
+},
+{
+"num_generacio" : 70,
+"fitness" : 164.4
+},
+{
+"num_generacio" : 71,
+"fitness" : 212.733333333333
+},
+{
+"num_generacio" : 72,
+"fitness" : 198.066666666667
+},
+{
+"num_generacio" : 73,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 74,
+"fitness" : 159.066666666667
+},
+{
+"num_generacio" : 75,
+"fitness" : 195.733333333333
+},
+{
+"num_generacio" : 76,
+"fitness" : 146.4
+},
+{
+"num_generacio" : 77,
+"fitness" : 160.733333333333
+},
+{
+"num_generacio" : 78,
+"fitness" : 156.4
+},
+{
+"num_generacio" : 79,
+"fitness" : 200.4
+},
+{
+"num_generacio" : 80,
+"fitness" : 164.733333333333
+},
+{
+"num_generacio" : 81,
+"fitness" : 150.733333333333
+},
+{
+"num_generacio" : 82,
+"fitness" : 147.066666666667
+},
+{
+"num_generacio" : 83,
+"fitness" : 150.4
+},
+{
+"num_generacio" : 84,
+"fitness" : 167.4
+},
+{
+"num_generacio" : 85,
+"fitness" : 216.733333333333
+},
+{
+"num_generacio" : 86,
+"fitness" : 164.4
+},
+{
+"num_generacio" : 87,
+"fitness" : 139.4
+},
+{
+"num_generacio" : 88,
+"fitness" : 142.4
+},
+{
+"num_generacio" : 89,
+"fitness" : 135.4
+},
+{
+"num_generacio" : 90,
+"fitness" : 208.4
+},
+{
+"num_generacio" : 91,
+"fitness" : 208.4
+},
+{
+"num_generacio" : 92,
+"fitness" : 164.4
+},
+{
+"num_generacio" : 93,
+"fitness" : 208.4
+},
+{
+"num_generacio" : 94,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 95,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 96,
+"fitness" : 152.4
+},
+{
+"num_generacio" : 97,
+"fitness" : 197.4
+},
+{
+"num_generacio" : 98,
+"fitness" : 143.066666666667
+},
+{
+"num_generacio" : 99,
+"fitness" : 177.733333333333
+},
+{
+"num_generacio" : 100,
+"fitness" : 213.066666666667
+},
+{
+"num_generacio" : 101,
+"fitness" : 200.4
+},
+{
+"num_generacio" : 102,
+"fitness" : 204.533333333333
+},
+{
+"num_generacio" : 103,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 104,
+"fitness" : 202.066666666666
+},
+{
+"num_generacio" : 105,
+"fitness" : 157.733333333333
+},
+{
+"num_generacio" : 106,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 107,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 108,
+"fitness" : 206.8
+},
+{
+"num_generacio" : 109,
+"fitness" : 198.866666666666
+},
+{
+"num_generacio" : 110,
+"fitness" : 193.4
+},
+{
+"num_generacio" : 111,
+"fitness" : 206.733333333333
+},
+{
+"num_generacio" : 112,
+"fitness" : 190.733333333333
+},
+{
+"num_generacio" : 113,
+"fitness" : 206.733333333333
+},
+{
+"num_generacio" : 114,
+"fitness" : 153.733333333333
+},
+{
+"num_generacio" : 115,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 116,
+"fitness" : 184.4
+},
+{
+"num_generacio" : 117,
+"fitness" : 139.4
+},
+{
+"num_generacio" : 118,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 119,
+"fitness" : 205.733333333333
+},
+{
+"num_generacio" : 120,
+"fitness" : 156.4
+},
+{
+"num_generacio" : 121,
+"fitness" : 197.4
+},
+{
+"num_generacio" : 122,
+"fitness" : 202.066666666666
+},
+{
+"num_generacio" : 123,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 124,
+"fitness" : 1131.73333333333
+},
+{
+"num_generacio" : 125,
+"fitness" : 134.733333333333
+}
+],
+"màxim_fitness" :1131.73333333333,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.79252459143754},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :0.04184544086456},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.58020403981209}
+]
+}
+},
+{
+"num_partida" :18,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 3560.53333333333
+},
+{
+"num_generacio" : 2,
+"fitness" : 209.4
+},
+{
+"num_generacio" : 3,
+"fitness" : 164509.000000008
+},
+{
+"num_generacio" : 4,
+"fitness" : 77241.0666666654
+},
+{
+"num_generacio" : 5,
+"fitness" : 164345.666666675
+},
+{
+"num_generacio" : 6,
+"fitness" : 163904.666666675
+},
+{
+"num_generacio" : 7,
+"fitness" : 164007.666666675
+}
+],
+"màxim_fitness" :164509.000000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.71090579032898},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.69145238399506},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.10438197851181}
+]
+}
+},
+{
+"num_partida" :19,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 26.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 105.4
+},
+{
+"num_generacio" : 3,
+"fitness" : 105.4
+},
+{
+"num_generacio" : 4,
+"fitness" : 106.733333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 111.4
+},
+{
+"num_generacio" : 6,
+"fitness" : 106.066666666666
+},
+{
+"num_generacio" : 7,
+"fitness" : 113.4
+},
+{
+"num_generacio" : 8,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 9,
+"fitness" : 141.733333333333
+},
+{
+"num_generacio" : 10,
+"fitness" : 127.4
+},
+{
+"num_generacio" : 11,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 12,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 13,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 14,
+"fitness" : 166.066666666667
+},
+{
+"num_generacio" : 15,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 16,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 17,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 18,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 19,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 20,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 21,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 22,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 23,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 24,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 25,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 26,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 27,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 28,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 29,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 30,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 31,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 32,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 33,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 34,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 35,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 36,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 37,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 38,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 39,
+"fitness" : 164.066666666666
+},
+{
+"num_generacio" : 40,
+"fitness" : 159.4
+},
+{
+"num_generacio" : 41,
+"fitness" : 168.4
+},
+{
+"num_generacio" : 42,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 43,
+"fitness" : 162
+},
+{
+"num_generacio" : 44,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 45,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 46,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 47,
+"fitness" : 164.4
+},
+{
+"num_generacio" : 48,
+"fitness" : 164.066666666667
+},
+{
+"num_generacio" : 49,
+"fitness" : 130
+},
+{
+"num_generacio" : 50,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 51,
+"fitness" : 164.4
+},
+{
+"num_generacio" : 52,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 53,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 54,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 55,
+"fitness" : 156.066666666667
+},
+{
+"num_generacio" : 56,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 57,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 58,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 59,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 60,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 61,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 62,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 63,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 64,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 65,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 66,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 67,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 68,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 69,
+"fitness" : 168.4
+},
+{
+"num_generacio" : 70,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 71,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 72,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 73,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 74,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 75,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 76,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 77,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 78,
+"fitness" : 163.4
+},
+{
+"num_generacio" : 79,
+"fitness" : 154.666666666667
+},
+{
+"num_generacio" : 80,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 81,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 82,
+"fitness" : 164.4
+},
+{
+"num_generacio" : 83,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 84,
+"fitness" : 135.4
+},
+{
+"num_generacio" : 85,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 86,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 87,
+"fitness" : 164.066666666666
+},
+{
+"num_generacio" : 88,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 89,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 90,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 91,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 92,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 93,
+"fitness" : 164.066666666666
+},
+{
+"num_generacio" : 94,
+"fitness" : 166.4
+},
+{
+"num_generacio" : 95,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 96,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 97,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 98,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 99,
+"fitness" : 164.066666666666
+},
+{
+"num_generacio" : 100,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 101,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 102,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 103,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 104,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 105,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 106,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 107,
+"fitness" : 157.333333333333
+},
+{
+"num_generacio" : 108,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 109,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 110,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 111,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 112,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 113,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 114,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 115,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 116,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 117,
+"fitness" : 159.4
+},
+{
+"num_generacio" : 118,
+"fitness" : 167.733333333333
+},
+{
+"num_generacio" : 119,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 120,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 121,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 122,
+"fitness" : 158.066666666667
+},
+{
+"num_generacio" : 123,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 124,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 125,
+"fitness" : 138.066666666667
+}
+],
+"màxim_fitness" :168.4,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.19970548152924},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :0.91440726816654},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.48216146230698}
+]
+}
+},
+{
+"num_partida" :20,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 59.4000000000001
+},
+{
+"num_generacio" : 2,
+"fitness" : 68.0666666666666
+},
+{
+"num_generacio" : 3,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 4,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 5,
+"fitness" : 163.066666666667
+},
+{
+"num_generacio" : 6,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 7,
+"fitness" : 198.733333333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 9,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 10,
+"fitness" : 193.8
+},
+{
+"num_generacio" : 11,
+"fitness" : 145.733333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 13,
+"fitness" : 199.733333333333
+},
+{
+"num_generacio" : 14,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 15,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 16,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 17,
+"fitness" : 189.066666666667
+},
+{
+"num_generacio" : 18,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 19,
+"fitness" : 192.066666666667
+},
+{
+"num_generacio" : 20,
+"fitness" : 177.733333333333
+},
+{
+"num_generacio" : 21,
+"fitness" : 190.4
+},
+{
+"num_generacio" : 22,
+"fitness" : 157.733333333333
+},
+{
+"num_generacio" : 23,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 24,
+"fitness" : 158.066666666667
+},
+{
+"num_generacio" : 25,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 26,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 27,
+"fitness" : 189.066666666667
+},
+{
+"num_generacio" : 28,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 29,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 30,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 31,
+"fitness" : 189.066666666667
+},
+{
+"num_generacio" : 32,
+"fitness" : 180.733333333333
+},
+{
+"num_generacio" : 33,
+"fitness" : 153.066666666667
+},
+{
+"num_generacio" : 34,
+"fitness" : 196.733333333333
+},
+{
+"num_generacio" : 35,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 36,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 37,
+"fitness" : 210.4
+},
+{
+"num_generacio" : 38,
+"fitness" : 162.4
+},
+{
+"num_generacio" : 39,
+"fitness" : 204.4
+},
+{
+"num_generacio" : 40,
+"fitness" : 199.733333333333
+},
+{
+"num_generacio" : 41,
+"fitness" : 191.733333333333
+},
+{
+"num_generacio" : 42,
+"fitness" : 188.733333333333
+},
+{
+"num_generacio" : 43,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 44,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 45,
+"fitness" : 196.066666666666
+},
+{
+"num_generacio" : 46,
+"fitness" : 149.4
+},
+{
+"num_generacio" : 47,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 48,
+"fitness" : 201.733333333333
+},
+{
+"num_generacio" : 49,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 50,
+"fitness" : 190.066666666666
+},
+{
+"num_generacio" : 51,
+"fitness" : 207.066666666667
+},
+{
+"num_generacio" : 52,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 53,
+"fitness" : 188.4
+},
+{
+"num_generacio" : 54,
+"fitness" : 162.4
+},
+{
+"num_generacio" : 55,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 56,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 57,
+"fitness" : 163.4
+},
+{
+"num_generacio" : 58,
+"fitness" : 145.733333333333
+},
+{
+"num_generacio" : 59,
+"fitness" : 200.066666666667
+},
+{
+"num_generacio" : 60,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 61,
+"fitness" : 157.4
+},
+{
+"num_generacio" : 62,
+"fitness" : 130.733333333333
+},
+{
+"num_generacio" : 63,
+"fitness" : 194.4
+},
+{
+"num_generacio" : 64,
+"fitness" : 152.4
+},
+{
+"num_generacio" : 65,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 66,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 67,
+"fitness" : 156.733333333333
+},
+{
+"num_generacio" : 68,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 69,
+"fitness" : 189.066666666666
+},
+{
+"num_generacio" : 70,
+"fitness" : 170.066666666667
+},
+{
+"num_generacio" : 71,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 72,
+"fitness" : 156.733333333333
+},
+{
+"num_generacio" : 73,
+"fitness" : 152.733333333333
+},
+{
+"num_generacio" : 74,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 75,
+"fitness" : 196.4
+},
+{
+"num_generacio" : 76,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 77,
+"fitness" : 193.4
+},
+{
+"num_generacio" : 78,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 79,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 80,
+"fitness" : 157.733333333333
+},
+{
+"num_generacio" : 81,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 82,
+"fitness" : 157.066666666667
+},
+{
+"num_generacio" : 83,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 84,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 85,
+"fitness" : 157.733333333333
+},
+{
+"num_generacio" : 86,
+"fitness" : 199.066666666667
+},
+{
+"num_generacio" : 87,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 88,
+"fitness" : 130.666666666667
+},
+{
+"num_generacio" : 89,
+"fitness" : 187.4
+},
+{
+"num_generacio" : 90,
+"fitness" : 193.4
+},
+{
+"num_generacio" : 91,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 92,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 93,
+"fitness" : 196.066666666666
+},
+{
+"num_generacio" : 94,
+"fitness" : 201.066666666667
+},
+{
+"num_generacio" : 95,
+"fitness" : 202.733333333333
+},
+{
+"num_generacio" : 96,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 97,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 98,
+"fitness" : 175.733333333333
+},
+{
+"num_generacio" : 99,
+"fitness" : 186.733333333333
+},
+{
+"num_generacio" : 100,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 101,
+"fitness" : 191.733333333333
+},
+{
+"num_generacio" : 102,
+"fitness" : 157.733333333333
+},
+{
+"num_generacio" : 103,
+"fitness" : 193.733333333333
+},
+{
+"num_generacio" : 104,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 105,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 106,
+"fitness" : 188.4
+},
+{
+"num_generacio" : 107,
+"fitness" : 191.733333333333
+},
+{
+"num_generacio" : 108,
+"fitness" : 203.066666666666
+},
+{
+"num_generacio" : 109,
+"fitness" : 162.4
+},
+{
+"num_generacio" : 110,
+"fitness" : 162.4
+},
+{
+"num_generacio" : 111,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 112,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 113,
+"fitness" : 157.733333333333
+},
+{
+"num_generacio" : 114,
+"fitness" : 195.066666666667
+},
+{
+"num_generacio" : 115,
+"fitness" : 198.066666666667
+},
+{
+"num_generacio" : 116,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 117,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 118,
+"fitness" : 156.733333333333
+},
+{
+"num_generacio" : 119,
+"fitness" : 202.733333333333
+},
+{
+"num_generacio" : 120,
+"fitness" : 175.733333333333
+},
+{
+"num_generacio" : 121,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 122,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 123,
+"fitness" : 149
+},
+{
+"num_generacio" : 124,
+"fitness" : 153.4
+},
+{
+"num_generacio" : 125,
+"fitness" : 183.333333333333
+}
+],
+"màxim_fitness" :210.4,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.78533222526312},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :0.66150179132819},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.65620355680585}
+]
+}
+},
+{
+"num_partida" :21,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 120.4
+},
+{
+"num_generacio" : 2,
+"fitness" : 220.733333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 1210.26666666666
+},
+{
+"num_generacio" : 4,
+"fitness" : 4516.33333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 1235.8
+},
+{
+"num_generacio" : 6,
+"fitness" : 1211.2
+},
+{
+"num_generacio" : 7,
+"fitness" : 160.4
+},
+{
+"num_generacio" : 8,
+"fitness" : 174.666666666667
+},
+{
+"num_generacio" : 9,
+"fitness" : 55697.1333333329
+},
+{
+"num_generacio" : 10,
+"fitness" : 24253.4666666666
+},
+{
+"num_generacio" : 11,
+"fitness" : 9726.13333333336
+},
+{
+"num_generacio" : 12,
+"fitness" : 164432.666666675
+},
+{
+"num_generacio" : 13,
+"fitness" : 164791.000000008
+},
+{
+"num_generacio" : 14,
+"fitness" : 164335.266666675
+}
+],
+"màxim_fitness" :164791.000000008,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.87465888261795},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.92929276823997},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.01450271904469}
+]
+}
+},
+{
+"num_partida" :22,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 1282.06666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 22114.3999999999
+},
+{
+"num_generacio" : 3,
+"fitness" : 118482.466666663
+},
+{
+"num_generacio" : 4,
+"fitness" : 65796.133333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 131025.999999995
+},
+{
+"num_generacio" : 6,
+"fitness" : 165118.333333341
+},
+{
+"num_generacio" : 7,
+"fitness" : 164959.333333342
+},
+{
+"num_generacio" : 8,
+"fitness" : 145
+},
+{
+"num_generacio" : 9,
+"fitness" : 256.133333333333
+},
+{
+"num_generacio" : 10,
+"fitness" : 161.733333333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 22035.1333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 13325.4000000001
+},
+{
+"num_generacio" : 13,
+"fitness" : 2203.46666666666
+},
+{
+"num_generacio" : 14,
+"fitness" : 14407.2000000002
+},
+{
+"num_generacio" : 15,
+"fitness" : 3578.66666666667
+},
+{
+"num_generacio" : 16,
+"fitness" : 163701.333333342
+},
+{
+"num_generacio" : 17,
+"fitness" : 68012.7999999994
+},
+{
+"num_generacio" : 18,
+"fitness" : 46135.7999999996
+},
+{
+"num_generacio" : 19,
+"fitness" : 135590.999999997
+},
+{
+"num_generacio" : 20,
+"fitness" : 38563.4666666663
+},
+{
+"num_generacio" : 21,
+"fitness" : 66787.1333333328
+},
+{
+"num_generacio" : 22,
+"fitness" : 109578.466666663
+},
+{
+"num_generacio" : 23,
+"fitness" : 164786.666666674
+},
+{
+"num_generacio" : 24,
+"fitness" : 165017.000000008
+},
+{
+"num_generacio" : 25,
+"fitness" : 165174.666666674
+}
+],
+"màxim_fitness" :165174.666666674,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.58083115541376},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.55500258412212},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.13517606002279}
+]
+}
+},
+{
+"num_partida" :23,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 32.4
+},
+{
+"num_generacio" : 2,
+"fitness" : 178.066666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 1258.4
+},
+{
+"num_generacio" : 4,
+"fitness" : 3498
+},
+{
+"num_generacio" : 5,
+"fitness" : 216.8
+},
+{
+"num_generacio" : 6,
+"fitness" : 206.066666666667
+},
+{
+"num_generacio" : 7,
+"fitness" : 240.466666666667
+},
+{
+"num_generacio" : 8,
+"fitness" : 72481.999999999
+},
+{
+"num_generacio" : 9,
+"fitness" : 17745.0666666668
+},
+{
+"num_generacio" : 10,
+"fitness" : 129.733333333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 164471.666666675
+},
+{
+"num_generacio" : 12,
+"fitness" : 164199.600000008
+},
+{
+"num_generacio" : 13,
+"fitness" : 164297.666666675
+}
+],
+"màxim_fitness" :164471.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.89801806211472},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.84906968474388},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.14984264969826}
+]
+}
+},
+{
+"num_partida" :24,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 132.066666666667
+},
+{
+"num_generacio" : 2,
+"fitness" : 163396.000000008
+},
+{
+"num_generacio" : 3,
+"fitness" : 46235.1999999996
+},
+{
+"num_generacio" : 4,
+"fitness" : 161918.066666675
+},
+{
+"num_generacio" : 5,
+"fitness" : 104377.066666664
+},
+{
+"num_generacio" : 6,
+"fitness" : 163236.266666675
+},
+{
+"num_generacio" : 7,
+"fitness" : 164333.000000009
+},
+{
+"num_generacio" : 8,
+"fitness" : 65392.0666666664
+},
+{
+"num_generacio" : 9,
+"fitness" : 163586.266666675
+},
+{
+"num_generacio" : 10,
+"fitness" : 64362.733333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 164731.666666675
+},
+{
+"num_generacio" : 12,
+"fitness" : 163638.000000008
+},
+{
+"num_generacio" : 13,
+"fitness" : 164070.333333341
+}
+],
+"màxim_fitness" :164731.666666675,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.5352475643158},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.54387249797583},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.04469835758209}
+]
+}
+},
+{
+"num_partida" :25,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 128248.466666662
+},
+{
+"num_generacio" : 2,
+"fitness" : 4550.6
+},
+{
+"num_generacio" : 3,
+"fitness" : 53282.9999999997
+},
+{
+"num_generacio" : 4,
+"fitness" : 1304.13333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 73438.8666666656
+},
+{
+"num_generacio" : 6,
+"fitness" : 4600.33333333333
+},
+{
+"num_generacio" : 7,
+"fitness" : 163422.000000008
+},
+{
+"num_generacio" : 8,
+"fitness" : 142726.2
+},
+{
+"num_generacio" : 9,
+"fitness" : 164011.333333342
+},
+{
+"num_generacio" : 10,
+"fitness" : 42937.9333333329
+},
+{
+"num_generacio" : 11,
+"fitness" : 101569.666666664
+},
+{
+"num_generacio" : 12,
+"fitness" : 114392.799999997
+},
+{
+"num_generacio" : 13,
+"fitness" : 70529.8666666657
+},
+{
+"num_generacio" : 14,
+"fitness" : 165345.000000009
+},
+{
+"num_generacio" : 15,
+"fitness" : 25578.1333333332
+},
+{
+"num_generacio" : 16,
+"fitness" : 163232.933333342
+},
+{
+"num_generacio" : 17,
+"fitness" : 12236.4000000001
+},
+{
+"num_generacio" : 18,
+"fitness" : 164476.666666675
+},
+{
+"num_generacio" : 19,
+"fitness" : 110166.066666664
+},
+{
+"num_generacio" : 20,
+"fitness" : 51666.3999999996
+},
+{
+"num_generacio" : 21,
+"fitness" : 164874.666666675
+},
+{
+"num_generacio" : 22,
+"fitness" : 39888.6666666663
+},
+{
+"num_generacio" : 23,
+"fitness" : 70262.1333333325
+},
+{
+"num_generacio" : 24,
+"fitness" : 4668.86666666666
+},
+{
+"num_generacio" : 25,
+"fitness" : 85854.466666665
+},
+{
+"num_generacio" : 26,
+"fitness" : 87801.7333333315
+},
+{
+"num_generacio" : 27,
+"fitness" : 164069.000000009
+},
+{
+"num_generacio" : 28,
+"fitness" : 52699.3999999996
+},
+{
+"num_generacio" : 29,
+"fitness" : 163737.600000008
+},
+{
+"num_generacio" : 30,
+"fitness" : 163931.000000009
+},
+{
+"num_generacio" : 31,
+"fitness" : 164338.666666675
+}
+],
+"màxim_fitness" :165345.000000009,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.66027091443539},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.68548452854156},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.05363391526043}
+]
+}
+},
+{
+"num_partida" :26,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 107.4
+},
+{
+"num_generacio" : 2,
+"fitness" : 170.733333333333
+},
+{
+"num_generacio" : 3,
+"fitness" : 173.733333333333
+},
+{
+"num_generacio" : 4,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 6,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 7,
+"fitness" : 183.733333333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 173.066666666667
+},
+{
+"num_generacio" : 9,
+"fitness" : 191.066666666667
+},
+{
+"num_generacio" : 10,
+"fitness" : 152.733333333333
+},
+{
+"num_generacio" : 11,
+"fitness" : 186.733333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 13,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 14,
+"fitness" : 196.4
+},
+{
+"num_generacio" : 15,
+"fitness" : 151.4
+},
+{
+"num_generacio" : 16,
+"fitness" : 195.4
+},
+{
+"num_generacio" : 17,
+"fitness" : 130.733333333333
+},
+{
+"num_generacio" : 18,
+"fitness" : 131.4
+},
+{
+"num_generacio" : 19,
+"fitness" : 162.733333333333
+},
+{
+"num_generacio" : 20,
+"fitness" : 174.066666666667
+},
+{
+"num_generacio" : 21,
+"fitness" : 152.066666666667
+},
+{
+"num_generacio" : 22,
+"fitness" : 132.066666666667
+},
+{
+"num_generacio" : 23,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 24,
+"fitness" : 152.066666666667
+},
+{
+"num_generacio" : 25,
+"fitness" : 189.066666666667
+},
+{
+"num_generacio" : 26,
+"fitness" : 142.066666666667
+},
+{
+"num_generacio" : 27,
+"fitness" : 184.066666666667
+},
+{
+"num_generacio" : 28,
+"fitness" : 138.733333333333
+},
+{
+"num_generacio" : 29,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 30,
+"fitness" : 185.4
+},
+{
+"num_generacio" : 31,
+"fitness" : 171.733333333333
+},
+{
+"num_generacio" : 32,
+"fitness" : 196.4
+},
+{
+"num_generacio" : 33,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 34,
+"fitness" : 183.4
+},
+{
+"num_generacio" : 35,
+"fitness" : 185.733333333333
+},
+{
+"num_generacio" : 36,
+"fitness" : 188.733333333333
+},
+{
+"num_generacio" : 37,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 38,
+"fitness" : 185.066666666666
+},
+{
+"num_generacio" : 39,
+"fitness" : 188.733333333333
+},
+{
+"num_generacio" : 40,
+"fitness" : 161.066666666667
+},
+{
+"num_generacio" : 41,
+"fitness" : 152.733333333333
+},
+{
+"num_generacio" : 42,
+"fitness" : 171.733333333333
+},
+{
+"num_generacio" : 43,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 44,
+"fitness" : 186.066666666667
+},
+{
+"num_generacio" : 45,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 46,
+"fitness" : 152.4
+},
+{
+"num_generacio" : 47,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 48,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 49,
+"fitness" : 152.066666666667
+},
+{
+"num_generacio" : 50,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 51,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 52,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 53,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 54,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 55,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 56,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 57,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 58,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 59,
+"fitness" : 158.4
+},
+{
+"num_generacio" : 60,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 61,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 62,
+"fitness" : 185.4
+},
+{
+"num_generacio" : 63,
+"fitness" : 185.733333333333
+},
+{
+"num_generacio" : 64,
+"fitness" : 165.4
+},
+{
+"num_generacio" : 65,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 66,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 67,
+"fitness" : 158.4
+},
+{
+"num_generacio" : 68,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 69,
+"fitness" : 148.733333333333
+},
+{
+"num_generacio" : 70,
+"fitness" : 156.4
+},
+{
+"num_generacio" : 71,
+"fitness" : 190.066666666666
+},
+{
+"num_generacio" : 72,
+"fitness" : 171.4
+},
+{
+"num_generacio" : 73,
+"fitness" : 168.733333333333
+},
+{
+"num_generacio" : 74,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 75,
+"fitness" : 185.733333333333
+},
+{
+"num_generacio" : 76,
+"fitness" : 181.4
+},
+{
+"num_generacio" : 77,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 78,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 79,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 80,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 81,
+"fitness" : 158.4
+},
+{
+"num_generacio" : 82,
+"fitness" : 184.066666666667
+},
+{
+"num_generacio" : 83,
+"fitness" : 148.4
+},
+{
+"num_generacio" : 84,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 85,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 86,
+"fitness" : 161.066666666667
+},
+{
+"num_generacio" : 87,
+"fitness" : 182
+},
+{
+"num_generacio" : 88,
+"fitness" : 168.733333333333
+},
+{
+"num_generacio" : 89,
+"fitness" : 155.733333333333
+},
+{
+"num_generacio" : 90,
+"fitness" : 191.733333333333
+},
+{
+"num_generacio" : 91,
+"fitness" : 138.066666666667
+},
+{
+"num_generacio" : 92,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 93,
+"fitness" : 185.4
+},
+{
+"num_generacio" : 94,
+"fitness" : 142.066666666667
+},
+{
+"num_generacio" : 95,
+"fitness" : 191.4
+},
+{
+"num_generacio" : 96,
+"fitness" : 160.733333333333
+},
+{
+"num_generacio" : 97,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 98,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 99,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 100,
+"fitness" : 153.066666666667
+},
+{
+"num_generacio" : 101,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 102,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 103,
+"fitness" : 184.066666666667
+},
+{
+"num_generacio" : 104,
+"fitness" : 142.066666666667
+},
+{
+"num_generacio" : 105,
+"fitness" : 186.733333333333
+},
+{
+"num_generacio" : 106,
+"fitness" : 155.4
+},
+{
+"num_generacio" : 107,
+"fitness" : 186.066666666667
+},
+{
+"num_generacio" : 108,
+"fitness" : 148.733333333333
+},
+{
+"num_generacio" : 109,
+"fitness" : 190.4
+},
+{
+"num_generacio" : 110,
+"fitness" : 182.4
+},
+{
+"num_generacio" : 111,
+"fitness" : 193.733333333333
+},
+{
+"num_generacio" : 112,
+"fitness" : 131.4
+},
+{
+"num_generacio" : 113,
+"fitness" : 193.733333333333
+},
+{
+"num_generacio" : 114,
+"fitness" : 152.066666666667
+},
+{
+"num_generacio" : 115,
+"fitness" : 130.733333333333
+},
+{
+"num_generacio" : 116,
+"fitness" : 178.066666666667
+},
+{
+"num_generacio" : 117,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 118,
+"fitness" : 187.733333333333
+},
+{
+"num_generacio" : 119,
+"fitness" : 185.066666666667
+},
+{
+"num_generacio" : 120,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 121,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 122,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 123,
+"fitness" : 186.4
+},
+{
+"num_generacio" : 124,
+"fitness" : 185.066666666667
+},
+{
+"num_generacio" : 125,
+"fitness" : 133.4
+}
+],
+"màxim_fitness" :196.4,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.62529689073563},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :0.67852139472961},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.58353209495544}
+]
+}
+},
+{
+"num_partida" :27,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 128.733333333333
+},
+{
+"num_generacio" : 2,
+"fitness" : 142.066666666667
+},
+{
+"num_generacio" : 3,
+"fitness" : 127.066666666666
+},
+{
+"num_generacio" : 4,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 216.066666666667
+},
+{
+"num_generacio" : 6,
+"fitness" : 166.4
+},
+{
+"num_generacio" : 7,
+"fitness" : 127.4
+},
+{
+"num_generacio" : 8,
+"fitness" : 191.4
+},
+{
+"num_generacio" : 9,
+"fitness" : 169.066666666667
+},
+{
+"num_generacio" : 10,
+"fitness" : 143.4
+},
+{
+"num_generacio" : 11,
+"fitness" : 215.733333333333
+},
+{
+"num_generacio" : 12,
+"fitness" : 224.6
+},
+{
+"num_generacio" : 13,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 14,
+"fitness" : 229.733333333333
+},
+{
+"num_generacio" : 15,
+"fitness" : 146.4
+},
+{
+"num_generacio" : 16,
+"fitness" : 220.066666666666
+},
+{
+"num_generacio" : 17,
+"fitness" : 142.733333333333
+},
+{
+"num_generacio" : 18,
+"fitness" : 207.4
+},
+{
+"num_generacio" : 19,
+"fitness" : 148.066666666667
+},
+{
+"num_generacio" : 20,
+"fitness" : 156.4
+},
+{
+"num_generacio" : 21,
+"fitness" : 146.066666666667
+},
+{
+"num_generacio" : 22,
+"fitness" : 229.066666666666
+},
+{
+"num_generacio" : 23,
+"fitness" : 208
+},
+{
+"num_generacio" : 24,
+"fitness" : 178.4
+},
+{
+"num_generacio" : 25,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 26,
+"fitness" : 156.4
+},
+{
+"num_generacio" : 27,
+"fitness" : 136.066666666667
+},
+{
+"num_generacio" : 28,
+"fitness" : 211.066666666666
+},
+{
+"num_generacio" : 29,
+"fitness" : 220.733333333333
+},
+{
+"num_generacio" : 30,
+"fitness" : 222.4
+},
+{
+"num_generacio" : 31,
+"fitness" : 208.066666666666
+},
+{
+"num_generacio" : 32,
+"fitness" : 140.4
+},
+{
+"num_generacio" : 33,
+"fitness" : 137.4
+},
+{
+"num_generacio" : 34,
+"fitness" : 136.066666666667
+},
+{
+"num_generacio" : 35,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 36,
+"fitness" : 136.066666666667
+},
+{
+"num_generacio" : 37,
+"fitness" : 175.733333333333
+},
+{
+"num_generacio" : 38,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 39,
+"fitness" : 181.4
+},
+{
+"num_generacio" : 40,
+"fitness" : 201.733333333333
+},
+{
+"num_generacio" : 41,
+"fitness" : 136.733333333333
+},
+{
+"num_generacio" : 42,
+"fitness" : 170.4
+},
+{
+"num_generacio" : 43,
+"fitness" : 210.066666666667
+},
+{
+"num_generacio" : 44,
+"fitness" : 1147.4
+},
+{
+"num_generacio" : 45,
+"fitness" : 1139.06666666667
+},
+{
+"num_generacio" : 46,
+"fitness" : 135.066666666667
+},
+{
+"num_generacio" : 47,
+"fitness" : 193.066666666666
+},
+{
+"num_generacio" : 48,
+"fitness" : 139.4
+},
+{
+"num_generacio" : 49,
+"fitness" : 230.4
+},
+{
+"num_generacio" : 50,
+"fitness" : 5577.13333333332
+},
+{
+"num_generacio" : 51,
+"fitness" : 2330.53333333333
+},
+{
+"num_generacio" : 52,
+"fitness" : 10960.4000000001
+},
+{
+"num_generacio" : 53,
+"fitness" : 20747.4
+},
+{
+"num_generacio" : 54,
+"fitness" : 87963.399999998
+},
+{
+"num_generacio" : 55,
+"fitness" : 55204.7333333331
+},
+{
+"num_generacio" : 56,
+"fitness" : 121366.733333329
+},
+{
+"num_generacio" : 57,
+"fitness" : 164277.333333342
+},
+{
+"num_generacio" : 58,
+"fitness" : 164367.000000009
+},
+{
+"num_generacio" : 59,
+"fitness" : 163902.666666675
+}
+],
+"màxim_fitness" :164367.000000009,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.89779622666538},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.90676325559616},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.0425084233284}
+]
+}
+},
+{
+"num_partida" :28,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 26.8
+},
+{
+"num_generacio" : 2,
+"fitness" : 33.7333333333334
+},
+{
+"num_generacio" : 3,
+"fitness" : 106.066666666666
+},
+{
+"num_generacio" : 4,
+"fitness" : 146.4
+},
+{
+"num_generacio" : 5,
+"fitness" : 177.066666666667
+},
+{
+"num_generacio" : 6,
+"fitness" : 204.8
+},
+{
+"num_generacio" : 7,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 8,
+"fitness" : 216.866666666667
+},
+{
+"num_generacio" : 9,
+"fitness" : 213.4
+},
+{
+"num_generacio" : 10,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 11,
+"fitness" : 210.066666666667
+},
+{
+"num_generacio" : 12,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 13,
+"fitness" : 181.4
+},
+{
+"num_generacio" : 14,
+"fitness" : 154.733333333333
+},
+{
+"num_generacio" : 15,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 16,
+"fitness" : 204.733333333333
+},
+{
+"num_generacio" : 17,
+"fitness" : 211.733333333333
+},
+{
+"num_generacio" : 18,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 19,
+"fitness" : 181.4
+},
+{
+"num_generacio" : 20,
+"fitness" : 201.066666666667
+},
+{
+"num_generacio" : 21,
+"fitness" : 194.666666666666
+},
+{
+"num_generacio" : 22,
+"fitness" : 203.4
+},
+{
+"num_generacio" : 23,
+"fitness" : 212.4
+},
+{
+"num_generacio" : 24,
+"fitness" : 139.733333333333
+},
+{
+"num_generacio" : 25,
+"fitness" : 139.733333333333
+},
+{
+"num_generacio" : 26,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 27,
+"fitness" : 211.066666666666
+},
+{
+"num_generacio" : 28,
+"fitness" : 1126.06666666667
+},
+{
+"num_generacio" : 29,
+"fitness" : 139.066666666667
+},
+{
+"num_generacio" : 30,
+"fitness" : 156.733333333333
+},
+{
+"num_generacio" : 31,
+"fitness" : 139.4
+},
+{
+"num_generacio" : 32,
+"fitness" : 215.066666666666
+},
+{
+"num_generacio" : 33,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 34,
+"fitness" : 199.4
+},
+{
+"num_generacio" : 35,
+"fitness" : 211.066666666666
+},
+{
+"num_generacio" : 36,
+"fitness" : 153.066666666667
+},
+{
+"num_generacio" : 37,
+"fitness" : 219.733333333333
+},
+{
+"num_generacio" : 38,
+"fitness" : 144.066666666667
+},
+{
+"num_generacio" : 39,
+"fitness" : 181.733333333333
+},
+{
+"num_generacio" : 40,
+"fitness" : 140.066666666667
+},
+{
+"num_generacio" : 41,
+"fitness" : 207.733333333333
+},
+{
+"num_generacio" : 42,
+"fitness" : 166.066666666667
+},
+{
+"num_generacio" : 43,
+"fitness" : 211.066666666666
+},
+{
+"num_generacio" : 44,
+"fitness" : 199.733333333333
+},
+{
+"num_generacio" : 45,
+"fitness" : 200.733333333333
+},
+{
+"num_generacio" : 46,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 47,
+"fitness" : 199.733333333333
+},
+{
+"num_generacio" : 48,
+"fitness" : 216.733333333333
+},
+{
+"num_generacio" : 49,
+"fitness" : 139.733333333333
+},
+{
+"num_generacio" : 50,
+"fitness" : 152.066666666667
+},
+{
+"num_generacio" : 51,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 52,
+"fitness" : 165.733333333333
+},
+{
+"num_generacio" : 53,
+"fitness" : 159.4
+},
+{
+"num_generacio" : 54,
+"fitness" : 217.066666666667
+},
+{
+"num_generacio" : 55,
+"fitness" : 151.733333333333
+},
+{
+"num_generacio" : 56,
+"fitness" : 219.733333333333
+},
+{
+"num_generacio" : 57,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 58,
+"fitness" : 134.733333333333
+},
+{
+"num_generacio" : 59,
+"fitness" : 199.4
+},
+{
+"num_generacio" : 60,
+"fitness" : 139.733333333333
+},
+{
+"num_generacio" : 61,
+"fitness" : 214.4
+},
+{
+"num_generacio" : 62,
+"fitness" : 158.4
+},
+{
+"num_generacio" : 63,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 64,
+"fitness" : 184.066666666667
+},
+{
+"num_generacio" : 65,
+"fitness" : 136.4
+},
+{
+"num_generacio" : 66,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 67,
+"fitness" : 211.733333333333
+},
+{
+"num_generacio" : 68,
+"fitness" : 144.733333333333
+},
+{
+"num_generacio" : 69,
+"fitness" : 200.733333333333
+},
+{
+"num_generacio" : 70,
+"fitness" : 181.4
+},
+{
+"num_generacio" : 71,
+"fitness" : 174.066666666667
+},
+{
+"num_generacio" : 72,
+"fitness" : 162.066666666667
+},
+{
+"num_generacio" : 73,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 74,
+"fitness" : 139.4
+},
+{
+"num_generacio" : 75,
+"fitness" : 158.4
+},
+{
+"num_generacio" : 76,
+"fitness" : 211.733333333333
+},
+{
+"num_generacio" : 77,
+"fitness" : 161.733333333333
+},
+{
+"num_generacio" : 78,
+"fitness" : 219.733333333333
+},
+{
+"num_generacio" : 79,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 80,
+"fitness" : 153.066666666667
+},
+{
+"num_generacio" : 81,
+"fitness" : 203.066666666667
+},
+{
+"num_generacio" : 82,
+"fitness" : 204.066666666667
+},
+{
+"num_generacio" : 83,
+"fitness" : 201.733333333333
+},
+{
+"num_generacio" : 84,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 85,
+"fitness" : 133.4
+},
+{
+"num_generacio" : 86,
+"fitness" : 139.4
+},
+{
+"num_generacio" : 87,
+"fitness" : 161.733333333333
+},
+{
+"num_generacio" : 88,
+"fitness" : 139.733333333333
+},
+{
+"num_generacio" : 89,
+"fitness" : 152.066666666667
+},
+{
+"num_generacio" : 90,
+"fitness" : 184.4
+},
+{
+"num_generacio" : 91,
+"fitness" : 160.733333333333
+},
+{
+"num_generacio" : 92,
+"fitness" : 181.733333333333
+},
+{
+"num_generacio" : 93,
+"fitness" : 184.066666666667
+},
+{
+"num_generacio" : 94,
+"fitness" : 214.4
+},
+{
+"num_generacio" : 95,
+"fitness" : 201.066666666667
+},
+{
+"num_generacio" : 96,
+"fitness" : 217.733333333333
+},
+{
+"num_generacio" : 97,
+"fitness" : 136.4
+},
+{
+"num_generacio" : 98,
+"fitness" : 139.4
+},
+{
+"num_generacio" : 99,
+"fitness" : 211.733333333333
+},
+{
+"num_generacio" : 100,
+"fitness" : 174.4
+},
+{
+"num_generacio" : 101,
+"fitness" : 161.4
+},
+{
+"num_generacio" : 102,
+"fitness" : 139.733333333333
+},
+{
+"num_generacio" : 103,
+"fitness" : 162.066666666667
+},
+{
+"num_generacio" : 104,
+"fitness" : 174.4
+},
+{
+"num_generacio" : 105,
+"fitness" : 216.733333333333
+},
+{
+"num_generacio" : 106,
+"fitness" : 199.733333333333
+},
+{
+"num_generacio" : 107,
+"fitness" : 152.066666666667
+},
+{
+"num_generacio" : 108,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 109,
+"fitness" : 134.066666666667
+},
+{
+"num_generacio" : 110,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 111,
+"fitness" : 132.4
+},
+{
+"num_generacio" : 112,
+"fitness" : 199.4
+},
+{
+"num_generacio" : 113,
+"fitness" : 143.733333333333
+},
+{
+"num_generacio" : 114,
+"fitness" : 217.733333333333
+},
+{
+"num_generacio" : 115,
+"fitness" : 132.733333333333
+},
+{
+"num_generacio" : 116,
+"fitness" : 184.4
+},
+{
+"num_generacio" : 117,
+"fitness" : 200.4
+},
+{
+"num_generacio" : 118,
+"fitness" : 181.066666666667
+},
+{
+"num_generacio" : 119,
+"fitness" : 141.4
+},
+{
+"num_generacio" : 120,
+"fitness" : 174.4
+},
+{
+"num_generacio" : 121,
+"fitness" : 203.4
+},
+{
+"num_generacio" : 122,
+"fitness" : 213.4
+},
+{
+"num_generacio" : 123,
+"fitness" : 144.4
+},
+{
+"num_generacio" : 124,
+"fitness" : 149.4
+},
+{
+"num_generacio" : 125,
+"fitness" : 184.066666666667
+}
+],
+"màxim_fitness" :1126.06666666667,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.82346772309393},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.01406401395798},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.57611417770386}
+]
+}
+},
+{
+"num_partida" :29,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 136.733333333333
+},
+{
+"num_generacio" : 2,
+"fitness" : 1126.4
+},
+{
+"num_generacio" : 3,
+"fitness" : 241
+},
+{
+"num_generacio" : 4,
+"fitness" : 141.733333333333
+},
+{
+"num_generacio" : 5,
+"fitness" : 145.066666666667
+},
+{
+"num_generacio" : 6,
+"fitness" : 1201.8
+},
+{
+"num_generacio" : 7,
+"fitness" : 235.6
+},
+{
+"num_generacio" : 8,
+"fitness" : 165405.333333341
+},
+{
+"num_generacio" : 9,
+"fitness" : 165058.000000008
+},
+{
+"num_generacio" : 10,
+"fitness" : 71643.9999999991
+},
+{
+"num_generacio" : 11,
+"fitness" : 164853.000000008
+},
+{
+"num_generacio" : 12,
+"fitness" : 165205.333333342
+},
+{
+"num_generacio" : 13,
+"fitness" : 165145.666666675
+}
+],
+"màxim_fitness" :165405.333333341,
+"millor_ocell" :
+{
+"neurones_input" : 3,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" : [
+{
+"desde" :0,
+"fins" :3,
+"importancia" :0.62922358512878},
+{
+"desde" :1,
+"fins" :3,
+"importancia" :-0.61478781700134},
+{
+"desde" :2,
+"fins" :3,
+"importancia" :-0.11101323366165}
+]
+}
+}
+]
+}
