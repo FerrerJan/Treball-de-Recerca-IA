@@ -35,8 +35,8 @@ for nombre in arxius:
         lista_promedio.append(round((n/len(matrix)), 2))
     #creación de una lista que contiene un promedio de todos los valores
 
-    wb = load_workbook(filename = 'IA.xlsx')
-    print(wb.sheetnames)
+    wb = load_workbook(filename = 'IA2.xlsx')
+    #print(wb.sheetnames)
 
     columnas_excel = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     #workbook = Workbook()
@@ -62,7 +62,7 @@ for nombre in arxius:
         
     #creación de una nueva hoja en caso de  que la hoja activa no esté vacía
 
-    wb.save(filename="IA.xlsx")
+    wb.save(filename="IA2.xlsx")
     #guardado del archivo
 
     """
