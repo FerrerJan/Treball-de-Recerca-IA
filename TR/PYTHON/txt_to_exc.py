@@ -3,13 +3,12 @@ from openpyxl import load_workbook
 from os import listdir
 import random
 
-
-ruta = "E:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\DATOS"
+ruta = 'C:\\Users\\Marc\\Documents\\GitHub\\Flappy-bird_TR\\TR\\DATOS'
 arxius = listdir(ruta)
 generaciones = 125
 print(listdir(ruta))
 for nombre in arxius:
-    with open("E:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\DATOS\\" + nombre) as f:
+    with open("C:\\Users\\Marc\\Documents\\GitHub\\Flappy-bird_TR\\TR\\DATOS\\" + nombre) as f:
         contents = f.readlines()
         matrix = []
         for i in range(len(contents)):
@@ -18,13 +17,13 @@ for nombre in arxius:
     #acceso al archivo .txt i  lectura de datos para una posterior transformación  en una matriz
 
     #completar datos/matriz
-    print("partidas:   " + str(len(matrix)))
+    #print("partidas:   " + str(len(matrix)))
     for i in range(len(matrix)):
         maxim = max(matrix[i])
         for j in range(generaciones - len(matrix[i])):
             matrix[i].append(maxim)
 
-        print(len(matrix[i]))
+        #print(len(matrix[i]))
 
     #print(matrix)
             
@@ -37,7 +36,7 @@ for nombre in arxius:
     #creación de una lista que contiene un promedio de todos los valores
 
     wb = load_workbook(filename = 'IA.xlsx')
-    print(wb.sheetnames)
+    #print(wb.sheetnames)
 
     columnas_excel = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     #workbook = Workbook()
