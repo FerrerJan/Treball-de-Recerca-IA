@@ -1,0 +1,2 @@
+Aquesta combinació d'inputs es la menys eficaç, després de les combinacions que no tenen l'input 0 o l'input 1, ja que per poder arribar a un fitness elevat ha de ignorar l'input 2 i l'input 3 cosa que li es complicada ja que només fa una mutació per generació aquest problema es podria solucionar fent que hi hagués més d'una mutació per xarxa neuronal per generació.
+(Fer proba aplicant una modificació al algoritme NEAT on de forma aleatoria es faci per cada xarxa neuronal sotmesa a evolucionar entre 1 i 5 mutacions)
