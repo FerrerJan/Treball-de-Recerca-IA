@@ -1,63 +1,136 @@
-P-2_I-0,1,2,3:
--Quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+p-2_i-0,1,2,3:
+-quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
 
-P-2_I-0,1,2:
+p-2_i-0,1,2:
 -
 
-P-2_I-0,1,3:
--Per alguna raó quan hi ha nomes la mutacio 0 aillada els valor son molt dispersos, quan entra en joc la mutacio 1 arriba mes rapid al maxim
+p-2_i-0,1,3:
+-per alguna raó quan hi ha nomes la mutacio 0 aillada els valor son molt dispersos, quan entra en joc la mutacio 1 arriba mes rapid al maxim
 
-P-2_I-0,1:
--Quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+p-2_i-0,1:
+-quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
 
-P-2_I-0:
--Quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
--La mutació 0 tendeix a una millor puntuació
+p-2_i-0:
+-quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
 
-P-2_I-1:
+p-2_i-1:
 -
 
-P-5_I-0,1,2,3:
--Quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
--La mutació 0 tendeix a una millor puntuació
+p-5_i-0,1,2,3:
+-quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
 
-P-5_I-0,1,2:
--Quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
--La mutació 0 tendeix a una millor puntuació
+p-5_i-0,1,2:
+-quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
 
-P-5_I-0,1,3:
--Quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
--La mutació 0 tendeix a una millor puntuació
+p-5_i-0,1,3:
+-quan hi ha la mutació 1, els valors estan mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
 
-P-5_I-0,1:
--La mutació 0 tendeix a una millor puntuació
--Quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+p-5_i-0,1:
+-la mutació 0 tendeix a una millor puntuació
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
 
-P-5_I-0:
+p-5_i-0:
 -
 
-P-5_I-1:
+p-5_i-1:
 -
 
-P-10_I-0,1,2,3:
--Quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+p-10_i-0,1,2,3:
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
 
-P-10_I-0,1,2:
--Quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
--La mutació 0 tendeix a una millor puntuació
+p-10_i-0,1,2:
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
 
-P-10_I-0,1,3:
--La mutació 0 tendeix a una millor puntuació
--La mutació 0 tendeix a una forma més logarítmica
--Quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+p-10_i-0,1,3:
+-la mutació 0 tendeix a una millor puntuació
+-la mutació 0 tendeix a una forma més logarítmica
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
      
-P-10_I-0,1:
--La mutació 0 tendeix a una millor puntuació
--La mutació 2 tendeix lleugerament a una millor puntuació
+p-10_i-0,1:
+-la mutació 0 tendeix a una millor puntuació
+-la mutació 2 tendeix lleugerament a una millor puntuació
 
-P-10_I-0:
+p-10_i-0:
 -
 
-P-10_I-1:
--La mutació 0 tendeix a una millor puntuació
+p-10_i-1:
+-la mutació 0 tendeix a una millor puntuació
+
+P-25_I-0,1,2,3:
+-la mutació 0 tendeix a una millor puntuació
+
+P-25_I-0,1,2:
+-la mutació 0 tendeix a una millor puntuació
+- quan totes les mutacions estan, es més logarítmica
+
+P-25_I-0,1,3:
+-la mutació 0 tendeix a una millor puntuació
+
+P-25_I-0,1:
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+
+P-25_I-0:
+-
+
+P-25_I-1:
+- la mutació 1 tendeix a una millor puntuació
+
+P-50_I-0,1,2,3:
+-la mutació 0 tendeix a una millor puntuació
+- quan totes les mutacions estan, es més logarítmica
+
+P-50_I-0,1,2:
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
+- quan totes les mutacions estan, es més logarítmica
+
+P-50_I-0,1:
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+
+P-50_I-0:
+-
+
+P-50_I-1:
+- la mutació 1 tendeix a una millor puntuació
+
+P-100_I-0,1,2,3:
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
+- quan totes les mutacions estan, es més logarítmica
+
+P-100_I-0,1,2:
+-
+
+P-100_I-0,1,3:
+-quan hi ha la mutació 1, els valors estan lleugerment mes dispersos (per exemple en la g. 20 la puntuació màx. és 300, en la 21 és 150, en la 22 és 220, etc.); quan no hi ha mutació 1 els valors són més estables al llarg de les generacions: 220-->236-->210--> etc
+-la mutació 0 tendeix a una millor puntuació
+- quan totes les mutacions estan, es més logarítmica
+
+P-100_I-0,1:
+-
+
+P-100_I-0:
+-la mutació 1 tendeix a una millor puntuació
+- quan totes les mutacions estan, es lleugerment més logarítmica
+
+P-100_I-1:
+-la mutació 1 tendeix a una millor puntuació
+
+
+
+
+
+
+
+CONCLUSIONES:
+-LA MUTACION 0 EN GENERAL TIENDE A UNA MEJOR PUNTUACION, EXCEPTO CUANDO HAY SOLO INPUT 1 O SOLO INPUT 0
+-LA MUTACION 1 TIENDE A SER MAS DISPERSA QUE LA MUTACION 0
+-LA MUTACION 2 NO AFECTA MUCHO EN CASI NADA, EXCEPTO EN ALGUNOS CASOS EN QUE LA MUTACION 2 Y LA 0 ESTAN JUNTOS Y ENTONCES EN ALGUN CASO LA GRAFICA NO TIENE SENTIDO I SE VUELVE LOCA
+
+
 
