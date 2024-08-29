@@ -1,8 +1,14 @@
 CONCLUSIONES:
 
+Mirant tota la sèrie de gràfics es poden observar diferents tipus de comportament a l'hora d'implicar els diferents tipus de mutacions, les diferents mutacions que hi ha són:
 
--LA MUTACION 0(mutacion no estructral, trabaja en una estructura simple I EN CONSEQUENCIA RESULTADOS MÁS SOLIDOS/ESTABLES) EN GENERAL TIENDE A UNA MEJOR PUNTUACION.
--LA MUTACION 1(mutacion estructral) TIENDE A SER MAS DISPERSA QUE LA MUTACION 0.
--LA MUTACION 2 NO AFECTA MUCHO EN CASI NADA, EXCEPTO EN ALGUNOS CASOS EN QUE LA MUTACION 2 Y LA 0 ESTAN JUNTOS Y ENTONCES EN ALGUN CASO LA GRAFICA NO TIENE SENTIDO I SE VUELVE LOCA.
+	-Mutació no estructural (Mutació 0):
+	-Mutació estructural (Mutació 1):
+	-Mutació crossover (Mutació 2):
 
-GRAFICAS DE INPUT 1 I MUTACION 0 vs INPUT 1 I MUTACION 1 --> 
+A l'hora d'implicar aquestes mutacions s'observen els següents comportaments:
+
+	-La implicació de la mutació no estructural (Mutació 0) en general provoca unes puntuacions de fitness més altes i uns valors més sòlids/estables que varien poc.
+	-La implicació de la mutació estructural (Mutació 1) provoca uns valors més dispersos i menys sòlids/estables i, en conseqüència unes puntuacions de fitness més baixes.
+	-Curiosament, la implicació de la mutació crossover (Mutació 2) no provoca canvis notables en la majoria de partides; tot i això, en un 20% dels casos on la mutació 0 i la mutació 2 es troben en les mateixes partides la puntuació 	 es dispersa exageradament sense cap motiu aparent.
+
