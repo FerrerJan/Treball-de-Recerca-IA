@@ -6,8 +6,8 @@ var IA_vives
 var xarxa_neuronal_preparada := false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.num_IA = num_IA
 	if Global.xarxa_aleatoria:
-		Global.num_IA = num_IA
 		if Global.gen == 0:
 			Global.max_fitness_partida = -1.0
 			Global.millor_ocell_partida = ClasseIa.ia.new()
