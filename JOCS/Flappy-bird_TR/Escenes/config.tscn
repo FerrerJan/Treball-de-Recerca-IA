@@ -144,6 +144,21 @@ offset_right = 219.0
 offset_bottom = 383.0
 text = "MUTACIONS"
 
+[node name="XarxaNeuronal" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 35.0
+offset_right = 188.0
+offset_bottom = 67.0
+text = "XARXA NEURONAL"
+
+[node name="Activat" type="CheckButton" parent="XarxaNeuronal"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 4.0
+offset_right = 238.0
+offset_bottom = 29.0
+
 [connection signal="pressed" from="OK/OK" to="." method="_on_ok_pressed"]
 [connection signal="pressed" from="Inputs" to="." method="_on_inputs_pressed"]
 [connection signal="pressed" from="Mutacions" to="." method="_on_mutacions_pressed"]
+[connection signal="pressed" from="XarxaNeuronal" to="." method="_on_xarxa_neuronal_pressed"]

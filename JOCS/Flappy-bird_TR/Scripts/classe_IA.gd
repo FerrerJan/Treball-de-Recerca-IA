@@ -9,7 +9,8 @@ class ia:
 	var num_outputs :int = 1
 	
 	func _init():
-		xarxa_aleatoria()
+		if Global.xarxa_aleatoria:
+			xarxa_aleatoria()
 		
 
 	class NEATNeuron:

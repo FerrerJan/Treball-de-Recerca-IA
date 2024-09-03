@@ -6,6 +6,9 @@ extends Node2D
 @onready var partides = $Partides/Num
 @onready var terra = $Terra
 @onready var velocitat_joc = $VelJoc/VelocitatJoc
+@onready var xarxa_neuronal = $XarxaNeuronal/Activat
+@onready var config_xarxa_neuronal = $XarxaNeuronal
+
 var velocitat := 138
 
 # Called when the node enters the scene tree for the first time.
@@ -15,12 +18,14 @@ func _ready():
 	generacions.text = str(Global.num_gen_max)
 	partides.text = str(Global.num_partidas)
 	velocitat_joc.text = str(Global.velocitat_joc)
+	xarxa_neuronal.button_pressed = !Global.xarxa_aleatoria
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	terra.position[0] += velocitat * (-1) * delta
 	if terra.position[0] < 0:
 		terra.position[0] = 2245.597
+	
 	if !poblacio.text.is_valid_int() and !poblacio.text.is_empty():
 		poblacio.text = str(poblacio.text.to_int())
 	if !puntuacio_max.text.is_valid_int() and !puntuacio_max.text.is_empty():
@@ -31,6 +36,12 @@ func _process(delta):
 		partides.text = str(partides.text.to_int())
 	if !velocitat_joc.text.is_valid_int() and !velocitat_joc.text.is_empty():
 		velocitat_joc.text = str(velocitat_joc.text.to_int())
+		
+	if xarxa_neuronal.button_pressed:
+		poblacio.text = '1'
+		config_xarxa_neuronal.disabled = false
+	else:
+		config_xarxa_neuronal.disabled = true
 
 
 func _on_ok_pressed():
@@ -59,3 +70,9 @@ func guardar_dades():
 		Global.num_partidas = partides.text.to_int()
 	if not velocitat_joc.text.to_int() <= 0:
 		Global.velocitat_joc = velocitat_joc.text.to_int()
+	Global.xarxa_aleatoria = !xarxa_neuronal.button_pressed
+
+
+func _on_xarxa_neuronal_pressed():
+	guardar_dades()
+	get_tree().change_scene_to_file("res://Escenes/config_xarxa_neuronal.tscn") # Replace with function body.
