@@ -23,6 +23,7 @@ var gen_seguides_amb_puntuació_maxima :int = 0
 var velocitat_joc := 5
 var xarxa_aleatoria := true
 var connections := [[0, 1, 0]]
+var hide_neurons = 0
 
 
 #Variables que es guarden per cada arxiu (Després de canviar la config)

@@ -61,6 +61,19 @@ class ia:
 					connections[index].weight = rng.randf_range(-1.0, 1.0)
 					index += 1
 
+	func xarxa_neuronal():
+		num_hidden = Global.hide_neurons
+		for _i in range(num_inputs):  # 3 neuronas de entrada
+			neurons.append(NEATNeuron.new())
+		for _i in range(num_hidden):  # 2 neuronas ocultas
+			neurons.append(NEATNeuron.new())
+		for _i in range(num_outputs):  # 1 neurona de salida
+			neurons.append(NEATNeuron.new())
+		for connection in Global.connections:
+			connections.append(NEATConnection.new())
+			connections[-1].from_neuron = connection[0]
+			connections[-1].to_neuron = connection[1]
+			connections[-1].weight = connection[2]
 
 	func feedforward(inputs):
 		# Procesamiento de la red neuronal
