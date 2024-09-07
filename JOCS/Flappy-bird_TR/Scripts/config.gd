@@ -42,7 +42,9 @@ func _process(delta):
 		config_xarxa_neuronal.disabled = false
 	else:
 		config_xarxa_neuronal.disabled = true
+	
 
+	
 
 func _on_ok_pressed():
 	guardar_dades()
@@ -76,3 +78,11 @@ func guardar_dades():
 func _on_xarxa_neuronal_pressed():
 	guardar_dades()
 	get_tree().change_scene_to_file("res://Escenes/config_xarxa_neuronal.tscn") # Replace with function body.
+
+
+func _on_check_button_toggled(toggled_on):
+	if Global.monedes == false:
+		Global.monedes = true
+	else:
+		Global.monedes = false
+	print(Global.monedes)

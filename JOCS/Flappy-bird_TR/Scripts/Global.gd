@@ -51,3 +51,4 @@ var num := 0
 var dades_json : = ''
 var dades_gen_json : = ''
 
+var monedes : = false
