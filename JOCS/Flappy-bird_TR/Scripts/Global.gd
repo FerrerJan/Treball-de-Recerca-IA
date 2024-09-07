@@ -8,7 +8,9 @@ var distancia : int = 0
 var mort := false
 var maxim : int = 0
 var I : int
+var posicio_moneda: float
 var posicio_obstacle: float
+var posicio_moneda_continua: Vector2 = Vector2(490, 207) 
 var posicio_obstacle_continua: Vector2 = Vector2(490, 207)
 var posicio_personatge_obstacles : Vector2
 var Z : int = 0

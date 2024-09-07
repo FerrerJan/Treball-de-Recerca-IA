@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var escena_obstacle: PackedScene
+@export var escena_moneda: PackedScene
 @export var min : float = -145
 @export var max : float = 126
 @onready var timer = $Obstacles/Timer
@@ -11,8 +12,10 @@ var num_ia : int = 0
 var num_joc : int = 0 
 
 var random_number: float
+var random_number2: float
 var posicio: float
 var posicio_obstacles = Vector2(0,0)
+var posicio_moneda = Vector2(0,0)
 var Vpos_personatge : Vector2
 @onready var collision = $CollisionShape2D
 var activat := false
@@ -28,6 +31,7 @@ func _ready():
 	Global.punts = 0
 	Global.distancia = 0
 	Global.posicio_obstacle = 0
+	Global.posicio_moneda = 0
 	$resultat.visible = false
 	$Contador2.visible = false
 	$maxim.visible = false
@@ -35,9 +39,10 @@ func _ready():
 	posicio = 0
 	Global.morts_ia = 0
 	Global.posicio_obstacle_continua = Vector2(490, 207)
-	timer.wait_time /= Global.velocitat_joc
-	
-
+	Global.posicio_moneda_continua = Vector2(490, 207)
+	$Obstacles/Tobstacle.wait_time /= Global.velocitat_joc
+	$Obstacles/Tdelay.wait_time /= Global.velocitat_joc
+	$Obstacles/Tmoneda.wait_time /= Global.velocitat_joc
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -55,18 +60,10 @@ func _process(delta):
 		#print(fitness)
 	if Global.repetir == true and Global.iniciat == false:
 		Global.iniciat = true
-		$Obstacles/Timer.start()
-		$volar_principi/CollisionShape2D.disabled = true
-		$clicar.visible = false
-		$clicar2.visible = false
+		$Obstacles/Tobstacle.start()
+		if Global.monedes == true:
+			$Obstacles/Tdelay.start()
 		
-		if Global.IA == true:
-			$CharacterBody2D.queue_free()
-			Global.Z = 0
-		
-	if Input.is_action_just_pressed("espai") and Global.iniciat == false:
-		Global.iniciat = true
-		$Obstacles/Timer.start()
 		$volar_principi/CollisionShape2D.disabled = true
 		$clicar.visible = false
 		$clicar2.visible = false
@@ -94,35 +91,13 @@ func _process(delta):
 			
 	if Input.is_action_just_pressed("enter") and Global.mort == true:
 		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
-	
-	if Global.mort == true and Global.I == 0 and Global.IA == false:
-		posicio = $CharacterBody2D.get_global_position().y
-		Global.I += 1
-		print('')
-		print('-------------------------------------------------')
-		print('Distancia recorreguda: ' + str(Global.distancia))
-		print('Punts: ' + str(Global.punts))
-		print('Altura personatge: ' + str(posicio))
-		print('Altura del forat: '+ str(Global.posicio_obstacle))
-		print('-------------------------------------------------')
-		print('')
-	
-	
-	if Input.is_action_just_pressed("I"):
-		Global.IA = !Global.IA
-		Global.noIA = !Global.noIA
-		get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
-	
+		
 	if Input.is_action_just_pressed("R"):
 		Global.mort = true
 		
 	if Input.is_action_just_pressed("Xarxa_aleatoria"): #Tecla 'A'
 		for ia in Global.population:
 			ia.xarxa_aleatoria()
-			
-	if Input.is_action_just_pressed("K"):
-		Global.repetir = !Global.repetir
-		#get_tree().change_scene_to_file("res://Escenes/escena_ia.tscn")
 	
 	if Global.mort:
 		guardar_dades_gen()
@@ -155,17 +130,39 @@ func _process(delta):
 		
 func _on_timer_timeout():
 	if Global.iniciat == true:
-		$Obstacles/Timer.start()
+		$Obstacles/Tobstacle.start()
 		random_number = randi_range(min, max)
 		crea_obstacle(posicio_obstacles)
 	else:
-		$Obstacles/Timer.stop()
+		$Obstacles/Tobstacle.stop()
+		
+func _on_tdelay_timeout():
+	$Obstacles/Tmoneda.start()
+	$Obstacles/Tdelay.stop()
+	print('delay')
+		
+func _on_tmoneda_timeout():
+	if Global.iniciat == true:
+		$Obstacles/Tmoneda.start()
+		random_number2 = randi_range(min, max) #min max
+		crea_moneda(posicio_obstacles)
+		print('monedes')
+	else:
+		$Obstacles/Tmoneda.stop()
+		
 	
 func crea_obstacle(posicio: Vector2):
 	var nou_obstacle = escena_obstacle.instantiate()
 	nou_obstacle.global_position = posicio + Vector2(0, random_number)
 	$Obstacles.add_child(nou_obstacle)
-
+	
+func crea_moneda(posicio: Vector2):
+	var nova_moneda = escena_moneda.instantiate()
+	nova_moneda.global_position = posicio + Vector2(0, random_number2)
+	$Obstacles.add_child(nova_moneda)
+	print('escena moneda')
+	
+	
 '''
 func _on_puntuacio_area_entered(area):
 	Global.population[area.p].fitness += 200.0
@@ -341,8 +338,6 @@ func desa_json():
 
 
 	
-	
-	
 
 
-		
+

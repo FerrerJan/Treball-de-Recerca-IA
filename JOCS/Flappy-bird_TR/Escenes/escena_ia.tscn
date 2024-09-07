@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://cy7hv3njt5jqm"]
+[gd_scene load_steps=20 format=3 uid="uid://cy7hv3njt5jqm"]
 
 [ext_resource type="Texture2D" uid="uid://dmbwxm0gim8uc" path="res://Recursos/Tilemaps/59894.png" id="1_ahhu8"]
 [ext_resource type="Script" path="res://Scripts/escena_ia.gd" id="1_uv4r2"]
 [ext_resource type="Texture2D" uid="uid://coa2h52ejspmb" path="res://icon.svg" id="2_ebxrb"]
 [ext_resource type="PackedScene" uid="uid://bx4nlu06uhgrv" path="res://Escenes/obstacles.tscn" id="2_mo2sc"]
+[ext_resource type="PackedScene" uid="uid://b8cpibwtw8inr" path="res://Escenes/moneda.tscn" id="3_85wwd"]
 [ext_resource type="Script" path="res://Scripts/Terra.gd" id="3_s4yvk"]
 [ext_resource type="Texture2D" uid="uid://cdqtgjttec2b3" path="res://Recursos/Tilemaps/598942.png" id="4_8ggo0"]
 [ext_resource type="FontFile" uid="uid://cs11ai2xuag05" path="res://Recursos/flappy-font.ttf" id="6_6wc8m"]
@@ -49,6 +50,7 @@ size = Vector2(88, 20)
 [node name="Escena IA" type="Node2D"]
 script = ExtResource("1_uv4r2")
 escena_obstacle = ExtResource("2_mo2sc")
+escena_moneda = ExtResource("3_85wwd")
 
 [node name="fondo" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -63,7 +65,13 @@ position = Vector2(393, 207)
 scale = Vector2(0.907, 1)
 texture = ExtResource("2_ebxrb")
 
-[node name="Timer" type="Timer" parent="Obstacles"]
+[node name="Tobstacle" type="Timer" parent="Obstacles"]
+wait_time = 1.6
+
+[node name="Tdelay" type="Timer" parent="Obstacles"]
+wait_time = 0.8
+
+[node name="Tmoneda" type="Timer" parent="Obstacles"]
 wait_time = 1.6
 
 [node name="terra" type="Area2D" parent="."]
@@ -248,7 +256,9 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="timeout" from="Obstacles/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Obstacles/Tobstacle" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Obstacles/Tdelay" to="." method="_on_tdelay_timeout"]
+[connection signal="timeout" from="Obstacles/Tmoneda" to="." method="_on_tmoneda_timeout"]
 [connection signal="area_entered" from="terra" to="terra" method="_on_area_entered"]
 [connection signal="body_entered" from="terra" to="terra" method="_on_body_entered"]
 [connection signal="area_entered" from="rotacio" to="terra" method="_on_rotacio_area_entered"]

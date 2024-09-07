@@ -1,20 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8cpibwtw8inr"]
+[gd_scene load_steps=13 format=3 uid="uid://b8cpibwtw8inr"]
 
 [ext_resource type="Script" path="res://Scripts/moneda.gd" id="1_2ustq"]
-[ext_resource type="Texture2D" uid="uid://bfl8qep2fgbbl" path="res://Recursos/monedanofons.png" id="2_0cbuj"]
+[ext_resource type="Texture2D" uid="uid://bkto7oow50pth" path="res://Recursos/moneda/coin2.png" id="2_3wbog"]
+[ext_resource type="Texture2D" uid="uid://ctc1hn8c3yo48" path="res://Recursos/moneda/coin3.png" id="3_uvflv"]
+[ext_resource type="Texture2D" uid="uid://5d0vaogtcnck" path="res://Recursos/moneda/coin4.png" id="4_wc1ws"]
+[ext_resource type="Texture2D" uid="uid://cxhae01q0hebm" path="res://Recursos/moneda/coin5.png" id="5_1cdns"]
+[ext_resource type="Texture2D" uid="uid://dypp0i80rg3at" path="res://Recursos/moneda/coin6.png" id="6_17nwf"]
+[ext_resource type="Texture2D" uid="uid://crjr51oq5r35b" path="res://Recursos/moneda/coin7.png" id="7_hte8j"]
+[ext_resource type="Texture2D" uid="uid://djua4ed20tjq3" path="res://Recursos/moneda/coin8.png" id="8_g1un8"]
+[ext_resource type="Texture2D" uid="uid://dcom71c2cyglj" path="res://Recursos/moneda/coin9.png" id="9_70ua5"]
+[ext_resource type="Texture2D" uid="uid://ommvbxu522ke" path="res://Recursos/moneda/coin10.png" id="10_ipris"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gnyc0"]
 radius = 398.246
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_axrbt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3wbog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uvflv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wc1ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1cdns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_17nwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hte8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g1un8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_70ua5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ipris")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
+}]
+
 [node name="Area2D" type="Area2D"]
+scale = Vector2(0.04, 0.04)
+collision_layer = 8
+collision_mask = 106
 script = ExtResource("1_2ustq")
 velocitat = 150.0
 
-[node name="Monedanofons" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("2_0cbuj")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gnyc0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-3.8147e-06, 3.63798e-12)
+scale = Vector2(40.4673, 39.84)
+sprite_frames = SubResource("SpriteFrames_axrbt")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.595735
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

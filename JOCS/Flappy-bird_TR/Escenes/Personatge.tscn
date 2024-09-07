@@ -90,7 +90,7 @@ shape = SubResource("CircleShape2D_y33h2")
 texture_filter = 1
 position = Vector2(3, -3)
 sprite_frames = SubResource("SpriteFrames_mxa6y")
-frame_progress = 0.580825
+frame_progress = 0.18915
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
