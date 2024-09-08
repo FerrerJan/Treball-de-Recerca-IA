@@ -19,7 +19,10 @@ func _ready():
 	partides.text = str(Global.num_partidas)
 	velocitat_joc.text = str(Global.velocitat_joc)
 	xarxa_neuronal.button_pressed = !Global.xarxa_aleatoria
-
+	
+	
+	$Label/monedes.button_pressed = Global.monedes
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	terra.position[0] += velocitat * (-1) * delta
@@ -78,11 +81,7 @@ func guardar_dades():
 func _on_xarxa_neuronal_pressed():
 	guardar_dades()
 	get_tree().change_scene_to_file("res://Escenes/config_xarxa_neuronal.tscn") # Replace with function body.
-
-
-func _on_check_button_toggled(toggled_on):
-	if Global.monedes == false:
-		Global.monedes = true
-	else:
-		Global.monedes = false
-	print(Global.monedes)
+	
+	
+func _on_monedes_pressed():
+	Global.monedes = !Global.monedes

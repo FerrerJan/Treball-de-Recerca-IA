@@ -181,7 +181,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 11
 text = "MONEDES"
 
-[node name="CheckButton" type="CheckButton" parent="Label"]
+[node name="monedes" type="CheckButton" parent="Label"]
 layout_mode = 0
 offset_left = 61.0
 offset_top = -4.0
@@ -192,4 +192,4 @@ offset_bottom = 20.0
 [connection signal="pressed" from="Inputs" to="." method="_on_inputs_pressed"]
 [connection signal="pressed" from="Mutacions" to="." method="_on_mutacions_pressed"]
 [connection signal="pressed" from="XarxaNeuronal" to="." method="_on_xarxa_neuronal_pressed"]
-[connection signal="toggled" from="Label/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="Label/monedes" to="." method="_on_monedes_pressed"]
