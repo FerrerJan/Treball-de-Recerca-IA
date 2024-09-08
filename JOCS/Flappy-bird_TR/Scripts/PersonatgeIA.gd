@@ -80,7 +80,8 @@ func inputs():
 	var pos_x_obstacle :float = Global.posicio_obstacle_continua[0]
 	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
 	var velocitat :float = velocity.y
-	var all_inputs := [pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat]
+	var pos_x_moneda :float = Global.posicio_moneda_continua[1]
+	var all_inputs := [pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat, pos_x_moneda]
 	var inputs := []
 	for i in Global.inputs:
 		inputs.append(all_inputs[i])
