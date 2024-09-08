@@ -5,6 +5,7 @@ extends Node2D
 @onready var PosYObs = $PosYObs/CheckButton
 @onready var PosXObs = $PosXObs/CheckButton
 @onready var VelYOcell = $VelYOcell/CheckButton
+@onready var PosYMonedes = $PosYMonedes/CheckButton
 var velocitat := 138
 var inputs := Global.inputs
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +19,8 @@ func _ready():
 			PosXObs.button_pressed = true
 		elif i == 3:
 			VelYOcell.button_pressed = true
+		elif i == 4:
+			PosYMonedes.button_pressed = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,6 +40,8 @@ func _on_ok_pressed():
 		Global.inputs.append(2)
 	if VelYOcell.button_pressed == true:
 		Global.inputs.append(3)
+	if PosYMonedes.button_pressed == true:
+		Global.inputs.append(4)
 	if Global.inputs.size() == 0:
 		Global.inputs = inputs
 	get_tree().change_scene_to_file("res://Escenes/config.tscn") # Replace with function body.
