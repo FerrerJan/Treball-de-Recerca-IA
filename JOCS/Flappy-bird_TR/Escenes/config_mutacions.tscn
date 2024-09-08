@@ -26,10 +26,11 @@ region_enabled = true
 region_rect = Rect2(-68.035, -0.237, 3000, 55.886)
 
 [node name="MutNoEst" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 131.0
-offset_right = 223.0
-offset_bottom = 155.0
+texture_filter = 1
+offset_left = 23.0
+offset_top = 48.0
+offset_right = 230.0
+offset_bottom = 72.0
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -37,16 +38,19 @@ theme_override_font_sizes/font_size = 16
 text = "Mutacions no estructurals:"
 
 [node name="CheckButton" type="CheckButton" parent="MutNoEst"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 208.0
-offset_right = 252.0
-offset_bottom = 24.0
+offset_left = 209.0
+offset_top = 1.0
+offset_right = 253.0
+offset_bottom = 25.0
 
 [node name="MutEst" type="Label" parent="."]
-offset_left = 39.0
-offset_top = 184.0
-offset_right = 246.0
-offset_bottom = 208.0
+texture_filter = 1
+offset_left = 23.0
+offset_top = 100.0
+offset_right = 230.0
+offset_bottom = 124.0
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -54,16 +58,19 @@ theme_override_font_sizes/font_size = 16
 text = "Mutacions estructurals:"
 
 [node name="CheckButton" type="CheckButton" parent="MutEst"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 185.0
-offset_right = 229.0
-offset_bottom = 24.0
+offset_left = 207.0
+offset_top = 2.0
+offset_right = 251.0
+offset_bottom = 26.0
 
 [node name="Crossover" type="Label" parent="."]
-offset_left = 140.0
-offset_top = 239.0
-offset_right = 228.0
-offset_bottom = 263.0
+texture_filter = 1
+offset_left = 24.0
+offset_top = 150.0
+offset_right = 112.0
+offset_bottom = 174.0
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -71,10 +78,12 @@ theme_override_font_sizes/font_size = 16
 text = "Crossover:"
 
 [node name="CheckButton" type="CheckButton" parent="Crossover"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 84.0
-offset_right = 128.0
-offset_bottom = 24.0
+offset_left = 206.0
+offset_top = 5.0
+offset_right = 250.0
+offset_bottom = 29.0
 
 [node name="OK" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -90,5 +99,22 @@ offset_left = -19.0
 offset_top = -6.0
 offset_right = 20.0
 offset_bottom = 7.0
+
+[node name="mut" type="Label" parent="."]
+texture_filter = 1
+offset_left = 24.0
+offset_top = 197.0
+offset_right = 64.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Número de mutacions:"
+
+[node name="text" type="TextEdit" parent="mut"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 209.0
+offset_top = 2.0
+offset_right = 250.0
+offset_bottom = 23.0
 
 [connection signal="pressed" from="OK/Button" to="." method="_on_button_pressed"]
