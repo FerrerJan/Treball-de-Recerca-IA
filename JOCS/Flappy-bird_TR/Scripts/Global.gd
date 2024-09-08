@@ -54,3 +54,4 @@ var dades_json : = ''
 var dades_gen_json : = ''
 
 var monedes : = false
+var num_mutacions : int = 1
