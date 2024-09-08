@@ -104,4 +104,4 @@ func actualizar_fitness(delta):
 		Global.population[p].fitness += 5.0 * delta
 
 func moneda():
-	Global.population[p].fitness = 100
+	Global.population[p].fitness = 1000
