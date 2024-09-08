@@ -103,4 +103,5 @@ func actualizar_fitness(delta):
 	elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 200:
 		Global.population[p].fitness += 5.0 * delta
 
-
+func moneda():
+	Global.population[p].fitness = 100

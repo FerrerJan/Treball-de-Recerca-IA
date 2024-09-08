@@ -18,8 +18,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if Global.IA == true:
-		#sumar puntuacio
-		queue_free()
+		body.moneda()
 	else:
 		Global.mort = true
 		if Global.I == 0:
