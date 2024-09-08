@@ -112,9 +112,11 @@ text = "Número de mutacions:"
 [node name="text" type="TextEdit" parent="mut"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 209.0
-offset_top = 2.0
+offset_left = 217.0
+offset_top = -2.0
 offset_right = 250.0
-offset_bottom = 23.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 14
+placeholder_text = "1"
 
 [connection signal="pressed" from="OK/Button" to="." method="_on_button_pressed"]
