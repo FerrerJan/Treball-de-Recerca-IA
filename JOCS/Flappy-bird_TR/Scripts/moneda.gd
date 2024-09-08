@@ -1,6 +1,8 @@
 extends Area2D
 
 @export var velocitat : float
+@onready var animated_sprite_2d = $AnimatedSprite2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -19,6 +21,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if Global.IA == true:
 		body.moneda()
+		animated_sprite_2d.hide()
 	else:
 		Global.mort = true
 		if Global.I == 0:

@@ -14,6 +14,7 @@ var gravity = (ProjectSettings.get_setting("physics/2d/default_gravity"))/1.4
 var mort := false
 var life := true
 var p := 0
+var moneda_aconseguida := true
 
 func inici():
 	Global.population[p].fitness = 0
@@ -104,4 +105,5 @@ func actualizar_fitness(delta):
 		Global.population[p].fitness += 5.0 * delta
 
 func moneda():
-	Global.population[p].fitness = 1000
+	moneda_aconseguida = true
+	Global.population[p].fitness += 1000

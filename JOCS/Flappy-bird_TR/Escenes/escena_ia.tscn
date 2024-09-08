@@ -66,13 +66,13 @@ scale = Vector2(0.907, 1)
 texture = ExtResource("2_ebxrb")
 
 [node name="Tobstacle" type="Timer" parent="Obstacles"]
-wait_time = 1.6
+wait_time = 3.2
 
 [node name="Tdelay" type="Timer" parent="Obstacles"]
-wait_time = 0.8
+wait_time = 1.6
 
 [node name="Tmoneda" type="Timer" parent="Obstacles"]
-wait_time = 1.6
+wait_time = 3.2
 
 [node name="terra" type="Area2D" parent="."]
 light_mask = 2
