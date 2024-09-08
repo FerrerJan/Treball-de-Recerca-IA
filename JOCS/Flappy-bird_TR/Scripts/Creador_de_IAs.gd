@@ -41,8 +41,8 @@ func _ready():
 				var r := rng.randi_range(0, mostra - 1)
 				Global.population.append(ClasseIa.ia.new())
 				Global.population[_i].copia(Global.population[r])
-				#for _j in range(rng.randi_range(0, 5)):
-				Global.population[_i].mutar(Global.population[r])
+				for _j in range(rng.randi_range(1, Global.num_mutacions)):
+					Global.population[_i].mutar(Global.population[r])
 	else:
 		Global.max_fitness_partida = -1.0
 		Global.millor_ocell_partida = ClasseIa.ia.new()
