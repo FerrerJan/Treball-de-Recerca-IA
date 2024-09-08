@@ -139,14 +139,14 @@ func _on_timer_timeout():
 func _on_tdelay_timeout():
 	$Obstacles/Tmoneda.start()
 	$Obstacles/Tdelay.stop()
-	print('delay')
+
 		
 func _on_tmoneda_timeout():
 	if Global.iniciat == true:
 		$Obstacles/Tmoneda.start()
 		random_number2 = randi_range(min, max) #min max
 		crea_moneda(posicio_obstacles)
-		print('monedes')
+
 	else:
 		$Obstacles/Tmoneda.stop()
 		
@@ -160,7 +160,7 @@ func crea_moneda(posicio: Vector2):
 	var nova_moneda = escena_moneda.instantiate()
 	nova_moneda.global_position = posicio + Vector2(0, random_number2)
 	$Obstacles.add_child(nova_moneda)
-	print('escena moneda')
+
 	
 	
 '''
