@@ -22,7 +22,10 @@ func _on_body_entered(body):
 	if Global.IA == true:
 		body.moneda()
 		animated_sprite_2d.hide()
-	else:
+		
+		
+	'''else:
 		Global.mort = true
 		if Global.I == 0:
-			Global.posicio_obstacle = get_global_position().y
+			Global.posicio_obstacle = get_global_position().y'''
+	

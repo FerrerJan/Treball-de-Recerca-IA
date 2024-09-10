@@ -149,7 +149,7 @@ shape = SubResource("RectangleShape2D_5iqum")
 
 [node name="Obsacles_eliminar" type="Area2D" parent="."]
 collision_layer = 64
-collision_mask = 72
+collision_mask = 328
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obsacles_eliminar"]
 position = Vector2(-92, 243)

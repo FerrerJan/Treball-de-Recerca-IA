@@ -43,6 +43,7 @@ func _ready():
 	$Obstacles/Tobstacle.wait_time /= Global.velocitat_joc
 	$Obstacles/Tdelay.wait_time /= Global.velocitat_joc
 	$Obstacles/Tmoneda.wait_time /= Global.velocitat_joc
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -180,7 +181,15 @@ func _on_button_pressed():
 func _on_puntuacio_area_exited(area):
 	Global.punts += 1
 	for i in range($Creador_de_IAs.get_child_count()):
-		Global.population[$Creador_de_IAs.get_child(i).p].fitness += 1000.0
+		if $Creador_de_IAs.get_child(i).moneda_aconseguida:
+			Global.population[$Creador_de_IAs.get_child(i).p].fitness += 1000.0
+			$Creador_de_IAs.get_child(i).moneda_aconseguida = false
+			print(1)
+		else:
+			Global.morts_ia += 1
+			$Creador_de_IAs.get_child(i).queue_free()
+			print(2)
+			
 	#Global.population[get_parent().area.p].fitness += 1000.0
 	Global.posicio_obstacle_continua[0] = 490
 	#print(Global.punts)

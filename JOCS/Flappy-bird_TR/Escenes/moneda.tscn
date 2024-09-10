@@ -51,8 +51,8 @@ animations = [{
 
 [node name="Area2D" type="Area2D"]
 scale = Vector2(0.04, 0.04)
-collision_layer = 8
-collision_mask = 106
+collision_layer = 256
+collision_mask = 66
 script = ExtResource("1_2ustq")
 velocitat = 150.0
 

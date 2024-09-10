@@ -107,3 +107,4 @@ func actualizar_fitness(delta):
 func moneda():
 	moneda_aconseguida = true
 	Global.population[p].fitness += 1000
+	print(moneda_aconseguida)

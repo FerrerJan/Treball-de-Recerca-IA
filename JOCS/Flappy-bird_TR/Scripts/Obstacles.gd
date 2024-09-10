@@ -21,7 +21,7 @@ func _on_body_entered(body):
 		Global.morts_ia += 1
 		#print(body.get_global_position().x)
 		body.queue_free()
-	
+		
 	else:
 		Global.mort = true
 		if Global.I == 0:
