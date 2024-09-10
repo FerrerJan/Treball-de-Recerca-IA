@@ -24,6 +24,7 @@ def parse_txt_file(file_path):
             # Append the parsed values as a list to the matrix
             matrix.append([p_value, i_values, m_values, r_value])
     
+    print(matrix)
     return matrix
 
 def filter_and_calculate(matrix, p_filter, i_filter, m_filter):
@@ -58,7 +59,8 @@ def filter_and_calculate(matrix, p_filter, i_filter, m_filter):
 
 def main():
     # Specify the file path here
-    file_path = r"C:\Users\Marc\Documents\GitHub\Flappy-bird_TR\TR\PYTHON\nom-r2.txt"
+    #file_path = r"C:\Users\Marc\Documents\GitHub\Flappy-bird_TR\TR\PYTHON\nom-r2.txt" #<-- per el ordinador del Marc
+    file_path = r"F:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\PYTHON\nom-r2.txt" #<-- per el ordinador del Teo
 
     # Parse the TXT file
     parsed_matrix = parse_txt_file(file_path)
