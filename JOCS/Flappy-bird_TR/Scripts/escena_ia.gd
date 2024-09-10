@@ -40,6 +40,16 @@ func _ready():
 	Global.morts_ia = 0
 	Global.posicio_obstacle_continua = Vector2(490, 207)
 	Global.posicio_moneda_continua = Vector2(490, 207)
+	
+	if Global.monedes:
+		$Obstacles/Tobstacle.wait_time = 3.2
+		$Obstacles/Tdelay.wait_time = 1.6
+		$Obstacles/Tmoneda.wait_time = 3.2
+	else:
+		$Obstacles/Tobstacle.wait_time = 1.6
+		$Obstacles/Tdelay.wait_time = 0.8
+		$Obstacles/Tmoneda.wait_time = 1.6
+	
 	$Obstacles/Tobstacle.wait_time /= Global.velocitat_joc
 	$Obstacles/Tdelay.wait_time /= Global.velocitat_joc
 	$Obstacles/Tmoneda.wait_time /= Global.velocitat_joc
@@ -181,14 +191,14 @@ func _on_button_pressed():
 func _on_puntuacio_area_exited(area):
 	Global.punts += 1
 	for i in range($Creador_de_IAs.get_child_count()):
-		if $Creador_de_IAs.get_child(i).moneda_aconseguida:
+		if !Global.monedes:
+			Global.population[$Creador_de_IAs.get_child(i).p].fitness += 1000.0
+		elif $Creador_de_IAs.get_child(i).moneda_aconseguida:
 			Global.population[$Creador_de_IAs.get_child(i).p].fitness += 1000.0
 			$Creador_de_IAs.get_child(i).moneda_aconseguida = false
-			print(1)
 		else:
 			Global.morts_ia += 1
 			$Creador_de_IAs.get_child(i).queue_free()
-			print(2)
 			
 	#Global.population[get_parent().area.p].fitness += 1000.0
 	Global.posicio_obstacle_continua[0] = 490

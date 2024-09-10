@@ -34,7 +34,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Posició Y de l'ocell:"
+text = "PosYOcell / PosYObs:"
 
 [node name="CheckButton" type="CheckButton" parent="PosYOcell"]
 layout_mode = 0
@@ -51,7 +51,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Posició Y de l'obstacle:"
+text = "PosYOcell / PosYMon:"
 
 [node name="CheckButton" type="CheckButton" parent="PosYObs"]
 layout_mode = 0
@@ -109,20 +109,21 @@ offset_right = 20.0
 offset_bottom = 7.0
 
 [node name="PosYMonedes" type="Label" parent="."]
-offset_left = 10.0
+offset_left = 30.0
 offset_top = 278.0
-offset_right = 203.0
+offset_right = 223.0
 offset_bottom = 302.0
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Posició Y de les monedes"
+text = "Moneda aconseguida:"
 
 [node name="CheckButton" type="CheckButton" parent="PosYMonedes"]
 layout_mode = 0
-offset_left = 214.0
-offset_right = 258.0
-offset_bottom = 24.0
+offset_left = 193.0
+offset_top = 1.0
+offset_right = 237.0
+offset_bottom = 25.0
 
 [connection signal="pressed" from="OK/OK" to="." method="_on_ok_pressed"]

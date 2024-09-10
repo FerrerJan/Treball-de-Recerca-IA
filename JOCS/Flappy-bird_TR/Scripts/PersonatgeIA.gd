@@ -77,12 +77,11 @@ func _physics_process(delta):
 
 func inputs():
 	# Entradas para la red neuronal
-	var pos_y_bird :float = get_global_position().y
+	var pos_y_bird_entre_pos_y_obstacle :float = get_global_position().y / Global.posicio_obstacle_continua[1]
 	var pos_x_obstacle :float = Global.posicio_obstacle_continua[0]
-	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
+	var pos_y_bird_entre_pos_y_moneda :float = get_global_position().y / Global.posicio_moneda_continua[1]
 	var velocitat :float = velocity.y
-	var pos_y_moneda :float = Global.posicio_moneda_continua[1]
-	var all_inputs := [pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat, pos_y_moneda]
+	var all_inputs := [pos_y_bird_entre_pos_y_obstacle, pos_y_bird_entre_pos_y_moneda, pos_x_obstacle, velocitat, moneda_aconseguida]
 	var inputs := []
 	for i in Global.inputs:
 		inputs.append(all_inputs[i])
@@ -95,14 +94,24 @@ func _on_area_2d_body_entered(body):
 
 func actualizar_fitness(delta):
 	Global.population[p].fitness += 1.0 * delta
-	if abs(global_position.y - Global.posicio_obstacle_continua[1]) < 10:
-		Global.population[p].fitness += 100.0 * delta
-	elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 50:
-		Global.population[p].fitness += 50.0 * delta
-	elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 100:
-		Global.population[p].fitness += 10.0 * delta
-	elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 200:
-		Global.population[p].fitness += 5.0 * delta
+	if moneda_aconseguida:
+		if abs(global_position.y - Global.posicio_obstacle_continua[1]) < 10:
+			Global.population[p].fitness += 100.0 * delta
+		elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 50:
+			Global.population[p].fitness += 50.0 * delta
+		elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 100:
+			Global.population[p].fitness += 10.0 * delta
+		elif abs(global_position.y - Global.posicio_obstacle_continua[1]) < 200:
+			Global.population[p].fitness += 5.0 * delta
+	else:
+		if abs(global_position.y - Global.posicio_moneda_continua[1]) < 10:
+			Global.population[p].fitness += 100.0 * delta
+		elif abs(global_position.y - Global.posicio_moneda_continua[1]) < 50:
+			Global.population[p].fitness += 50.0 * delta
+		elif abs(global_position.y - Global.posicio_moneda_continua[1]) < 100:
+			Global.population[p].fitness += 10.0 * delta
+		elif abs(global_position.y - Global.posicio_moneda_continua[1]) < 200:
+			Global.population[p].fitness += 5.0 * delta
 
 func moneda():
 	moneda_aconseguida = true
