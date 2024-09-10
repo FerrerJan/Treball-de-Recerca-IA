@@ -81,11 +81,21 @@ func inputs():
 	var pos_x_obstacle :float = Global.posicio_obstacle_continua[0]
 	var pos_y_bird_entre_pos_y_moneda :float = get_global_position().y / Global.posicio_moneda_continua[1]
 	var velocitat :float = velocity.y
-	var all_inputs := [pos_y_bird_entre_pos_y_obstacle, pos_y_bird_entre_pos_y_moneda, pos_x_obstacle, velocitat, moneda_aconseguida]
+	var moneda_aconseguida_i : int = 1
+	if moneda_aconseguida:
+		moneda_aconseguida_i = 1
+	else:
+		moneda_aconseguida_i = 0
+		
+	
+	var all_inputs := [pos_y_bird_entre_pos_y_obstacle, pos_y_bird_entre_pos_y_moneda, pos_x_obstacle, velocitat, moneda_aconseguida_i]
 	var inputs := []
+	
 	for i in Global.inputs:
 		inputs.append(all_inputs[i])
 	return inputs
+	
+		
 
 
 func _on_area_2d_body_entered(body):
