@@ -5,7 +5,7 @@ class ia:
 	var connections = []
 	var fitness :float = 0.0
 	var num_inputs :int = Global.inputs.size()
-	var num_hidden :int = 0
+	var num_hidden :int = 3
 	var num_outputs :int = 1
 	
 	func _init():
@@ -82,7 +82,7 @@ class ia:
 			neurons[_i].output = inputs[_i]
 		for _i in range(num_outputs):
 			valor(_i + num_inputs + num_hidden, 1)
-			outputs.append(sigmoid(neurons[_i + num_inputs + num_hidden].output))
+			outputs.append(neurons[_i + num_inputs + num_hidden].output)
 		return outputs
 
 
@@ -98,6 +98,7 @@ class ia:
 				output += neurons[conection.from_neuron].output * conection.weight
 			elif conection.to_neuron == n:
 				output += valor(conection.from_neuron, m + 1)
+		output = sigmoid(output)
 		neurons[n].output = output
 		return output
 

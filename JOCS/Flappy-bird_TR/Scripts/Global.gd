@@ -29,7 +29,7 @@ var hide_neurons = 0
 
 
 #Variables que es guarden per cada arxiu (Després de canviar la config)
-var inputs := [0, 1, 2, 4]
+var inputs := [0, 1, 4]
 var mutacions := [0, 1, 2]
 var num_poblacio : int = 150
 var num_gen_max : int = 300
@@ -54,4 +54,4 @@ var dades_json : = ''
 var dades_gen_json : = ''
 
 var monedes : = true
-var num_mutacions : int = 5
+var num_mutacions : int = 7
