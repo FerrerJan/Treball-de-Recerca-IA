@@ -330,7 +330,7 @@ func desa_json():
 	var data : String = str(current_time['day']) + '/' + str(current_time['month']) + '/' + str(current_time['year']) + ' ' + str(current_time['hour']) + ':' + str(current_time['minute']) + ':' + str(current_time['second']) 
 	
 	
-	var file_name = "res://Dades Json/" + Global.nom + '_' + str(Global.num) + '.json'
+	var file_name = "res://Dades_Json/" + Global.nom + '_' + str(Global.num) + '.json'
 	var file = null
 	var file_exists = false
 	
