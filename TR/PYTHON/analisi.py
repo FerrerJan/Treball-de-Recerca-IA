@@ -58,7 +58,8 @@ def filter_and_calculate(matrix, p_filter, i_filter, m_filter):
 
 def main():
     # Specify the file path here
-    file_path = r"C:\Users\07map\Documents\GitHub\Flappy-bird_TR\TR\PYTHON\nom-r2.txt"
+    #file_path = r"C:\Users\07map\Documents\GitHub\Flappy-bird_TR\TR\PYTHON\nom-r2.txt"
+    file_path = r"F:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\PYTHON\nom-r2.txt"
     
     # Parse the TXT file
     parsed_matrix = parse_txt_file(file_path)
