@@ -1,0 +1,50 @@
+{
+"nom_fitxer" : "res://Dades_Json/Població-200_Inputs-[0,1]_Mutacions-[0]_0.json",
+"data_mostra" : "24/9/2024 12:19:37",
+"configuracio" :
+{
+"població" : 200,
+"inputs" : [0, 1],
+"mutacions" : [0],
+"partides_totals" : 1,
+"generacions totals" : 125,
+"Puntuació màxima" : 150
+},
+"partides" : [
+{
+"num_partida" :0,
+"generacions" :
+[
+{
+"num_generacio" : 1,
+"fitness" : 163962.200000007
+},
+{
+"num_generacio" : 2,
+"fitness" : 164072.166666673
+},
+{
+"num_generacio" : 3,
+"fitness" : 164015.200000007
+}
+],
+"màxim_fitness" :164072.166666673,
+"millor_ocell" :
+{
+"neurones_input" : 2,
+"neurones_amagades" :0,
+"neuornes_output" :1,
+"conexions" :[
+{
+"desde" :0,
+"fins" :2,
+"importancia" :0.50913214683533},
+{
+"desde" :1,
+"fins" :2,
+"importancia" :-0.54339265823364}
+]
+}
+}
+]
+}
