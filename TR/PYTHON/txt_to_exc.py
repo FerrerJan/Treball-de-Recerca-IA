@@ -3,12 +3,12 @@ from openpyxl import load_workbook
 from os import listdir
 import random
 
-ruta = 'C:\\Users\\Marc\\Documents\\GitHub\\Flappy-bird_TR\\TR\\DATOS'
+ruta = r'E:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\DATOS'
 arxius = listdir(ruta)
 generaciones = 125
 print(listdir(ruta))
 for nombre in arxius:
-    with open("C:\\Users\\Marc\\Documents\\GitHub\\Flappy-bird_TR\\TR\\DATOS\\" + nombre) as f:
+    with open(r"E:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\DATOS\\" + nombre) as f:
         contents = f.readlines()
         matrix = []
         for i in range(len(contents)):
