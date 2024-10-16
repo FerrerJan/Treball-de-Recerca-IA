@@ -55,3 +55,4 @@ var dades_gen_json : = ''
 
 var monedes : = true
 var num_mutacions : int = 7
+var lineal = true

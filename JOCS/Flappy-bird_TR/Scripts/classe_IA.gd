@@ -82,7 +82,9 @@ class ia:
 			neurons[_i].output = inputs[_i]
 		for _i in range(num_outputs):
 			valor(_i + num_inputs + num_hidden, 1)
-			outputs.append(sigmoid(neurons[_i + num_inputs + num_hidden].output))
+			if Global.lineal:
+				neurons[_i + num_inputs + num_hidden].output = sigmoid(neurons[_i + num_inputs + num_hidden].output)
+			outputs.append(neurons[_i + num_inputs + num_hidden].output)
 		return outputs
 
 
@@ -98,7 +100,8 @@ class ia:
 				output += neurons[conection.from_neuron].output * conection.weight
 			elif conection.to_neuron == n:
 				output += valor(conection.from_neuron, m + 1)
-		#output = sigmoid(output)
+		if !Global.lineal:
+			output = sigmoid(output)
 		neurons[n].output = output
 		return output
 

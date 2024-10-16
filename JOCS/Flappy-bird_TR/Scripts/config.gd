@@ -8,6 +8,7 @@ extends Node2D
 @onready var velocitat_joc = $VelJoc/VelocitatJoc
 @onready var xarxa_neuronal = $XarxaNeuronal/Activat
 @onready var config_xarxa_neuronal = $XarxaNeuronal
+@onready var lineal = $Label2/LINEAL
 
 var velocitat := 138
 
@@ -19,7 +20,7 @@ func _ready():
 	partides.text = str(Global.num_partidas)
 	velocitat_joc.text = str(Global.velocitat_joc)
 	xarxa_neuronal.button_pressed = !Global.xarxa_aleatoria
-	
+	lineal.button_pressed = Global.lineal
 	
 	$Label/monedes.button_pressed = Global.monedes
 		
@@ -85,3 +86,7 @@ func _on_xarxa_neuronal_pressed():
 	
 func _on_monedes_pressed():
 	Global.monedes = !Global.monedes
+
+
+func _on_lineal_pressed():
+	Global.lineal = !Global.lineal
