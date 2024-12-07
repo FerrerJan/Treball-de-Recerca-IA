@@ -78,6 +78,8 @@ func _physics_process(delta):
 func inputs():
 	# Entradas para la red neuronal
 	var pos_y_bird_entre_pos_y_obstacle :float = get_global_position().y / Global.posicio_obstacle_continua[1]
+	var pos_y_bird :float = get_global_position().y
+	var pos_y_obstacle :float = Global.posicio_obstacle_continua[1]
 	var pos_x_obstacle :float = Global.posicio_obstacle_continua[0]
 	var pos_y_bird_entre_pos_y_moneda :float = get_global_position().y / Global.posicio_moneda_continua[1]
 	var velocitat :float = velocity.y
@@ -88,7 +90,7 @@ func inputs():
 		moneda_aconseguida_i = 0
 		
 	
-	var all_inputs := [pos_y_bird_entre_pos_y_obstacle, pos_y_bird_entre_pos_y_moneda, pos_x_obstacle, velocitat, moneda_aconseguida_i]
+	var all_inputs := [pos_y_bird_entre_pos_y_obstacle, pos_y_bird_entre_pos_y_moneda, pos_y_bird, pos_y_obstacle, pos_x_obstacle, velocitat, moneda_aconseguida_i]
 	var inputs := []
 	
 	for i in Global.inputs:
