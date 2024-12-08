@@ -59,6 +59,10 @@ func _ready():
 func _process(delta):
 	delta *= Global.velocitat_joc
 	#print(Global.gen)
+	
+	if Input.is_action_just_pressed("Esc"):
+		get_tree().change_scene_to_file("res://Escenes/inteficie.tscn")
+	
 	if !Global.mort:
 		var fitness := []
 		for i in Global.population:
