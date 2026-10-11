@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
-Conf="*res://Scripts/configuracio.gd"
 ClasseIa="*res://Scripts/classe_IA.gd"
 
 [display]

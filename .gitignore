@@ -1,0 +1,14 @@
+# Godot editor cache
+.godot/
+
+# Office / editor temp files
+~$*
+*.tmp
+.*.sw?
+
+# Python
+__pycache__/
+tempCodeRunnerFile.py
+
+# graphify cache
+graphify-out/
