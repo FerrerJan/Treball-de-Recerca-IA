@@ -2,8 +2,11 @@ import json
 from os import listdir
 import os
 
-ruta_json = 'C:\\Users\\07map\\Documents\\GitHub\\Flappy-bird_TR\\JOCS\\Flappy-bird_TR\\Dades_Json\\'
-ruta_txt = 'C:\\Users\\07map\\Documents\\GitHub\\Flappy-bird_TR\\TR\\DATOS\\'
+# Rutes relatives a l'arrel del repositori
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ruta_json = os.path.join(ROOT, 'game', 'Dades_Json')
+ruta_txt = os.path.join(ROOT, 'analysis', 'data')
+os.makedirs(ruta_txt, exist_ok=True)
 archivos = listdir(ruta_json)
 
 for archivo in archivos:

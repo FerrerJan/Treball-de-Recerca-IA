@@ -2,13 +2,17 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 from os import listdir
 import random
+import os
 
-ruta = r'E:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\DATOS'
+# Rutes relatives a l'arrel del repositori
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+ruta = os.path.join(os.path.dirname(SCRIPTS_DIR), 'data')
+excel = os.path.join(SCRIPTS_DIR, 'IA2.xlsx')
 arxius = listdir(ruta)
 generaciones = 125
 print(listdir(ruta))
 for nombre in arxius:
-    with open(r"E:\TRABAJO DE RECERCA\Treball-de-Recerca-IA\TR\DATOS\\" + nombre) as f:
+    with open(os.path.join(ruta, nombre)) as f:
         contents = f.readlines()
         matrix = []
         for i in range(len(contents)):
@@ -35,7 +39,7 @@ for nombre in arxius:
         lista_promedio.append(round((n/len(matrix)), 2))
     #creación de una lista que contiene un promedio de todos los valores
 
-    wb = load_workbook(filename = 'IA2.xlsx')
+    wb = load_workbook(filename = excel)
     #print(wb.sheetnames)
 
     columnas_excel = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -62,7 +66,7 @@ for nombre in arxius:
         
     #creación de una nueva hoja en caso de  que la hoja activa no esté vacía
 
-    wb.save(filename="IA2.xlsx")
+    wb.save(filename=excel)
     #guardado del archivo
 
     """

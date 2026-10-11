@@ -2,7 +2,8 @@ import os
 import re
 
 # Ruta a la carpeta que contiene los archivos de texto
-carpeta = r'C:\Users\07map\Documents\GitHub\Flappy-bird_TR\JOCS\Flappy-bird_TR\Dades\no monedes'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+carpeta = os.path.join(ROOT, 'game', 'Dades', 'no monedes')
 
 # Inicializar la variable npartides
 npartides = 0
